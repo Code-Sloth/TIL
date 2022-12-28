@@ -72,7 +72,7 @@ git clone URL
 
 <br/>
 
-![Push_Conflict](https://user-images.githubusercontent.com/121420601/209783192-0b8b202f-94ae-4bca-9023-9aa87a622347.png)
+![Push_Conflict](https://user-images.githubusercontent.com/121420601/209783363-52734781-4997-4498-951d-8a18c0321f86.png)
 
 <br/>
 
