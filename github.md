@@ -65,7 +65,7 @@ git clone URL
 - 로컬과 원격 저장소의 commit 이력이 다른 경우 발생
 - 동시에 같은 파일이 수정 > merge conflict 발생 > 브랜치 학습
 
-1. 원격저장소의 commit을 원격 저장소로 가져온다 (pull)
+1. 원격저장소의 commit을 로컬로 가져온다 (pull)
 2. 로컬에서 두 커밋을 병합 (추가 commit 발생)
 3. 다시 GitHub로 Push
 ```
