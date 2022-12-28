@@ -14,9 +14,7 @@
 4. `로컬 저장소`에 원격 저장소 정보 설정 
 
     (git remote add origin https://github.com/UserName/RepositoryName.git)
-5. `원격 저장소`의 정보를 확인
-
-    (git remote -v)
+5. `원격 저장소`의 정보를 확인 (git remote -v)
 
 <br/>
 
@@ -57,7 +55,7 @@ git clone URL
 
 <br/>
 
-![Push_Pull_Clone](./12.28.3.png)
+![Push_Pull_Clone](https://user-images.githubusercontent.com/121420601/209783192-0b8b202f-94ae-4bca-9023-9aa87a622347.png)
 
 <br/>
 
@@ -74,7 +72,7 @@ git clone URL
 
 <br/>
 
-![Push_Conflict](./12.28.5.png)
+![Push_Conflict](https://user-images.githubusercontent.com/121420601/209783192-0b8b202f-94ae-4bca-9023-9aa87a622347.png)
 
 <br/>
 
@@ -89,4 +87,3 @@ ex) test/a.txt  (test폴더 안의 a 텍스트 파일)
     *.pptx      (ppt형식의 모든 파일)
     !b.pptx     (b파일은 예외)
 ```
-
