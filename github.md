@@ -1,6 +1,6 @@
 # 원격 저장소
 
-- VS Code = 로컬 저장소 , Github = 원격 저장소
+- `VS Code` = 로컬 저장소 , `Github` = 원격 저장소
 
 <br/>
 
@@ -26,7 +26,6 @@
 
 - ### **`git push (원격 저장소 이름) (브랜치 이름)`**
 
-
 ```
 git push origin master
 
@@ -34,6 +33,7 @@ git push origin master
 - 처음할 때 계정 인증 필요
 ```
 
+<br/>
 
 - ### **`git pull (원격 저장소 이름) (브랜치 이름)`**
 
@@ -43,6 +43,7 @@ git pull origin master
 원격 저장소로부터 변경된 내역을 받아와서 이력을 병합함
 ```
 
+<br/>
 
 - ### **`git clone (원격 저장소 주소)`**
 
@@ -53,13 +54,38 @@ git clone URL
 - git init = 로컬에서의 프로젝트 시작
   git clone = 원격에 있는 프로젝트 시작
 ```
+
+<br/>
+
 ![Push_Pull_Clone](./12.28.3.png)
+
+<br/>
 
 - ### **`Push Conflict`**
 
 ```
 - 로컬과 원격 저장소의 commit 이력이 다른 경우 발생
+- 동시에 같은 파일이 수정 > merge conflict 발생 > 브랜치 학습
 
 1. 원격저장소의 commit을 원격 저장소로 가져온다 (pull)
 2. 로컬에서 두 커밋을 병합 (추가 commit 발생)
 3. 다시 GitHub로 Push
+```
+
+<br/>
+
+![Push_Conflict](./12.28.5.png)
+- ### **`gitignore`**
+
+<br/>
+
+```
+- 버전 관리를 별도로 하지 않는 파일이나 디렉토리를 관리
+- 로컬 저장소에 .gitignore 파일을 생성 후 내용 입력
+
+ex) test/a.txt  (test폴더 안의 a 텍스트 파일)
+    user/       (user 폴더 안의 모든 것)
+    *.pptx      (ppt형식의 모든 파일)
+    !b.pptx     (b파일은 예외)
+```
+
