@@ -8,3 +8,11 @@
 - gitignore 이미 commit한 경우엔 무시를 안해서 미리 설정해야함
 - 삭제해도 삭제했다는 commit은 남아있음
 - 메모장은 글씨가 깨진다.
+
+<br/>
+
+- fatal: refusing to merge unrelated histories 오류 해결법
+
+https://jobc.tistory.com/177
+
+해결 명령어 : git pull origin main --allow-unrelated-histories
