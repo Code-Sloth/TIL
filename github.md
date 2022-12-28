@@ -75,9 +75,10 @@ git clone URL
 <br/>
 
 ![Push_Conflict](./12.28.5.png)
-- ### **`gitignore`**
 
 <br/>
+
+- ### **`gitignore`**
 
 ```
 - 버전 관리를 별도로 하지 않는 파일이나 디렉토리를 관리
