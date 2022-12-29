@@ -177,4 +177,3 @@ git branch -d test
 2. fork한 내 저장소를 git clone
 3. 이후 과정은 Shared Repository Model과 동일
 ```
-
