@@ -73,7 +73,7 @@ git merge [branch name]
 
 <br/>
 
-![mergeimage](https://raw.githubusercontent.com/Code-Sloth/TIL/master/mergeimage.png)
+![mergeimage](https://raw.githubusercontent.com/Code-Sloth/TIL/master/image/mergeimage.png)
 
 <br/>
 
