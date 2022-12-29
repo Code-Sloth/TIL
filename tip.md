@@ -16,3 +16,8 @@
 https://jobc.tistory.com/177
 
 해결 명령어 : git pull origin main --allow-unrelated-histories
+
+- 질문 하기 전에 구글링하며 생각해보고 질문하기 / 코드 오류 메세지 확인
+- 커밋과 저장은 다른 개념이다
+- b.txt를 잘못 add했을 때 git restore --staged b.txt
+- 커밋 제목 수정 코드 git commit --amend / 하지만 해시값이 달라지기 때문에 push한 이후에는 amend X
