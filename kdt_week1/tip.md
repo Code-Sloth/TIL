@@ -23,3 +23,5 @@ https://jobc.tistory.com/177
 - 커밋 제목 수정 코드 git commit --amend / 하지만 해시값이 달라지기 때문에 push한 이후에는 amend X
 
 - 폴더 이름 수정 git mv (현재폴더이름) (바꿀폴더이름) /// 폴더이름 소문자로만 써야함!
+
+- 마크 다운 이모지 윈도우키 + .
