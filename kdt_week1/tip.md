@@ -21,3 +21,5 @@ https://jobc.tistory.com/177
 - 커밋과 저장은 다른 개념이다
 - b.txt를 잘못 add했을 때 git restore --staged b.txt
 - 커밋 제목 수정 코드 git commit --amend / 하지만 해시값이 달라지기 때문에 push한 이후에는 amend X
+
+- 폴더 이름 수정 git mv (현재폴더이름) (바꿀폴더이름) /// 폴더이름 소문자로만 써야함!
