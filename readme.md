@@ -18,6 +18,6 @@
 - [Employment](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/employment_lecture.md)
 - [Employment_Practice](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/employment.md)
 
-### **🔥 Day6 (12.31) / Weekend**
+### **☁ Day6 (12.31) / Weekend**
 
-### **🔥 Day6 (12.31) / Weekend**
+### **☁ Day6 (12.31) / Weekend**
