@@ -36,7 +36,7 @@ hobby = "공놀이"
 
 print(name + "는 ",age,"살이며, ",hobby,"을 아주 좋아해요 ")
 # +는 ,로 바꿔줘도 된다. 그럼 정수형 str을 붙일 필요 없다.
-# ,를 넣으면 자동 띄어쓰기가 된다.
+# ,를 넣으면 자동 띄어쓰기가 되니 주의.
 
 print(name + "는 어른일까요? " + str(is_adult))
 
@@ -196,6 +196,3 @@ print(python.find("Java")) # 원하는 값이 없을 경우 -1
 print("hi") # find는 보이지만 index는 안보임
 
 print(python.count("n")) # n이 총 몇번 등장?
-
-# ☁ 문자열 포맷 ☁ (46.57)
-
