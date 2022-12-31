@@ -55,6 +55,7 @@ print("Red\tApple") # /t : 탭
 # ============================================================================
 
 # my solution
+
 url = "http://kakao.com"
 url = url[7:]
 url = url[:-4] # .의 위치로 해야해서 잘못됐다.
@@ -63,6 +64,7 @@ print(url[:3] + str(len(url)) + str(url.count("e")) + "!")
 
 
 # solution
+
 url2 = "http://naver.com"
 my_str = url2.replace("http://", "") # 규칙 1
 # inde = url2.index("/")
@@ -264,18 +266,22 @@ print(menu, type(menu)) # tuple이 set로 바뀜 / ()소괄호 >> {}중괄호
 # print(sample(lst, 1))
 # =====================================================================
 
+# my solution
+
 from random import *
 lst = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 shuffle(lst)
-print("-- 당첨자 발표 --\n치킨 당첨자 : " + str(sample(lst, 1)) + "\n커피 당첨자 : " + str(lst[:3]) + "\n-- 축하합니다 --")
+print(" -- 당첨자 발표 -- \n치킨 당첨자 : " + str(sample(lst, 1)) + "\n커피 당첨자 : " + str(lst[:3]) + "\n -- 축하합니다 -- ")
+
+# solution
 
 users = range(1, 21) # 1부터 20까지 숫자를 생성
 # print(type(users))
 users = list(users) # range를 list로 변환
 # print(type(users))
-print(users)
+# print(users)
 shuffle(users)
-print(users)
+# print(users)
 
 winners = sample(users, 4) # 4명 중에서 1명은 치킨, 3명은 커피
 
