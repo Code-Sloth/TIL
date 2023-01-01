@@ -23,3 +23,4 @@
 - [Python_Lecture 0~1hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python1.py)
 - [Python_Lecture 1~2hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python2.py)
 ### **☁ Day7 (23.1.1) / Weekend**
+- [Python_Lecture 2~3hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python3.py)
