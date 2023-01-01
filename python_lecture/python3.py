@@ -230,5 +230,137 @@ print("수수료 {0}원이며, 잔액은 {1}원입니다.".format(commission, ba
 
 # ☁ 기본값 ☁
 
+'''
 def profile(name, age, main_lang):
+     print("이름 : {0}\t나이 : {1}\t주 사용 언어: {2}"\
+             .format(name, age, main_lang)) # \ 줄바꿈
      
+profile("유재석", 20, "파이썬")
+profile("김태호", 25, "자바")
+'''
+
+# 같은 학교 같은 학년 같은 반 같은 수업
+
+def profile(name, age=17, main_lang="파이썬"):
+     print("이름 : {0}\t나이 : {1}\t주 사용 언어: {2}"\
+             .format(name, age, main_lang))
+     
+profile("유재석")
+profile("김태호")
+
+# ☁ 키워드 값 ☁
+
+def profile(name, age, main_lang):
+     print(name, age, main_lang)
+
+profile(name="유재석", main_lang="파이썬", age=20)
+profile(main_lang="자바", age=25, name="김태호")
+
+# ☁ 가변인자 ☁
+
+'''
+def profile(name, age, lang1, lang2, lang3, lang4, lang5):
+     print("이름 : {0}\t나이 : {1}\t".format(name, age), end=" ") # end" " 줄바꿈을 하지않고 이어서 출력
+     print(lang1, lang2, lang3, lang4, lang5)
+'''
+
+def profile(name, age, *language): # * 가변인자
+     print("이름 : {0}\t나이 : {1}\t".format(name, age), end=" ") # end" " 줄바꿈을 하지않고 이어서 출력
+     for lang in language:
+          print(lang, end=" ")
+          print()
+
+profile("유재석", 20, "python", "java", "c", "c++", "c#", "javascript")
+profile("김태호", 25, "kotlin", "swift", "", "", "")
+
+# ☁ 지역변수와 전역변수☁
+
+'''
+gun = 10
+
+def checkpoint(soldiers): # 경계근무
+     gun = 20 # 지역 변수
+     gun = gun - soldiers
+     print("[함수 내] 남은 총 : {0}".format(gun))
+
+print("전체 총 : {0}".format(gun))
+checkpoint(2) # 2명이 경계근무 나감
+print("남은 총 : {0}".format(gun))
+''' # 전체 총 10 / 함수 내 남은 총 18 / 남은 총 10가 됨
+
+'''
+gun = 10
+
+def checkpoint(soldiers): # 경계근무
+     global gun # 전역 공간에 있는 gun 사용
+     gun = gun - soldiers
+     print("[함수 내] 남은 총 : {0}".format(gun))
+
+print("전체 총 : {0}".format(gun))
+checkpoint(2) # 2명이 경계근무 나감
+print("남은 총 : {0}".format(gun))
+'''
+# 일반적으로 전역변수를 많이 쓰면 코드 관리가 어려워서 권장되지 않음
+# 가급적 함수의 전달값으로 던져서 계산하고 반환값을 받아서 사용하는 방법 아래에 나옴
+
+gun = 10
+
+def checkpoint(soldiers): # 경계근무
+     global gun # 전역 공간에 있는 gun 사용
+     gun = gun - soldiers
+     print("[함수 내] 남은 총 : {0}".format(gun))
+
+def checkpoint_ret(gun, soldiers):
+     gun = gun - soldiers
+     print("[함수 내] 남은 총 : {0}".format(gun))
+     return gun
+
+print("전체 총 : {0}".format(gun))
+#checkpoint(2) # 2명이 경계근무 나감
+gun = checkpoint_ret(gun, 2)
+print("남은 총 : {0}".format(gun))
+
+# ===============================================
+# Quiz) 표준 체중을 구하는 프로그램을 작성하시오
+
+# * 표준체중 : 각 개인의 키에 적당한 체중
+
+# (성별에 따른 공식)
+#  남자 : 키(m) x 키(m) x 22
+#  여자 : 키(m) x 키(m) x 21
+
+# 조건 1 : 표준 체중은 별도의 함수 내에서 계산
+#             * 함수명 : std_weight
+#             * 전달값 : 키(height), 성별(gender)
+# 조건 2 : 표준 체중은 소수점 둘째자리까지 표시
+
+# (출력 예제)
+# 키 175cm 남자의 표준 체중은 67.38kg 입니다.
+# ===============================================
+
+
+# my solution
+
+'''
+def std_weight(height, gender):
+     if gender == "남자":
+          weight = height * height * 22 / 10000
+          print("키 {0}cm {1}의 표준 체중은 {2}kg 입니다.".format(height, gender, weight))
+     elif gender == "여자":
+          weight = height * height * 211 / 10000
+          print("키 {0}cm {1}의 표준 체중은 {2}kg 입니다.".format(height, gender, weight))
+
+std_weight(int(input("키를 입력해 주세요. ")), gender = input("성별을 입력해 주세요. "))
+'''
+# solution
+
+def std_weight(height, gender): # 키 m 단위 (실수), 성별 "남자" / "여자"
+     if gender == "남자":
+          return height * height * 22
+     else:
+          return height * height * 21
+     
+height = 175 # cm 단위
+gender = "남자"
+weight = round(std_weight(height / 100, gender), 2)
+print("키 {0}cm {1}의 표준 체중은 {2}kg 입니다.".format(height, gender, weight))
