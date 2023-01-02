@@ -24,3 +24,22 @@
 - [Python_Lecture 1~2hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python2.py)
 ### **☁ Day7 (23.1.1) / Weekend**
 - [Python_Lecture 2~3hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python3.py)
+
+<br/>
+
+🕐🕒🕕🕘🕛
+
+<br/>
+
+### **🔥 Day8 (1.2)**
+- [Python1.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.2.md)
+- [Python_Practice1.2.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.2.1.py)
+- [Python_Practice1.2.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.2.2.py)
+### **🔥 Day9 (1.3)**
+- 
+### **🔥 Day10 (1.4)**
+- 
+### **🔥 Day11 (1.5)**
+- 
+### **🔥 Day12 (1.6)**
+- 
