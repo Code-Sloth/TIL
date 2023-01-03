@@ -97,4 +97,9 @@ for char in word:
         continue
 ```
 
-- 
+- 알고리즘 문제 풀 때 시간 단축을 위해 쓰는 명령어
+```
+import sys # 사전 입력
+input() 대신에 아래 명령어 대신 입력
+sys.stdin.readline()
+```
