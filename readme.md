@@ -37,7 +37,9 @@
 - [Python_Practice1.2.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.2.2.py)
 - [Create_Repository_BAEKJOONHub](https://github.com/Code-Sloth/BAEKJOONHub)
 ### **🔥 Day9 (1.3)**
-- 
+- [Python1.3](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.md)
+- [Python_Practice1.3.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.1.py)
+- [Python_Practice1.3.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.2.py)
 ### **🔥 Day10 (1.4)**
 - 
 ### **🔥 Day11 (1.5)**
