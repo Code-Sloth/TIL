@@ -7,7 +7,7 @@
 <br/>
 
 ### **`컴퓨터`** 
-- Caculaion (조작)
+- Caculation (조작)
 - Remember (저장)
 
 <br/>
