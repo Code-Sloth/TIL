@@ -99,7 +99,7 @@ num11 = int(input('세 번째 숫자를 입력해주세요 > '))
 num12 = int(input('네 번째 숫자를 입력해주세요 > '))
 num13 = int(input('다섯 번째 숫자를 입력해주세요 > '))
 nums = [num9, num10, num11, num12, num13]
-list_nums = list(nums)
+list_nums = list(nums) # (modify) 이미 list라 필요없는 항목
 print(list_nums)
 
 # ☁ 실습 9 ☁
@@ -128,7 +128,8 @@ print(str1 * num_a)
 15
 '''
 
-''' solution 1
+# solution 1
+''' 
 num14 = int(input('첫 번째 숫자를 입력해주세요 > '))
 print(num14)
 num15 = int(input('두 번째 숫자를 입력해주세요 > '))
@@ -142,7 +143,7 @@ print(num14 + num15 + num16 + num17 + num18)
 '''
 
 # solution 2
-
+'''
 number1 = int(input("첫 번째 숫자를 입력해주세요 > "))
 num = 0
 num += number1
@@ -158,4 +159,19 @@ num += number4
 print(num)
 number5 = int(input("다섯 번째 숫자를 입력해주세요 > "))
 num += number5
+print(num)
+'''
+
+# solution 3
+
+num = 0
+num += int(input("첫 번째 숫자를 입력해주세요 > "))
+print(num)
+num += int(input("두 번째 숫자를 입력해주세요 > "))
+print(num)
+num += int(input("세 번째 숫자를 입력해주세요 > "))
+print(num)
+num += int(input("네 번째 숫자를 입력해주세요 > "))
+print(num)
+num += int(input("다섯 번째 숫자를 입력해주세요 > "))
 print(num)
