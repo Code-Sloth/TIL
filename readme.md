@@ -41,7 +41,9 @@
 - [Python_Practice1.3.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.1.py)
 - [Python_Practice1.3.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.2.py)
 ### **🔥 Day10 (1.4)**
-- 
+- [Python1.4](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.4.md)
+- [Python_Practice1.4.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.4.1.py)
+- [Python_Practice1.4.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.4.2.py)
 ### **🔥 Day11 (1.5)**
 - 
 ### **🔥 Day12 (1.6)**
