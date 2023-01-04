@@ -103,3 +103,106 @@ import sys # 사전 입력
 input() 대신에 아래 명령어 대신 입력
 sys.stdin.readline()
 ```
+
+- 1부터 입력받은 정수까지의 합
+```
+a=int(input())
+n=0
+i=1
+
+while i<=a:
+    n += i
+    i += 1
+
+print(n)
+=====================================
+n=0
+for i in range(1,int(input())+1):
+    n += i
+print(n)
+=====================================
+
+print(sum(range(1,int(input())+1)))
+```
+
+- 
+```
+c=int(input())
+
+for i in range(1,c+1):
+    for j in range(i):
+        print('*',end='')
+    print('')
+```
+
+- a.pop() : a의 마지막 요소를 삭제한다.
+- 개행 이해 / print()에는 기본적으로 end가 개행이 담겨있다.
+```
+print('-')
+print()
+print()
+print('-')
+
+print('-')
+print('\n')
+print('\n')
+print('-')
+
+print('-')
+print('\n',end='')
+print('\n',end='')
+print('-')
+```
+
+- 리스트 입력 받기 (아직 이해 x)
+```
+numList = list(map(int, number_list[1:-1].split(',')))
+# [1, 2, 3, 4, 5]를 입력받았다고 치면
+string = input()
+numList = list(map(int, string[1:-1].split(',')))
+```
+
+- while True: 무한 루프
+- while 문에서 다른 입력을 했을 때 코드가 종료되게 해준다
+```
+while True:
+    try:
+        a,b=map(int,input().split())
+    except:
+        break
+    print(a+b)
+```
+
+- print(b.count(c)) // b에서 c가 몇개 있는지 확인
+- [내장함수 정리 사이트](https://docs.python.org/ko/3/library/functions.html#aiter)
+- 리스트 대괄호 빼고 출력
+```
+b = [1, 2, 3, 4, 5]
+
+print(b) # [1, 2, 3, 4, 5]
+print(*b) # 1 2 3 4 5
+```
+- 리스트 인덱스
+```
+a = [1, 4, 2, 7, 3]
+
+print(a.index(max(a))+1)
+
+# 4
+```
+- [list 관련 정보](https://wikidocs.net/14)
+
+- [파이썬 기본 튜토리얼](https://www.w3schools.com/python/default.asp)
+- remove : 특정 색인이 아닌 첫번째 일치 값을 제거
+- del : 특정 인덱스에서 항목을 제거
+- pop : 특정 인덱스에서 항목을 제거하고 값을 반환
+```
+a = [1, 2, 3, 4]
+b = 4
+a.remove(b)
+# 1, 2, 3
+del a[1]
+# 2, 3, 4
+a.pop(1)
+# 2
+```
