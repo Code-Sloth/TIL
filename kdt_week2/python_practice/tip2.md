@@ -206,3 +206,29 @@ del a[1]
 a.pop(1)
 # 2
 ```
+
+- 최댓값 최솟값 구할 때 초기값을 0이 아닌 원소의 첫번째 값으로 설정
+```
+max = nums[0]
+```
+
+- [코드업 사이트](https://codeup.kr/problemsetsol.php?psid=33) - 문제, 문제집, python 기초 100제
+
+- 딕셔너리에 바로 입력값 저장
+```
+d = {}
+b = []
+
+for j in range(3):
+    b.append(input())
+
+for i in b:
+    d[i] = input('')
+
+for key,value in d.items():
+    print(key,value,sep=' : ')
+```
+
+- [list, dictionary 정리 사이트](https://wikidocs.net/86293)
+
+- 
