@@ -49,4 +49,5 @@
 - [Python_Practice1.5.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.5.1.py)
 - [Python_Practice1.5.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.5.2.py)
 ### **🔥 Day12 (1.6)**
-- 
+- [python1.6](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.6.md)
+- [json Project 01](https://github.com/Code-Sloth/KDT-PJT1)
