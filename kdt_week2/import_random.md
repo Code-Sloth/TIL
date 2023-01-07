@@ -5,13 +5,16 @@
 <br/>
 
 ## 목록
-- random.random()
-- random.uniform(i,j)
-- random.randint(i,j)
-- random.randrange(i,j,k)
-- random.choice(seq)
-- random.sample(seq)
-- random.shuffle(seq)
+|번호|명령어|설명
+|--|-----|------|
+|1|**import random**|random모듈 import|
+|2|**random.random()**|0~1 사이 랜덤 실수|
+|3|**random.uniform(i,j)**|i~j 사이 랜덤 실수|
+|4|**random.randint(i,j)**|i~j 사이 랜덤 정수|
+|5|**random.randrange(i,j,k)**|i~j k스텝 랜덤 정수|
+|6|**random.choice(seq)**|seq안의 랜덤 요소|
+|7|**random.sample(seq,i)**|seq안의 i개의 랜덤 요소|
+|8|**random.shuffle(seq)**|seq을 랜덤으로 정렬|
 
 <br/>
 
@@ -62,7 +65,7 @@ print(random.choice(a))
 ```
 
 ```python
-🌈 random.sample(seq)
+🌈 random.sample(seq,i)
 seq안의 여러개의 랜덤 요소를 반환
 
 a = [1,2,3,'a','b','c']
