@@ -51,3 +51,9 @@
 ### **🔥 Day12 (1.6)**
 - [python1.6](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.6.md)
 - [json Project 01](https://github.com/Code-Sloth/KDT-PJT1)
+### **☁ Day13 (1.7) / Weekend**
+- [list](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/list.md)
+- [dictionary](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/dictionary.md)
+- [random](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/import_random.md)
+### **☁ Day14 (1.8) / Weekend**
+-
