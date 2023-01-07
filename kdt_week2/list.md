@@ -2,16 +2,16 @@
 
 <br/>
 
-- ### `mutable / iterable`
-- ### `sequence(데이터에 순서가 있는 것) (list, tuple, range, string)`
+- ### mutable / iterable
+- ### sequence(데이터에 순서가 있는 것) (list, tuple, range, string)
 
 <br/>
 
 ## 목록
-+ [**`1. len(a)`**](#---1-len-a----)
+- len(a)
 - a[n]
 - a[i:j]
-+ [**`4. c in a`**](#---4-c-in-a---)
+- c in a
 - a.count(b)
 - a.index(b)
 - a.append(b)
@@ -29,7 +29,6 @@
 
 <br/>
 
-- ### **`1. len(a)`**
 ```python
 🌈 len(a)
 전체 요소 개수를 리턴
@@ -57,7 +56,6 @@ print(a[2:5])
 # 3 a b
 ```
 
-- ### **`4. c in a`**
 ```python
 🌈 c in a
 c요소가 a안에 있는지 확인
