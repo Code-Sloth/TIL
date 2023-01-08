@@ -56,4 +56,4 @@
 - [dictionary](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/dictionary.md)
 - [random](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/import_random.md)
 ### **☁ Day14 (1.8) / Weekend**
--
+- [String](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/string.md)
