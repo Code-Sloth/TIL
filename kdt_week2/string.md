@@ -15,6 +15,7 @@
 |8|**s.split(a)**|s의 문자열을 a를 기준으로 구분|
 |9|**a.join(s)**|s의 문자열을 a를 기준으로 결합|
 |10|**print(s+a), print(s*i)**|s에 문자열을 a와 합침,i만큼 반복출력|
+|11|**import string**|string 모듈을 불러오고 다양한 문자열 집합을 불러올 수 있음|
 
 <br/>
 
@@ -125,4 +126,12 @@ print(s+a)
 print(s*i)
 # Hello World! Hi World!
 # Hello World!Hello World!Hello World!  
+```
+
+```python
+🌈 import string
+string.ascii_lowercase # 소문자 abcdefghijklmnopqrstuvwxyz
+string.ascii_uppercase # 대문자 ABCDEFGHIJKLMNOPQRSTUVWXYZ
+string.ascii_letters # 대소문자 모두 abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+string.digits # 숫자 0123456789
 ```
