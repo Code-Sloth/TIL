@@ -32,3 +32,11 @@
 - 순서가 없고 중복된 값이 없음
 - mutable, iterable
 - a = set()로 생성
+
+<br/>
+<br/>
+
+- ## [String](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/string.md)
+- ## [List](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/list.md)
+- ## [Dictionary](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/dictionary.md)
+- ## [Random](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/import_random.md)
