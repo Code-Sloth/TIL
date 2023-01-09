@@ -12,7 +12,7 @@
 |----|-----|-----|
 |1|**a[k]=b**|a에 k(key), b(value)추가|
 |2|**del a[k]**|a의 k요소 삭제|
-|3|**print(a[k]**|a의 k의 value값 출력|
+|3|**print(a[k])**|a의 k의 value값 출력|
 |4|**k in a**|a에 k(key)가 있는지 확인|
 |5|**a.items, list(a.items())**|a를 다른 객체, list로 변환|
 |6|**for k in a**|a의 k(key)를 다 불러옴|
