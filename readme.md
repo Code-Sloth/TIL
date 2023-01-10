@@ -69,7 +69,9 @@
 - [Python_Practice1.9.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.9.1.py)
 - [Python_Practice1.9.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.9.2.py)
 ### **🔥 Day16 (1.10)**
-- 
+- [Python1.10/함수](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.10.md)
+- [Python_Practice1.10.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.10.1.py)
+- [Python_swea1.10](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/swea1.10.py)
 ### **🔥 Day17 (1.11)**
 - 
 ### **🔥 Day18 (1.12)**
