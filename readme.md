@@ -81,7 +81,8 @@
 - [Python_Practice1.12.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.12.1.py)
 - [Python_sweatest1.12](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/pythontest1.12.py)
 ### **🔥 Day19 (1.13)**
-- 
+- [Python1.13/API](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.13.md)
+- [API Project 2](https://github.com/Code-Sloth/PJT-02)
 ### **☁ Day20 (1.14) / Weekend**
 - 
 ### **☁ Day21 (1.15) / Weekend**
