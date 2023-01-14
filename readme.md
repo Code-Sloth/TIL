@@ -84,6 +84,6 @@
 - [Python1.13/API](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.13.md)
 - [API Project 2](https://github.com/Code-Sloth/PJT-02)
 ### **☁ Day20 (1.14) / Weekend**
-- 
+- [Additional Grammar & dotenv](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/grammar1.14.md)
 ### **☁ Day21 (1.15) / Weekend**
 - 
