@@ -86,4 +86,25 @@
 ### **☁ Day20 (1.14) / Weekend**
 - [Additional Grammar & dotenv](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/grammar1.14.md)
 ### **☁ Day21 (1.15) / Weekend**
-- 
+- [Code_Review](https://github.com/Code-Sloth/TIL/tree/master/baek/codereview)
+
+<br/>
+
+🕐🕒🕕🕘🕛
+
+<br/>
+
+### **🔥 Day22 (1.16)**
+- []()
+### **🔥 Day23 (1.17)**
+- []()
+### **🔥 Day24 (1.18)**
+- []()
+### **🔥 Day25 (1.19)**
+- []()
+### **🔥 Day26 (1.20)**
+- []()
+### **☁ Day27 (1.21) / Weekend**
+- []()
+### **☁ Day28 (1.22) / Weekend**
+- []()
