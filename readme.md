@@ -95,7 +95,9 @@
 <br/>
 
 ### **🔥 Day22 (1.16)**
-- []()
+- [Algorithm1.16/Coding Test](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/algorithm1.16.md)
+- [practice1.16.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/practice1.16.1.py)
+- [Baekdoon1.16](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/boj1.16.py)
 ### **🔥 Day23 (1.17)**
 - []()
 ### **🔥 Day24 (1.18)**
