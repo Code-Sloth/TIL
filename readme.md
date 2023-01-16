@@ -22,7 +22,7 @@
 |week 3|week 4|
 |--|--|
 |**🔥 Day15 (1.9)**|**🔥 Day22 (1.16)**|
-|[Python1.9/메서드](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.9.md) <br/> [Python_Practice1.9.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.9.1.py) <br/> [Python_Practice1.9.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.9.2.py)|[Algorithm1.16/Coding Test](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/algorithm1.16.md)　　　 <br/> [practice1.16.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/practice1.16.1.py) <br/> [Baekdoon1.16](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/boj1.16.py)|
+|[Python1.9/메서드](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.9.md) <br/> [Python_Practice1.9.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.9.1.py) <br/> [Python_Practice1.9.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.9.2.py)|[Algorithm1.16/Coding Test](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/algorithm1.16.md)　　 <br/> [practice1.16.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/practice1.16.1.py) <br/> [Baekdoon1.16](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/boj1.16.py)|
 |**🔥 Day16 (1.10)**|**🔥 Day23 (1.17)**|
 |[Python1.10/함수](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.10.md) <br/> [Python_Practice1.10.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.10.1.py) <br/> [Python_swea1.10](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/swea1.10.py)||
 |**🔥 Day17 (1.11)**|**🔥 Day24 (1.18)**|
