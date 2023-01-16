@@ -2,61 +2,23 @@
 
 <br/>
 
-### **🔥 Day1 (12.26)**
-- OT ✅
-### **🔥 Day2 (12.27)**
-- [Markdown](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/markdown.md)
-- [CLI & GIT](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/CLI.md)
+|week 1|week2|
+|--|--|
+|**🔥 Day1 (12.26)**|**🔥 Day8 (1.2)**|
+|- OT ✅|[Python1.2파이썬 기초](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.2.md) <br/> [Python_Practice1.2.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.2.1.py) <br/> [Python_Practice1.2.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.2.2.py) <br/> [Create_Repository_BAEKJOONHub](https://github.com/Code-Sloth/BAEKJOONHub)|
+|**🔥 Day2 (12.27)**|**🔥 Day9 (1.3)**|
+|[Markdown](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/markdown.md) <br/> [CLI & GIT](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/CLI.md)|[Python1.3/제어문 반복문](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.md) <br/> [Python_Practice1.3.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.1.py) <br/> [Python_Practice1.3.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.2.py)|
+|**🔥 Day3 (12.28)**|**🔥 Day10 (1.4)**|
+|[Github](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/github.md)|[Python1.4/함수](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.4.md) <br/> [Python_Practice1.4.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.4.1.py) <br/> [Python_Practice1.4.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.4.2.py)|
+|**🔥 Day4 (12.29)**|**🔥 Day11 (1.5)**|
+|[Branch](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/branch.md)|[Python1.5/딕셔너리 모듈](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.5.md) <br/> [Python_Practice1.5.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.5.1.py) <br/> [Python_Practice1.5.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.5.2.py)|
+|**🔥 Day5 (12.30)**|**🔥 Day12 (1.6)**|
+|[Employment](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/employment_lecture.md) <br/> [Employment_Practice](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/employment.md)|[python1.6/Json](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.6.md) <br/> [json Project 01](https://github.com/Code-Sloth/KDT-PJT1)|
+|**☁ Day6 (12.31) / Weekend**|**☁ Day13 (1.7) / Weekend**|
+|[Year_Plan](https://github.com/Code-Sloth/TIL/blob/master/plan/yearplan.md) <br/> [Python_Lecture 0~1hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python1.py) <br/> [Python_Lecture 1~2hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python2.py)|[list](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/list.md) <br/> [dictionary](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/dictionary.md) <br/> [random](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/import_random.md)|
+|**☁ Day7 (23.1.1) / Weekend**|**☁ Day14 (1.8) / Weekend**|
+|[Python_Lecture 2~3hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python3.py)|[String](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/string.md)|
 
-### **🔥 Day3 (12.28)**
-- [Github](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/github.md)
-
-### **🔥 Day4 (12.29)**
-- [Branch](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/branch.md)
-
-### **🔥 Day5 (12.30)**
-- [Employment](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/employment_lecture.md)
-- [Employment_Practice](https://github.com/Code-Sloth/TIL/blob/master/kdt_week1/employment.md)
-
-### **☁ Day6 (12.31) / Weekend**
-- [Year_Plan](https://github.com/Code-Sloth/TIL/blob/master/plan/yearplan.md)
-- [Python_Lecture 0~1hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python1.py)
-- [Python_Lecture 1~2hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python2.py)
-### **☁ Day7 (23.1.1) / Weekend**
-- [Python_Lecture 2~3hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python3.py)
-
-<br/>
-
-🕐🕒🕕🕘🕛
-
-<br/>
-
-### **🔥 Day8 (1.2)**
-- [Python1.2파이썬 기초](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.2.md)
-- [Python_Practice1.2.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.2.1.py)
-- [Python_Practice1.2.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.2.2.py)
-- [Create_Repository_BAEKJOONHub](https://github.com/Code-Sloth/BAEKJOONHub)
-### **🔥 Day9 (1.3)**
-- [Python1.3/제어문 반복문](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.md)
-- [Python_Practice1.3.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.1.py)
-- [Python_Practice1.3.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.3.2.py)
-### **🔥 Day10 (1.4)**
-- [Python1.4/함수](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.4.md)
-- [Python_Practice1.4.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.4.1.py)
-- [Python_Practice1.4.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.4.2.py)
-### **🔥 Day11 (1.5)**
-- [Python1.5/딕셔너리 모듈](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.5.md)
-- [Python_Practice1.5.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.5.1.py)
-- [Python_Practice1.5.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/practice1.5.2.py)
-### **🔥 Day12 (1.6)**
-- [python1.6/Json](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/python_practice/python_1.6.md)
-- [json Project 01](https://github.com/Code-Sloth/KDT-PJT1)
-### **☁ Day13 (1.7) / Weekend**
-- [list](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/list.md)
-- [dictionary](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/dictionary.md)
-- [random](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/import_random.md)
-### **☁ Day14 (1.8) / Weekend**
-- [String](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/string.md)
 
 <br/>
 
