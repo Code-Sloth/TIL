@@ -13,7 +13,7 @@
 |**🔥 Day18 (1.12)**|**🔥 Day25 (1.19)**|
 |[Python1.12/클래스2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.12.md) <br/> [Python_Practice1.12.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/practice1.12.1.py) <br/> [Python_sweatest1.12](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/pythontest1.12.py)|[Algorithm1.19/Dictionary](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/algorithm1.19.md) <br/> [Baekjoon1.19](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/boj1.19.py)|
 |**🔥 Day19 (1.13)**|**🔥 Day26 (1.20)**|
-|[Python1.13/API](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.13.md) <br/> [API Project 2](https://github.com/Code-Sloth/PJT-02)||
+|[Python1.13/API](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.13.md) <br/> [API Project 2](https://github.com/Code-Sloth/PJT-02)|[Swea1.20](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/swea1.20.py)|
 |**☁ Day20 (1.14) / Weekend**|**☁ Day27 (1.21) / Weekend**|
 |[Additional Grammar & dotenv](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/grammar1.14.md)||
 |**☁ Day21 (1.15) / Weekend**|**☁ Day28 (1.22) / Weekend**|
