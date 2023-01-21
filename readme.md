@@ -15,7 +15,7 @@
 |**🔥 Day19 (1.13)**|**🔥 Day26 (1.20)**|
 |[Python1.13/API](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/python_1.13.md) <br/> [API Project 2](https://github.com/Code-Sloth/PJT-02)|[Swea1.20](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/swea1.20.py)|
 |**☁ Day20 (1.14) / Weekend**|**☁ Day27 (1.21) / Weekend**|
-|[Additional Grammar & dotenv](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/grammar1.14.md)||
+|[Additional Grammar & dotenv](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/grammar1.14.md)|[Algorithm](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/algorithm.md)|
 |**☁ Day21 (1.15) / Weekend**|**☁ Day28 (1.22) / Weekend**|
 |[Code_Review](https://github.com/Code-Sloth/TIL/tree/master/baek/codereview)||
 
