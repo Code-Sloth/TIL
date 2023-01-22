@@ -1,5 +1,22 @@
 # 💭 Today I Learned
 
+|week 5|week 6|
+|--|--|
+|**☁ Day29 (1.23) / Holidays**|**🔥 Day36 (1.30)**|
+|||
+|**☁ Day30 (1.24) / Holidays**|**🔥 Day37 (1.31)**|
+|||
+|**☁ Day31 (1.25) / Holidays**|**🔥 Day38 (2.1)**|
+|||
+|**🔥 Day32 (1.26)**|**🔥 Day39 (2.2)**|
+|||
+|**🔥 Day33 (1.27)**|**🔥 Day40 (2.3)**|
+|||
+|**☁ Day34 (1.28) / Weekend**|**☁ Day41 (2.4) / Weekend**|
+|||
+|**☁ Day35 (1.29) / Weekend**|**☁ Day42 (2.5) / Weekend**|
+|||
+
 <br/>
 
 |week 3|week 4|
@@ -17,7 +34,7 @@
 |**☁ Day20 (1.14) / Weekend**|**☁ Day27 (1.21) / Weekend**|
 |[Additional Grammar & dotenv](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/grammar1.14.md)|[Algorithm](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/algorithm.md)|
 |**☁ Day21 (1.15) / Weekend**|**☁ Day28 (1.22) / Weekend**|
-|[Code_Review](https://github.com/Code-Sloth/TIL/tree/master/baek/codereview)||
+|[Code_Review](https://github.com/Code-Sloth/TIL/tree/master/baek/codereview)|[Codingtest](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/codingtest.md)|
 
 <br/>
 
