@@ -3,7 +3,7 @@
 |week 5|week 6|
 |--|--|
 |**☁ Day29 (1.23) / Holidays**|**🔥 Day36 (1.30)**|
-|||
+|[Collections1.23](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/collections.md)||
 |**☁ Day30 (1.24) / Holidays**|**🔥 Day37 (1.31)**|
 |||
 |**☁ Day31 (1.25) / Holidays**|**🔥 Day38 (2.1)**|
