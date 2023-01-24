@@ -5,7 +5,7 @@
 |**☁ Day29 (1.23) / Holidays**|**🔥 Day36 (1.30)**|
 |[Collections1.23](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/collections.md)||
 |**☁ Day30 (1.24) / Holidays**|**🔥 Day37 (1.31)**|
-|||
+|[mlp_algorithm1~4](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm1~4.md)||
 |**☁ Day31 (1.25) / Holidays**|**🔥 Day38 (2.1)**|
 |||
 |**🔥 Day32 (1.26)**|**🔥 Day39 (2.2)**|
