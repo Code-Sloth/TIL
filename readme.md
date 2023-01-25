@@ -7,7 +7,7 @@
 |**☁ Day30 (1.24) / Holidays**|**🔥 Day37 (1.31)**|
 |[mlp_algorithm1~4](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm1~4.md)||
 |**☁ Day31 (1.25) / Holidays**|**🔥 Day38 (2.1)**|
-|||
+|[stack,queue,deque1.25](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/queue.md)||
 |**🔥 Day32 (1.26)**|**🔥 Day39 (2.2)**|
 |||
 |**🔥 Day33 (1.27)**|**🔥 Day40 (2.3)**|
