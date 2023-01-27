@@ -11,7 +11,7 @@
 |**🔥 Day32 (1.26)**|**🔥 Day39 (2.2)**|
 |[Algorithm1.26/Stack,Queue](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/algorithm1.26.md) <br/> [Baekjoon1.26](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/boj1.26.py)||
 |**🔥 Day33 (1.27)**|**🔥 Day40 (2.3)**|
-|||
+|[Algorithm1.27/Heap,Set](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/algorithm1.27.md) <br/> [Baekjoon1.27](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/boj1.27.py)||
 |**☁ Day34 (1.28) / Weekend**|**☁ Day41 (2.4) / Weekend**|
 |||
 |**☁ Day35 (1.29) / Weekend**|**☁ Day42 (2.5) / Weekend**|
