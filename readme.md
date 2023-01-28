@@ -1,10 +1,12 @@
-# 메서드, 알고리즘 정리
+# ✅ 메서드, 자료구조 정리
 
-- ### [string](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/string.md)
-- ### [list](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/list.md)
-- ### [dictionary](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/dictionary.md)
-- ### [set](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/set.md)
-- ### [random](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/import_random.md)
+- ### [String](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/string.md)
+- ### [List](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/list.md)
+- ### [Dictionary](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/dictionary.md)
+- ### [Set](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/set.md)
+- ### [Random](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/import_random.md)
+- ### [Grammar](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/grammar1.14.md)
+- ### [Heap](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/heap.md)
 
 # 💭 Today I Learned
 
