@@ -10,6 +10,8 @@
 
 # 💭 Today I Learned
 
+<br/>
+
 |week 5|week 6|
 |--|--|
 |**☁ Day29 (1.23) / Holidays**|**🔥 Day36 (1.30)**|
