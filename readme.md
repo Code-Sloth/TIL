@@ -19,7 +19,7 @@
 |**☁ Day30 (1.24) / Holidays**|**🔥 Day37 (1.31)**|
 |[Mlp_Algorithm1~4](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm1~4.md)|[Mlp_Algorithm8~9](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm8~9.md) <br/> [Baekjoon1.31](https://github.com/Code-Sloth/TIL/blob/master/kdt_week6/boj1.31.py)|
 |**☁ Day31 (1.25) / Holidays**|**🔥 Day38 (2.1)**|
-|[Stack,Queue,Deque1.25](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/queue.md)||
+|[Stack,Queue,Deque1.25](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/queue.md)|[Algorithm2.1/ExhaustiveSearch](https://github.com/Code-Sloth/TIL/blob/master/kdt_week6/algorithm2.1.md) <br/> [Baekjoon2.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week6/boj2.1.py)|
 |**🔥 Day32 (1.26)**|**🔥 Day39 (2.2)**|
 |[Algorithm1.26/Stack,Queue](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/algorithm1.26.md) <br/> [Baekjoon1.26](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/boj1.26.py)||
 |**🔥 Day33 (1.27)**|**🔥 Day40 (2.3)**|
