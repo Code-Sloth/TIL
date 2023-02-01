@@ -127,8 +127,8 @@ for i in range(n):
 def dfs(x, y):
     if x <= -1 or x >= n or y <= -1 or y >= m:
         return False
-    if graph[x][y] == 0:
-        graph[x][y] = 1
+    if graph[x][y] == 0: # 0일때만 재귀 실행하고 본인을 1로 만들면서
+        graph[x][y] = 1 # 주변이 다 막힐때까지 1로 만들고 True를 반환
         dfs(x - 1, y)
         dfs(x, y - 1)
         dfs(x + 1, y)
@@ -191,4 +191,42 @@ dx = [-1,1,0,0]
 dy = [0,0,-1,1]
 
 print(bfs(0,0))
+```
+
+
+### 상하좌우 탐색 문제
+```python
+def dfs(i,j):
+    global t
+    if i < 0 or i >= n or j < 0 or j >= n:
+        return False
+    if g[i][j]:
+        g[i][j] = 0
+        for dx, dy in d:
+            nx, ny = i + dx, j + dy
+            dfs(nx,ny)
+        return True
+    return False
+```
+```python
+def bfs(x,y):
+    q = deque([(x,y)])
+    g[x][y] = 0
+    while q:
+        x,y = q.popleft()
+        for dx,dy in d:
+            nx,ny = x + dx, y + dy
+            if nx < 0 or nx >= n or ny < 0 or ny >= n:
+                continue
+            if g[nx][ny]:
+                g[nx][ny] = 0
+                q.append((nx,ny))
+    return 1
+```
+### 간선 정보가 주어진 문제 입력
+```python
+for i in range(v) : 
+    a, b = map(int, stdin.readline().split())
+    graph[a] += [b]
+    graph[b] += [a]
 ```
