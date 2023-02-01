@@ -10,8 +10,6 @@
 
 # 💭 Today I Learned
 
-### week 5~6
-
 |week 5|week 6|
 |--|--|
 |**☁ Day29 (1.23) / Holidays**|**🔥 Day36 (1.30)**|
@@ -31,8 +29,6 @@
 
 <br/>
 
-### week 3~4
-
 |week 3|week 4|
 |--|--|
 |**🔥 Day15 (1.9)**|**🔥 Day22 (1.16)**|
@@ -51,8 +47,6 @@
 |[Code_Review](https://github.com/Code-Sloth/TIL/tree/master/baek/codereview)|[Codingtest](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/codingtest.md)|
 
 <br/>
-
-### week 1~2
 
 |week 1|week 2|
 |--|--|
