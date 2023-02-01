@@ -12,9 +12,6 @@
 
 ### week 5~6
 
-<details>
-    <summary>자세히</summary>
-
 |week 5|week 6|
 |--|--|
 |**☁ Day29 (1.23) / Holidays**|**🔥 Day36 (1.30)**|
@@ -31,13 +28,10 @@
 |[Set](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/set.md) <br/> [Heap](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/heap.md)||
 |**☁ Day35 (1.29) / Weekend**|**☁ Day42 (2.5) / Weekend**|
 |[Mlp_Algorithm5~7](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm5~7.md)||
-<details>
 
 <br/>
 
 ### week 3~4
-<details>
-    <summary>자세히</summary>
 
 |week 3|week 4|
 |--|--|
@@ -55,13 +49,10 @@
 |[Additional Grammar & dotenv](https://github.com/Code-Sloth/TIL/blob/master/kdt_week3/grammar1.14.md)|[Algorithm](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/algorithm.md)|
 |**☁ Day21 (1.15) / Weekend**|**☁ Day28 (1.22) / Weekend**|
 |[Code_Review](https://github.com/Code-Sloth/TIL/tree/master/baek/codereview)|[Codingtest](https://github.com/Code-Sloth/TIL/blob/master/kdt_week4/codingtest.md)|
-<details>
 
 <br/>
 
 ### week 1~2
-<details>
-    <summary>자세히</summary>
 
 |week 1|week 2|
 |--|--|
@@ -79,4 +70,3 @@
 |[Year_Plan](https://github.com/Code-Sloth/TIL/blob/master/plan/yearplan.md) <br/> [Python_Lecture 0~1hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python1.py) <br/> [Python_Lecture 1~2hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python2.py)|[list](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/list.md) <br/> [dictionary](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/dictionary.md) <br/> [random](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/import_random.md)|
 |**☁ Day7 (23.1.1) / Weekend**|**☁ Day14 (1.8) / Weekend**|
 |[Python_Lecture 2~3hour](https://github.com/Code-Sloth/TIL/blob/master/python_lecture/python3.py)|[String](https://github.com/Code-Sloth/TIL/blob/master/kdt_week2/string.md)|
-</details>
