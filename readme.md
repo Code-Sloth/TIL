@@ -12,6 +12,25 @@
 
 <br/>
 
+|week 7|week 8|
+|--|--|
+|**🔥 Day43 (2.6)**|**🔥 Day50 (2.13)**|
+|||
+|**🔥 Day44 (2.7)**|**🔥 Day51 (2.14)**|
+|||
+|**🔥 Day45 (2.8)**|**🔥 Day52 (2.15)**|
+|||
+|**🔥 Day46 (2.9)**|**🔥 Day53 (2.16)**|
+|||
+|**🔥 Day47 (2.10)**|**🔥 Day54 (2.17)**|
+|||
+|**☁ Day48 (2.11) / Weekend**|**☁ Day55 (2.18) / Weekend**|
+|||
+|**☁ Day49 (2.12) / Weekend**|**☁ Day56 (2.19) / Weekend**|
+|||
+
+<br/>
+
 |week 5|week 6|
 |--|--|
 |**☁ Day29 (1.23) / Holidays**|**🔥 Day36 (1.30)**|
@@ -27,7 +46,7 @@
 |**☁ Day34 (1.28) / Weekend**|**☁ Day41 (2.4) / Weekend**|
 |[Set](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/set.md) <br/> [Heap](https://github.com/Code-Sloth/TIL/blob/master/kdt_week5/heap.md)|[Mlp_Algorithm10](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm10.md)|
 |**☁ Day35 (1.29) / Weekend**|**☁ Day42 (2.5) / Weekend**|
-|[Mlp_Algorithm5~7](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm5~7.md)||
+|[Mlp_Algorithm5~7](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm5~7.md)|[Mlp_Algorithm11~12](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm11~12.md)|
 
 <br/>
 
