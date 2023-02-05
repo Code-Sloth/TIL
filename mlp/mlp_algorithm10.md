@@ -85,3 +85,78 @@ for i in range(1, n+1):
     print('INFINITY')
   else: print(dis[i])
 ```
+
+<br/>
+
+### 간단한 구현 방법 성능 분석
+- 총 O(V)번에 걸쳐서 최단 거리가 가장 짧은 노드를 매번 선형 탐색
+- 전체 시간복잡도 O(V^2)
+- 일반적으로 코딩 테스트의 최단 경로 문제에서 전체 노드 개수가 5,000개 이하이면 이 코드로 해결 가능
+- 하지만 노드 개수가 10,000개 이상이라면?
+
+<br/>
+
+## 우선순위 큐(Priority Queue)
+- 우선순위가 가장 높은 데이터를 가장 먼저 삭제하는 자료구조
+- 예를 들어 여러 개의 물건 데이터를 자료구조에 넣었다가 가치가 높은 물건 데이터부터 꺼내서 확인해야 하는 경우에 우선순위 큐를 이용 가능
+- Python, C++, Java를 포함한 대부분의 프로그래밍 언어에서 표준 라이브러리 형태로 지원
+
+<br/>
+
+### 힙(Heap)
+- 우선순위 큐를 구현하기 위해 사용하는 자료구조 중 하나
+- 최소 힙, 최대 힙
+- 다익스트라 최단 경로 알고리즘을 포함해 다양한 알고리즘에서 사용
+
+<br/>
+
+### 다익스트라 알고리즘 개선된 구현 방법
+- 단계마다 방문하지 않은 노드 중에서 최단 거리가 가장 짧은 노드를 선택하기 위해 힙 자료구조를 이용
+- 다익스트라 알고리즘 동작 기본 원리는 동일
+  - 현재 가장 가까운 노드를 저장해 놓기 위해서 힙 자료구조를 추가적으로 이용
+  - 현재의 최단 거리가 가장 짧은 노드를 선택해야 하므로 최소 힙을 이용
+
+<br/>
+
+### 힙을 이용한 다익스트라 코드 구현
+```python
+import heapq as hq
+
+INF = int(1e9)
+n, m = map(int,input().split())
+st = int(input())
+g = [[] for _ in range(n+1)]
+dis = [INF] * (n+1)
+for _ in range(m):
+  a, b, c = map(int,input().split())
+  g[a].append((b,c))
+
+def dijkstra(st):
+  q = []
+  hq.heappush(q, (0, st))
+  dis[st] = 0
+  while q:
+    d, now = hq.heappop(q)
+    if dis[now] < d:continue
+    for i in g[now]:
+      cost = d + i[1]
+      if cost < dis[i[0]]:
+        dis[i[0]] = cost
+        hq.heappop(q,(cost, i[0]))
+
+dijkstra(st)
+for i in range(1, n+1):
+  print('INFINITY') if dis[i] == INF else print(dis[i])
+```
+
+<br/>
+
+### 개선된 구현 방법 성능 분석
+- 힙 자료구조를 이용하는 다익스트라 알고리즘 시간 복잡도는 O(ElogV)
+- 노드를 하나씩 꺼내 검사하는 반복문(While)은 노드의 개수 V이상의 횟수로는 처리되지 않음
+  - 결과적으로 현재 우선순위 큐에서 꺼낸 노드와 연겨로딘 다른 노드들을 확인하는 총 횟수는 최대 간선개수(E)만큼 연산이 수행될 수 있음
+- 직관적으로 전체 과정은 E개의 원소를 우선순위 큐에 넣었다가 모두 빼내는 연산과 매우 유사
+  - 시간 복잡도를 O(ElogE)로 판단 가능
+  - 중복 간선을 포함하지 않는 경우에 이를 O(ElogV)로 정리 가능
+    - O(ElogE) -> O(ElogV^2) -> O(2ElogV) -> O(ElogV)
+
