@@ -142,7 +142,7 @@ def dijkstra(st):
       cost = d + i[1]
       if cost < dis[i[0]]:
         dis[i[0]] = cost
-        hq.heappop(q,(cost, i[0]))
+        hq.heappush(q,(cost, i[0]))
 
 dijkstra(st)
 for i in range(1, n+1):
