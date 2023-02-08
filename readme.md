@@ -19,7 +19,7 @@
 |**🔥 Day44 (2.7)**|**🔥 Day51 (2.14)**|
 |[Algorithm2.7/Implementation](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/algorithm2.7.md) <br/> [Baekjoon2.7](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/boj2.7.py)||
 |**🔥 Day45 (2.8)**|**🔥 Day52 (2.15)**|
-|||
+|[Database2.8/RDBMS](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/database2.8.md) <br/> [MySQL_Guide](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/MySQLguide.md)||
 |**🔥 Day46 (2.9)**|**🔥 Day53 (2.16)**|
 |||
 |**🔥 Day47 (2.10)**|**🔥 Day54 (2.17)**|
