@@ -23,7 +23,7 @@
 |**🔥 Day46 (2.9)**|**🔥 Day53 (2.16)**|
 |[Database2.9/SQL](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/database2.9.md) <br/> [SQL_Practice2.9](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/sqlpractice2.9.sql)||
 |**🔥 Day47 (2.10)**|**🔥 Day54 (2.17)**|
-|||
+|[Mlp_Algorithm21](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm21.md) <br/>[Sweatest2.10](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/sweatest2.10.py)||
 |**☁ Day48 (2.11) / Weekend**|**☁ Day55 (2.18) / Weekend**|
 |||
 |**☁ Day49 (2.12) / Weekend**|**☁ Day56 (2.19) / Weekend**|
