@@ -25,9 +25,9 @@
 |**🔥 Day47 (2.10)**|**🔥 Day54 (2.17)**|
 |[Mlp_Algorithm21](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm21.md) <br/>[Sweatest2.10](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/sweatest2.10.py)||
 |**☁ Day48 (2.11) / Weekend**|**☁ Day55 (2.18) / Weekend**|
-|||
+|[Mlp_Algorithm17](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm17.md)||
 |**☁ Day49 (2.12) / Weekend**|**☁ Day56 (2.19) / Weekend**|
-|||
+|[Mlp_Algorithm18](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm18.md) <br/> [Mlp_Algorithm24](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm24.md)||
 
 <br/>
 
