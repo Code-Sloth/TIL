@@ -15,7 +15,7 @@
 |week 7|week 8|
 |--|--|
 |**🔥 Day43 (2.6)**|**🔥 Day50 (2.13)**|
-|[Algorithm2.6/DFS](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/algorithm2.6.md) <br/> [Baekjoon2.6](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/boj2.6.py)||
+|[Algorithm2.6/DFS](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/algorithm2.6.md) <br/> [Baekjoon2.6](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/boj2.6.py)|[Database2.13/DQL](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/database2.13.md) <br/> [SQL_Practice2.13](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/sqlpractice2.13.sql)|
 |**🔥 Day44 (2.7)**|**🔥 Day51 (2.14)**|
 |[Algorithm2.7/Implementation](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/algorithm2.7.md) <br/> [Baekjoon2.7](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/boj2.7.py)||
 |**🔥 Day45 (2.8)**|**🔥 Day52 (2.15)**|
