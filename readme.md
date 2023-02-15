@@ -19,7 +19,7 @@
 |**🔥 Day44 (2.7)**|**🔥 Day51 (2.14)**|
 |[Algorithm2.7/Implementation](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/algorithm2.7.md) <br/> [Baekjoon2.7](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/boj2.7.py)|[Database2.14/DDL,DML](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/database2.14.md) <br/> [SQL_Practice2.14.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/sqlpractice2.14.sql) <br/> [SQL_Practice2.14.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/sqlpractice2.14.2.sql)|
 |**🔥 Day45 (2.8)**|**🔥 Day52 (2.15)**|
-|[Database2.8/RDBMS](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/database2.8.md) <br/> [MySQL_Guide](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/MySQLguide.md)||
+|[Database2.8/RDBMS](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/database2.8.md) <br/> [MySQL_Guide](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/MySQLguide.md)|[Database2.15/Join](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/database2.15.md) <br/> [SQL_Practice2.15](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/sqlpractice2.15.sql)|
 |**🔥 Day46 (2.9)**|**🔥 Day53 (2.16)**|
 |[Database2.9/SQL](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/database2.9.md) <br/> [SQL_Practice2.9](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/sqlpractice2.9.sql)||
 |**🔥 Day47 (2.10)**|**🔥 Day54 (2.17)**|
