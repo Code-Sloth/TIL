@@ -21,7 +21,7 @@
 |**🔥 Day45 (2.8)**|**🔥 Day52 (2.15)**|
 |[Database2.8/RDBMS](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/database2.8.md) <br/> [MySQL_Guide](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/MySQLguide.md)|[Database2.15/Join](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/database2.15.md) <br/> [SQL_Practice2.15](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/sqlpractice2.15.sql)|
 |**🔥 Day46 (2.9)**|**🔥 Day53 (2.16)**|
-|[Database2.9/SQL](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/database2.9.md) <br/> [SQL_Practice2.9](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/sqlpractice2.9.sql)||
+|[Database2.9/SQL](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/database2.9.md) <br/> [SQL_Practice2.9](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/sqlpractice2.9.sql)|[Database2.16/Subquery](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/database2.16.md) <br/> [SQL_Practice2.16](https://github.com/Code-Sloth/TIL/blob/master/kdt_week8/sqlpractice2.16.sql)|
 |**🔥 Day47 (2.10)**|**🔥 Day54 (2.17)**|
 |[Mlp_Algorithm21](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm21.md) <br/>[Sweatest2.10](https://github.com/Code-Sloth/TIL/blob/master/kdt_week7/sweatest2.10.py)||
 |**☁ Day48 (2.11) / Weekend**|**☁ Day55 (2.18) / Weekend**|
