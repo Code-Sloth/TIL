@@ -17,7 +17,7 @@
 |**🔥 Day57 (2.20)**|**🔥 Day64 (2.27)**|
 |[Database2.20/Trigger](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/database2.20.md)||
 |**🔥 Day58 (2.21)**|**🔥 Day65 (2.28)**|
-|||
+|[Database2.21/ERD](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/database2.21.md)||
 |**🔥 Day59 (2.22)**|**🔥 Day66 (3.1)**|
 |||
 |**🔥 Day60 (2.23)**|**🔥 Day67 (3.2)**|
