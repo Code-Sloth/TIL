@@ -19,7 +19,7 @@
 |**🔥 Day58 (2.21)**|**🔥 Day65 (2.28)**|
 |[Database2.21/ERD](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/database2.21.md)||
 |**🔥 Day59 (2.22)**|**🔥 Day66 (3.1)**|
-|||
+|[HTML/CSS2.22](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html2.22.md) <br/> [HTML/CSS_Practice2.22](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html_practice2.22.2.html)||
 |**🔥 Day60 (2.23)**|**🔥 Day67 (3.2)**|
 |||
 |**🔥 Day61 (2.24)**|**🔥 Day68 (3.3)**|
