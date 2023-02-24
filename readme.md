@@ -23,7 +23,7 @@
 |**🔥 Day60 (2.23)**|**🔥 Day67 (3.2)**|
 |[HTML/CSS2.23/Box](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html2.23.md) <br/> [HTML/CSS_Practice2.23](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html_practice2.23.html)||
 |**🔥 Day61 (2.24)**|**🔥 Day68 (3.3)**|
-|||
+|[HTML/CSS_Profile_Practice](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/pj2.24.2.html)||
 |**☁ Day62 (2.25) / Weekend**|**☁ Day69 (3.4) / Weekend**|
 |||
 |**☁ Day63 (2.26) / Weekend**|**☁ Day70 (3.5) / Weekend**|
