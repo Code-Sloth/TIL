@@ -25,7 +25,7 @@
 |**🔥 Day61 (2.24)**|**🔥 Day68 (3.3)**|
 |[HTML/CSS_Profile_Practice](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/pj2.24.2.html)||
 |**☁ Day62 (2.25) / Weekend**|**☁ Day69 (3.4) / Weekend**|
-|||
+|[Mlp_Algorithm23](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm23.md)||
 |**☁ Day63 (2.26) / Weekend**|**☁ Day70 (3.5) / Weekend**|
 |||
 
