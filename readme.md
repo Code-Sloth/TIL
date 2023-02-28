@@ -17,7 +17,7 @@
 |**🔥 Day57 (2.20)**|**🔥 Day64 (2.27)**|
 |[Database2.20/Trigger](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/database2.20.md)|[HTML/CSS2.27/Position](https://github.com/Code-Sloth/TIL/blob/master/kdt_week10/html2.27.md) <br/> [HTML/CSS_Practice2.27](https://github.com/Code-Sloth/TIL/blob/master/kdt_week10/html_practice2.27/html_practice2.27.3.html)|
 |**🔥 Day58 (2.21)**|**🔥 Day65 (2.28)**|
-|[Database2.21/ERD](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/database2.21.md)||
+|[Database2.21/ERD](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/database2.21.md)|[HTML/CSS2.28/Flex](https://github.com/Code-Sloth/TIL/blob/master/kdt_week10/html2.28.md) <br/> [HTML/CSS_Practice2.28](https://github.com/Code-Sloth/TIL/blob/master/kdt_week10/html_practice2.28/html_practice2.28.4.html)|
 |**🔥 Day59 (2.22)**|**🔥 Day66 (3.1)**|
 |[HTML/CSS2.22](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html2.22.md) <br/> [HTML/CSS_Practice2.22](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html_practice2.22.2.html)||
 |**🔥 Day60 (2.23)**|**🔥 Day67 (3.2)**|
