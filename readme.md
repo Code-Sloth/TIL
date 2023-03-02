@@ -21,7 +21,7 @@
 |**🔥 Day59 (2.22)**|**🔥 Day66 (3.1)**|
 |[HTML/CSS2.22](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html2.22.md) <br/> [HTML/CSS_Practice2.22](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html_practice2.22.2.html)|[Python_SpeedUp](https://github.com/Code-Sloth/TIL/blob/master/kdt_week10/python_speedup.md)|
 |**🔥 Day60 (2.23)**|**🔥 Day67 (3.2)**|
-|[HTML/CSS2.23/Box](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html2.23.md) <br/> [HTML/CSS_Practice2.23](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html_practice2.23.html)||
+|[HTML/CSS2.23/Box](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html2.23.md) <br/> [HTML/CSS_Practice2.23](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/html_practice2.23.html)|[HTML/CSS3.2/Semantics](https://github.com/Code-Sloth/TIL/blob/master/kdt_week10/html3.2.md) <br/> [HTML/CSS_Practice3.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week10/html_practice3.2/html_practice3.2.3.html)|
 |**🔥 Day61 (2.24)**|**🔥 Day68 (3.3)**|
 |[HTML/CSS_Profile_Practice](https://github.com/Code-Sloth/TIL/blob/master/kdt_week9/pj2.24.2.html)||
 |**☁ Day62 (2.25) / Weekend**|**☁ Day69 (3.4) / Weekend**|
