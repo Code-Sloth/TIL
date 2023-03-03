@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/24c831e198.js" crossorigin="anonymous"></script>
+  <style>
+    @font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    * {
+      font-family: 'GangwonEduPowerExtraBoldA';
+    }
+
+    /* Block */
+    body {
+      background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/a43711df-c428-4f88-8bb3-b2ac5f20608f/c7cd631d-4f1f-46e1-b1a4-2ea3c93d9301/KR-ko-20230227-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 20px auto;
+      background-color: rgb(17, 16, 16);
+    }
+
+    .side {
+      background-color: black;
+      display: flex;
+      flex-flow: column wrap;
+
+      width: 14%;
+      height: 930px;
+      position: sticky;
+      top: 0;
+      
+      align-items: center;
+    }
+
+    .section {
+      display: flex;
+      flex-flow: column wrap;
+
+      width: 85%;
+      flex-grow: 1;
+      
+      
+    }
+
+    /* Element */
+    .section__nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      position: sticky;
+      top: 0;
+
+      width: 100%;
+      height: 100px;
+      margin-right: 0;
+
+      background-color: black;
+
+    }
+
+    .section__content {
+      display: flex;
+      flex-wrap: wrap;
+
+      width: 100%;
+      height: 1620px;
+
+    }
+
+    .section__footer {
+      display: flex;
+      flex-flow: column wrap;
+      background-color: black;
+
+      width: 100%;
+      height: 100px;
+      margin-top: 200px;
+
+    }
+
+    .section__content__header {
+      width: 100%;
+      height: 600px;
+    }
+
+    .section_footer__box {
+      margin-left: auto;
+      margin-top: 20px;
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    /* Modify */
+
+    .side--logo {
+      width: 80%;
+      margin-top: 30px;
+    }
+
+    .side a {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+
+      margin-top: 40px;
+    }
+
+    .section__nav--button {
+      flex-basis: 150px;
+      height: 50px;
+      margin-right: 20px;
+      background-color: black;
+      border: 0.5px solid white;
+      border-radius: 30px;
+
+      display:inline-flex;
+      align-items:center;
+      justify-content: center;
+
+      color: white;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .section__nav--sortright {
+      margin-left: auto;
+    }
+
+    .section__nav--search {
+      border: 2px solid white;
+      background-color: black;
+      height: 50px;
+      width: 400px;
+      text-align: end;
+      margin-left: 50px;
+
+      border-radius: 30px;
+    }
+
+    .section__content--sort {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 10px;
+    }
+
+    .section__content--sort img {
+      width: 340px;
+      margin: 10px;
+    }
+
+    .section__content--title {
+      width: 500px;
+      font-size: 25px;
+      color: white;
+      margin-left: 20px;
+      
+    }
+
+    .section__footer--text {
+      color: dimgray;
+      flex-basis: content;
+      margin: 0;
+    }
+
+    .section__footer--title {
+      font-size: 30px;
+      color: dimgray;
+      width: fit-content;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+
+    .icon {
+      font-size: 20px;
+      margin-right: 20px;
+      margin-top: 16px;
+    }
+
+    .section__content a img {
+      transition: all 0.2s linear;
+    }
+    .section__content a:hover img {
+      transform: scale(1.4);
+    }    
+
+  </style>
+</head>
+<body>
+  <main class="main">
+    <div class="side">
+      <img class="side--logo" src="netflix.png" alt="#">
+      <a style="margin-top:100px" href="https://www.netflix.com/browse">홈</a>
+      <a href="https://www.netflix.com/browse/genre/83">시리즈</a>
+      <a href="https://www.netflix.com/browse/genre/34399">영화</a>
+      <a href="https://www.netflix.com/latest">대세 콘텐츠</a>
+      <a href="https://www.netflix.com/browse/my-list">찜한 콘텐츠</a>
+      <a href="https://www.netflix.com/browse/original-audio">언어별 검색</a>
+    </div>
+
+    <section class="section">
+
+      <nav class="section__nav">
+        <div class="section__nav--search"><i style="color:white" class="fa-solid fa-magnifying-glass icon"></i></div>
+        <a class="section__nav--button section__nav--sortright" href="https://www.netflix.com/kr/"><p style="margin-top:25px">회원 가입</p></a>
+        <a class="section__nav--button" href="https://www.netflix.com/kr/login"><p style="margin-top:25px">로그인</p></a>
+      </nav>
+  
+      <content class="section__content">
+        <img class="section__content__header" src="header.png" alt="나의 나라">
+        
+        <p class="section__content--title">넷플릭스 인기 콘텐츠</p>
+        <div class="section__content--sort">
+          <a href="https://www.netflix.com/search?q=%EB%8D%94%EA%B8%80%EB%A1%9C%EB%A6%AC&jbv=81519223"><img src="01_더글로리.jpg" alt="더 글로리"></a>
+          <a href="https://www.netflix.com/kr/title/81343748"><img src="05_수리남.jpg" alt="수리남"></a>
+          <a href="https://www.netflix.com/kr/title/81633267"><img src="06_재벌집막내아들.jpg" alt="재벌집막내아들"></a>
+          <a href="https://www.netflix.com/kr/title/81012510"><img src="10_도깨비.jpg" alt="도깨비"></a>
+        </div>
+
+        <p class="section__content--title">지금 뜨는 콘텐츠</p>
+        <div class="section__content--sort">
+          <a href="https://www.netflix.com/kr/title/81594904"><img src="02_아무것도하고싶지않아.jpg" alt="아무것도하고싶지않아"></a>
+          <a href="https://www.netflix.com/kr/Title/81650113"><img src="03_세자매.jpg" alt="세자매"></a>
+          <a href="https://www.netflix.com/kr/title/81425050"><img src="04_디보션.jpg" alt="디보션"></a>
+          <a href="https://www.netflix.com/kr/title/81486812"><img src="07_치히로상.jpg" alt="치히로상"></a>
+        </div>
+
+        <p class="section__content--title">한국 드라마</p>
+        <div class="section__content--sort">
+          <a href="https://www.netflix.com/kr/title/80214406"><img src="09_슬기로운감빵생활.jpg" alt="슬기로운감빵생활"></a>
+          <a href="https://www.netflix.com/kr/title/81611740"><img src="11_사랑의 이해.jpg" alt="사랑의 이해"></a>
+          <a href="https://www.netflix.com/kr/title/81239224"><img src="12_슬기로운 의사생활.jpg" alt="슬기로운 의사생활"></a>
+          <a href="https://www.netflix.com/kr/title/80991107"><img src="13_미스터 선샤인.jpg" alt="미스터 선샤인"></a>
+        </div>
+
+        <p class="section__content--title">새로 올라온 콘텐츠</p>
+        <div class="section__content--sort">
+          <a href="https://www.netflix.com/kr/title/81657535"><img src="14_빨간풍선.jpg" alt="빨간풍선"></a>
+          <a href="https://www.netflix.com/browse?jbv=81502485"><img src="https://occ-0-1361-3996.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZL_WDH9Xy5hLNy75Ge_IG_HgugPu_WM1xNVp703zC5MiDenRJDIVY1JhBYarJo2R74HAOaIxPqCNnIl4ZhuEJHdq5DCL5_4ToSZdwwG6Pe1Lj-1qgQzH1TnYjKTeZoHC5kCo72otPsMaZNMhxInfz2uKh_bKrXUuEUV.webp?r=78f" alt="노스맨"></a>
+          <a href="https://www.netflix.com/browse?jbv=80066080"><img src="https://occ-0-1361-3996.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUy3UdI_N5JH4rSWKcTH4imIY4sRi4GgB0g1Tio-9Ll8F9jNDNFeWI1r72VLZuducjvYjQk5V25hVS0O0eJpFRZMy2O_KA3P0mL_axqS3IOgdTA4_fxCDkrfiYRRAJly8Ru1HCKhxOxPEzafHew-LPcbXWynCZRgklhouFOWyEE9KR01p3JvixBMpbBdpRp8WyxvKKrQja8wCDmTGbEMlRkH45d7PvCZ85iF7Gab2jwJrOU44rsGeosZ7FBuBOS9nzeYRFb6spSwMGvugBAAszF8OCLLBY4.webp?r=aab" alt="레전드 오브 투모로우"></a>
+          <a href="https://www.netflix.com/browse?jbv=80230619"><img src="https://occ-0-1361-3996.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABa8laMg1HNkaaP2DwBgKlwLXSYCyKcxDofUCw6TyDJwiWUuJBDmSse7MAO6eXdwLi65WrH1C20mgA96oKzlu9k577w-SxDDWTMyhTRE2PnLwliq_lSIanXaWuBaCCmIvyDQh4d7z8K_vJ2m_Nid-DNryy1SvL2ofrCXCt9fsLXJ1cZOyQbfE5qkEi0WD7tPH.jpg?r=e2e" alt="위 해브 어 고스트"></a>
+        </div>
+
+      </content>
+  
+      <footer class="section__footer">
+        <div class="section__footer--title">NETFLIX</div>
+        <div class="section_footer__box">
+          <p class="section__footer--text">조 : 13조</p>
+          <p class="section__footer--text">저자 : 이민욱 유주현 서유영</p>
+          <p class="section__footer--text">이메일 : djqmflsk@naver.com dbwnwngus@naver.com yuyoung.dev@gmail.com </p>
+        </div>
+      </footer>
+
+    </section>
+
+  </main>
+</body>
+</html>
