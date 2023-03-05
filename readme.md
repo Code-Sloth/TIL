@@ -27,7 +27,7 @@
 |**☁ Day62 (2.25) / Weekend**|**☁ Day69 (3.4) / Weekend**|
 |[Mlp_Algorithm23](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm23.md)|[Mlp_Algorithm14](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm14.md)|
 |**☁ Day63 (2.26) / Weekend**|**☁ Day70 (3.5) / Weekend**|
-|[Mlp_Algorithm25](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm25.md)||
+|[Mlp_Algorithm25](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm25.md)|[Mlp_Algorithm15](https://github.com/Code-Sloth/TIL/blob/master/mlp/mlp_algorithm15.md)|
 
 <br/>
 
