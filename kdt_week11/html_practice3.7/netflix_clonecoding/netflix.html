@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    @font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    * {
+      font-family: 'GangwonEduPowerExtraBoldA';
+    }
+
+    body {
+      background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/a43711df-c428-4f88-8bb3-b2ac5f20608f/c7cd631d-4f1f-46e1-b1a4-2ea3c93d9301/KR-ko-20230227-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    }
+
+    a img {
+      transition: all 0.2s linear;
+    }
+    a:hover img {
+      transform: scale(1.4);
+    }    
+
+    .sticky-top a {
+      width: fit-content;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="row gx-0">
+
+      <!-- 사이드 바 -->
+      <div class="col-2 bg-black text-center">
+
+        <div class="sticky-top">
+          
+          <img class="w-75 my-3" src="netflix.png" alt="netflix logo">
+          <ul class="list-group text-center my-5">
+
+            <a href="https://www.netflix.com/browse" class="list-group-item list-group-item-action bg-black text-white border-0 my-3 fs-5 mx-auto">홈</a>
+            <a href="https://www.netflix.com/browse/genre/83" class="list-group-item list-group-item-action bg-black text-white border-0 my-3 fs-5 mx-auto">시리즈</a>
+            <a href="https://www.netflix.com/browse/genre/34399" class="list-group-item list-group-item-action bg-black text-white border-0 my-3 fs-5 mx-auto">영화</a>
+            <a href="https://www.netflix.com/latest" class="list-group-item list-group-item-action bg-black text-white border-0 my-3 fs-5 mx-auto">대세 콘텐츠</a>
+            <a href="https://www.netflix.com/browse/my-list" class="list-group-item list-group-item-action bg-black text-white border-0 my-3 fs-5 mx-auto">찜한 콘텐츠</a>
+            <a href="https://www.netflix.com/browse/original-audio" class="list-group-item list-group-item-action bg-black text-white border-0 my-3 fs-5 mx-auto">언어별 검색</a>
+            
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- 오른쪽 전체 -->
+      <div class="col-10 bg-black">
+        
+        <!-- 네비게이션 바 -->
+        <nav class="navbar navbar-expand-lg bg-black text-white sticky-top">
+          <div class="container-fluid">
+            
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 bg-tertiary" type="search" aria-label="Search">
+              <button class="btn btn-outline-dark text-white" type="submit">Search</button>
+            </form>
+
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://www.netflix.com/kr/">회원 가입</a></li>
+                <li><a class="dropdown-item" href="https://www.netflix.com/kr/login">로그인</a></li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+        <!-- 메인 이미지 -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="header.png" class="d-block w-100" alt="header1">
+            </div>
+            <div class="carousel-item">
+              <img src="header2.png" class="d-block w-100" alt="header2">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!-- 콘텐츠 목록 -->
+        <div>
+          <p class="h4 text-white mt-5">넷플릭스 인기 콘텐츠</p>
+
+          <div class="row bg-black w-100">
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/search?q=%EB%8D%94%EA%B8%80%EB%A1%9C%EB%A6%AC&jbv=81519223"><img class="img-fluid" src="01_더글로리.jpg" alt="더 글로리"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/81343748"><img class="img-fluid" src="05_수리남.jpg" alt="수리남"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/81633267"><img class="img-fluid" src="06_재벌집막내아들.jpg" alt="재벌집막내아들"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/81012510"><img class="img-fluid" src="10_도깨비.jpg" alt="도깨비"></a>
+            </div>
+            
+          </div>
+
+          <p class="h4 text-white mt-5">지금 뜨는 콘텐츠</p>
+
+          <div class="row bg-black w-100">
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/81594904"><img class="img-fluid" src="02_아무것도하고싶지않아.jpg" alt="아무것도하고싶지않아"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/Title/81650113"><img class="img-fluid" src="03_세자매.jpg" alt="세자매"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/81425050"><img class="img-fluid" src="04_디보션.jpg" alt="디보션"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/81486812"><img class="img-fluid" src="07_치히로상.jpg" alt="치히로상"></a>
+            </div>
+
+          </div>
+
+          <p class="h4 text-white mt-5">한국 드라마</p>
+
+          <div class="row bg-black w-100">
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/80214406"><img class="img-fluid" src="09_슬기로운감빵생활.jpg" alt="슬기로운감빵생활"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/81611740"><img class="img-fluid" src="11_사랑의 이해.jpg" alt="사랑의 이해"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/81239224"><img class="img-fluid" src="12_슬기로운 의사생활.jpg" alt="슬기로운 의사생활"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/kr/title/80991107"><img class="img-fluid" src="13_미스터 선샤인.jpg" alt="미스터 선샤인"></a>
+            </div>
+
+          </div>
+
+          <p class="h4 text-white mt-5">새로 올라온 콘텐츠</p>
+
+          <div class="row bg-black w-100">
+
+            <div class="col-3 mb-5">
+              <a href="https://www.netflix.com/kr/title/81657535"><img class="img-fluid" src="14_빨간풍선.jpg" alt="빨간풍선"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/browse?jbv=81502485"><img class="img-fluid" src="https://occ-0-1361-3996.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZL_WDH9Xy5hLNy75Ge_IG_HgugPu_WM1xNVp703zC5MiDenRJDIVY1JhBYarJo2R74HAOaIxPqCNnIl4ZhuEJHdq5DCL5_4ToSZdwwG6Pe1Lj-1qgQzH1TnYjKTeZoHC5kCo72otPsMaZNMhxInfz2uKh_bKrXUuEUV.webp?r=78f" alt="노스맨"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/browse?jbv=80066080"><img class="img-fluid" src="https://occ-0-1361-3996.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUy3UdI_N5JH4rSWKcTH4imIY4sRi4GgB0g1Tio-9Ll8F9jNDNFeWI1r72VLZuducjvYjQk5V25hVS0O0eJpFRZMy2O_KA3P0mL_axqS3IOgdTA4_fxCDkrfiYRRAJly8Ru1HCKhxOxPEzafHew-LPcbXWynCZRgklhouFOWyEE9KR01p3JvixBMpbBdpRp8WyxvKKrQja8wCDmTGbEMlRkH45d7PvCZ85iF7Gab2jwJrOU44rsGeosZ7FBuBOS9nzeYRFb6spSwMGvugBAAszF8OCLLBY4.webp?r=aab" alt="레전드 오브 투모로우"></a>
+            </div>
+
+            <div class="col-3">
+              <a href="https://www.netflix.com/browse?jbv=80230619"><img class="img-fluid" src="https://occ-0-1361-3996.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABa8laMg1HNkaaP2DwBgKlwLXSYCyKcxDofUCw6TyDJwiWUuJBDmSse7MAO6eXdwLi65WrH1C20mgA96oKzlu9k577w-SxDDWTMyhTRE2PnLwliq_lSIanXaWuBaCCmIvyDQh4d7z8K_vJ2m_Nid-DNryy1SvL2ofrCXCt9fsLXJ1cZOyQbfE5qkEi0WD7tPH.jpg?r=e2e" alt="위 해브 어 고스트"></a>
+            </div>
+
+          </div> 
+
+        </div>
+
+        <!-- 푸터 -->
+        <div>
+          <p class="fs-2">NETFLIX</p>
+        </div>
+   
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
