@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- 부트스트랩 및 부트스트랩 Datepicker CSS 파일 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    
+    <!-- 부트스트랩 Datepicker 언어 파일 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.kr.min.js"></script>
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/24c831e198.js" crossorigin="anonymous"></script>
+    <style>
+      a {
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      @media (max-width:767px) {
+        .container {
+          margin: 0;
+          max-width: 100%;
+        }
+        .main-box { 
+          width : 100%;
+          margin-top: 30px;
+          padding: 32px;
+          z-index: 2;
+          background-color: white;
+        }
+
+        .icon-box {
+          width: 160px;
+          height: 115px;
+          background-color: white;
+          border-radius: 15px;
+          box-shadow: 0px 6px 20px rgb(0 0 0/20%);
+          padding: 30px;
+          font-size: 18px;
+          font-weight: bold;
+          flex-grow: 1;
+          min-width: 180px;
+        }
+
+        .room_img {
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .room_img2 {
+          width: 100%;
+          object-fit: fill;
+        }
+
+        .icon-boxes {
+          flex-wrap: wrap;
+        }
+      }
+
+      @media (min-width:768px) {
+        .container {
+          margin-left: 80px;
+          margin-right: 80px;
+        }
+        .main-box { 
+          width : 420px;
+          margin-top: 30px;
+          padding: 32px;
+          z-index: 2;
+          background-color: white;
+          border-radius: 15px;
+          box-shadow: 0px 6px 20px rgb(0 0 0/20%);
+        }
+
+        .rowcontainer {
+          width: 440px;
+        }
+
+        .icon-box {
+          width: 220px;
+          height: 115px;
+          background-color: white;
+          border-radius: 15px;
+          box-shadow: 0px 6px 20px rgb(0 0 0/20%);
+          padding: 30px;
+          font-size: 18px;
+          font-weight: bold;
+          flex-grow: 1;
+        }
+
+        .room_img {
+          width: 416px;
+          height: 416px;
+          object-fit: fill;
+        }
+
+        .room_img2 {
+          width: 308px;
+          height: 308px;
+          object-fit: cover;
+        }
+
+        .main-img {
+          width: 55%;
+          display: inline-block;
+          top: 0;
+          right: 0;
+          position: absolute;
+        }
+
+        .img-box {
+
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .container {
+          margin: auto;
+        }
+      }
+
+      .input_box {
+        border: solid 2px lightgrey;
+        border-radius: 8px;
+        padding: 8px 16px;
+        margin-bottom: 8px;
+      }
+
+      .input_box2 {
+        border: solid 2px lightgrey;
+        border-radius: 8px;
+        padding: 0;
+        margin-bottom: 8px;
+      }
+
+      .label1 {
+        font-size: 5px;
+      }
+
+      .title {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-weight: bold;
+      }
+
+      .article {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        font-weight: lighter;
+      }
+
+      .sm_article {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-weight: lighter;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="sticky-top bg-body-tertiary">
+      <div class="container">
+          <nav class="navbar">
+              <div class="container-fluid d-flex">
+                <a class="navbar-brand" href="#">
+                  <div class="d-flex">
+                      <span><svg  class="me-2" viewBox="0 0 1000 1000" role="img" color= "#ff385c" aria-hidden="false" aria-label="에어비앤비 홈페이지" focusable="false" style="height: 32px; width: 32px; display: block; fill: currentColor;"><path d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"></path></svg></span>
+                      <span style="color: #ff385c;">airbnb</span>
+                  </div>
+                </a>
+                <div>
+                  <a class="text-dark me-2" href="">호스팅 시작하기</a>
+                  <a class="text-dark me-2" href="">회원가입</a>
+                  <a class="text-dark" href="">로그인</a>
+                </div>
+              </div>
+          </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div style="position: relative; height: content;">
+        <div class="main-box">
+            <h3 class="fw-bold mx-0 mt-0 mb-2 fw-bold">한국의 휴가 임대 시설</h3>
+            <p class="p-1">에어비앤비에서 독특한 숙소를 예약하세요.</p>
+            <div class="input_box" >
+              <p class="m-0 label1">위치</p>
+              <div>      
+                  <input type="text" class="form-control" style="border:none; padding:0px; height: fit-content;"  id="place" value="한국" placeholder="어디든지">
+              </div>
+            </div>
+            <div class="input_box2 d-flex">
+              <div style="width: 50%; padding: 8px 16px;">
+                <p class="m-0 label1">체크인</p>
+                <input type="text" class="form-control" style="border:none; padding:0px; height: fit-content;"  id="datepicker" placeholder="날짜 입력">
+              </div>
+              <div style="width: 50%; padding: 8px 16px;">
+                <p class="m-0 label1">체크아웃</p>
+                <input type="text" class="form-control" style="border:none; padding:0px; height: fit-content;"  id="datepicker2" placeholder="날짜 입력">
+              </div>
+            </div>
+            <div class="input_box2 d-flex">
+              <div style="width: 50%; padding: 8px 16px;">
+                <p class="m-0 label1">성인</p>
+                <select style="border: none; font-size: 16px;" class="form-select p-0">
+                  <option selected>1</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                </select>
+              </div>
+              <div style="width: 50%; padding: 8px 16px;">
+                <p class="m-0 label1">어린이</p>
+                <select style="border: none; font-size: 16px;" class="form-select p-0">
+                  <option selected>0</option>
+                  <option value="1">0</option>
+                  <option value="2">1</option>
+                  <option value="3">2</option>
+                  <option value="4">3</option>
+                  <option value="5">4</option>
+                  <option value="6">5</option>
+                  <option value="7">6</option>
+                </select>
+              </div>
+            </div>
+            <button type="button" class="btn mt-3" style="border-radius: 8px; width:100%; height:48px; background-color: #e41d53; color: white;">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>검색</span>
+            </button>
+        </div>
+        <div class="d-none d-xxl-block main-img">
+          <img class="img-fluid" src="img/00.webp" alt="">
+        </div>
+      </div>
+
+      <div>
+        <h3 class="mt-5 fw-bold">최고 평점을 받은 한국의 휴가 숙소</h3>
+        <p>위치, 청결도 등에서 게스트의 높은 평가를 받은 숙소입니다.</p>
+        <div class="row">
+          <div class="rowcontainer col-md-4">
+            <div class="d-flex flex-column">
+              <img style="border-radius: 10px;" class="room_img mb-2" src="img/01.webp" alt="">
+              <div class="w-100 d-flex mb-0" style="height: 24px;">
+                <p style="width: 90%; height: 24px;" class="title flex-grow-1 mb-0">마포구의 공동 주택</p>
+                <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+              </div>
+              <p class="article">TERRACE HOUSE in Mangwon [PETIT REST 작은 휴식]
+                ‘Terrace House’ in Mangwon-dong, a place where you can heal your mind and soul with drinking warm tea or coffee while looking at the terrace view with quiet music. You can take a walk, sit back, relax and enjoy the sparkling gloss, beautiful sky, and sunset of the Han River Park which is nearby. You can also experience various tasty foods in Mangwon Market and restaurants and cafes in Mangridan-gil area. Enjoy the charm of Mangwon-dong, the one of the best place to live and to travel in Korea.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-column">
+              <img style="border-radius: 10px;" class="room_img mb-2" src="img/02.webp" alt="">
+              <div class="w-100 d-flex mb-0" style="height: 24px;">
+                <p style="width: 90%; height: 24px;" class="title flex-grow-1 mb-0">Gimsatgat-myeon, Yeongweol의 게스트용 별이 보이는 감성충만 프라이빗 복층 Cosmos Room</p>
+                <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+              </div>
+              <p class="article">별이 보이는 감성충만 프라이빗 복층 Cosmos Room
+                영월의 스테이하우스는 커플이 프라이빗하게 쉬기 좋은 객실입니다. 
+                복층 구조로 되어있어 2층에 올라가면, 아늑하고 따뜻한 느낌의 객실에서 편안하게 즐기실 수 있습니다.
+                창밖으로 들리는 계곡물소리와 지저귀는 새소리 그리고 맑은 공기는 도시에서 지친 마음에 휴식을 주며 매일 청결하게 관리하는 침구는 편안한 잠자리를 제공합니다. 
+                김삿갓계곡의 외씨버선길과 가깝고 숙소 바로 앞에는 아름다운 계곡이 흐르고 있습니다.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex flex-column">
+              <img style="border-radius: 10px;" class="room_img mb-2" src="img/03.webp" alt="">
+              <div class="w-100 d-flex mb-0" style="height: 24px;">
+                <p style="width: 90%; height: 24px;" class="title flex-grow-1 mb-0">Cheomdangwahak-ro, Jeongeup-si의 돔하우스</p>
+                <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+              </div>
+              <p class="article">꽃담원(꽃담아카데미)
+                국립공원 내장산 구역안에 있는 송죽마을(구 솔티)의 꽃담아카데미 내에 있습니다. 2층 다락이 딸린 20m2의 내부공간(침실, 주방, 욕실)과 40m2의 목재데크가 있는 아치형 방갈로 형태의 독립주택입니다. 주변이 국립공원이라 반딧불이 서식하고 있고 앞개울 건너에 담비가 사는 최고의 자연환경을 유지하고 있습니다. 가족단위 휴식과 팀단위 MT에 적합하며 돔온실도 있어 30명 정도의 당일 워크샵도 가능합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="mt-5 mb-3 fw-bold">한국의 휴가용 임대 숙소의 인기 편의시설</h3>
+        <div class="d-flex icon-boxes" style="gap: 10px;">
+          <div class="icon-box">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 30px; width: 30px; fill: #222;" aria-hidden="true" role="presentation" focusable="false"><path d="M26 1a5 5 0 0 1 5 5c0 6.389-1.592 13.187-4 14.693V31h-2V20.694c-2.364-1.478-3.942-8.062-3.998-14.349L21 6l.005-.217A5 5 0 0 1 26 1zm-9 0v18.118c2.317.557 4 3.01 4 5.882 0 3.27-2.183 6-5 6s-5-2.73-5-6c0-2.872 1.683-5.326 4-5.882V1zM2 1h1c4.47 0 6.934 6.365 6.999 18.505L10 21H3.999L4 31H2zm14 20c-1.602 0-3 1.748-3 4s1.398 4 3 4 3-1.748 3-4-1.398-4-3-4zM4 3.239V19h3.995l-.017-.964-.027-.949C7.673 9.157 6.235 4.623 4.224 3.364l-.12-.07zm19.005 2.585L23 6l.002.31c.045 4.321 1.031 9.133 1.999 11.39V3.17a3.002 3.002 0 0 0-1.996 2.654zm3.996-2.653v14.526C27.99 15.387 29 10.4 29 6a3.001 3.001 0 0 0-2-2.829z"></path></svg>
+            <p>주방</p>
+          </div>
+          <div class="icon-box">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 30px; width: 30px; fill: #222;" aria-hidden="true" role="presentation" focusable="false"><path d="m15.9999 20.33323c2.0250459 0 3.66667 1.6416241 3.66667 3.66667s-1.6416241 3.66667-3.66667 3.66667-3.66667-1.6416241-3.66667-3.66667 1.6416241-3.66667 3.66667-3.66667zm0 2c-.9204764 0-1.66667.7461936-1.66667 1.66667s.7461936 1.66667 1.66667 1.66667 1.66667-.7461936 1.66667-1.66667-.7461936-1.66667-1.66667-1.66667zm.0001-7.33323c3.5168171 0 6.5625093 2.0171251 8.0432368 4.9575354l-1.5143264 1.5127043c-1.0142061-2.615688-3.5549814-4.4702397-6.5289104-4.4702397s-5.5147043 1.8545517-6.52891042 4.4702397l-1.51382132-1.5137072c1.48091492-2.939866 4.52631444-4.9565325 8.04273174-4.9565325zm.0001-5.3332c4.9804693 0 9.3676401 2.540213 11.9365919 6.3957185l-1.4470949 1.4473863c-2.1746764-3.5072732-6.0593053-5.8431048-10.489497-5.8431048s-8.31482064 2.3358316-10.48949703 5.8431048l-1.44709488-1.4473863c2.56895177-3.8555055 6.95612261-6.3957185 11.93659191-6.3957185zm-.0002-5.3336c6.4510616 0 12.1766693 3.10603731 15.7629187 7.9042075l-1.4304978 1.4309874c-3.2086497-4.44342277-8.4328305-7.3351949-14.3324209-7.3351949-5.8991465 0-11.12298511 2.89133703-14.33169668 7.334192l-1.43047422-1.4309849c3.58629751-4.79760153 9.31155768-7.9032071 15.7621709-7.9032071z"></path></svg>
+            <p>무선 인터넷</p>
+          </div>
+          <div class="icon-box">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 30px; width: 30px; fill: #222;" aria-hidden="true" role="presentation" focusable="false"><path d="M24 26c.988 0 1.945.351 2.671 1.009.306.276.71.445 1.142.483L28 27.5v2l-.228-.006a3.96 3.96 0 0 1-2.443-1.003A1.978 1.978 0 0 0 24 28c-.502 0-.978.175-1.328.491a3.977 3.977 0 0 1-2.67 1.009 3.977 3.977 0 0 1-2.672-1.009A1.978 1.978 0 0 0 16 28c-.503 0-.98.175-1.329.491a3.978 3.978 0 0 1-2.67 1.009 3.978 3.978 0 0 1-2.672-1.008A1.978 1.978 0 0 0 8 28c-.503 0-.98.175-1.33.491a3.96 3.96 0 0 1-2.442 1.003L4 29.5v-2l.187-.008a1.953 1.953 0 0 0 1.142-.483A3.975 3.975 0 0 1 8 26c.988 0 1.945.352 2.671 1.009.35.316.826.49 1.33.491.502 0 .979-.175 1.328-.492A3.974 3.974 0 0 1 16 26c.988 0 1.945.351 2.671 1.009.35.316.826.49 1.33.491.502 0 .979-.175 1.328-.491A3.975 3.975 0 0 1 23.999 26zm0-5c.988 0 1.945.351 2.671 1.009.306.276.71.445 1.142.483L28 22.5v2l-.228-.006a3.96 3.96 0 0 1-2.443-1.003A1.978 1.978 0 0 0 24 23c-.502 0-.978.175-1.328.491a3.977 3.977 0 0 1-2.67 1.009 3.977 3.977 0 0 1-2.672-1.009A1.978 1.978 0 0 0 16 23c-.503 0-.98.175-1.329.491a3.978 3.978 0 0 1-2.67 1.009 3.978 3.978 0 0 1-2.672-1.008A1.978 1.978 0 0 0 8 23c-.503 0-.98.175-1.33.491a3.96 3.96 0 0 1-2.442 1.003L4 24.5v-2l.187-.008a1.953 1.953 0 0 0 1.142-.483A3.975 3.975 0 0 1 8 21c.988 0 1.945.352 2.671 1.009.35.316.826.49 1.33.491.502 0 .979-.175 1.328-.492A3.974 3.974 0 0 1 16 21c.988 0 1.945.351 2.671 1.009.35.316.826.49 1.33.491.502 0 .979-.175 1.328-.491A3.975 3.975 0 0 1 23.999 21zM20 3a4 4 0 0 1 3.995 3.8L24 7v2h4v2h-4v5c.912 0 1.798.3 2.5.862l.171.147c.306.276.71.445 1.142.483L28 17.5v2l-.228-.006a3.96 3.96 0 0 1-2.443-1.003A1.978 1.978 0 0 0 24 18c-.502 0-.978.175-1.328.491a3.977 3.977 0 0 1-2.67 1.009 3.977 3.977 0 0 1-2.672-1.009A1.978 1.978 0 0 0 16 18c-.503 0-.98.175-1.329.491a3.978 3.978 0 0 1-2.67 1.009 3.978 3.978 0 0 1-2.672-1.008A1.978 1.978 0 0 0 8 18c-.503 0-.98.175-1.33.491a3.96 3.96 0 0 1-2.442 1.003L4 19.5v-2l.187-.008a1.953 1.953 0 0 0 1.142-.483A3.975 3.975 0 0 1 8 16c.988 0 1.945.352 2.671 1.009.35.316.826.49 1.33.491.502 0 .979-.175 1.328-.492a3.956 3.956 0 0 1 2.444-1.002L16 16v-5H4V9h12V7a2 2 0 0 0-3.995-.15L12 7h-2a4 4 0 0 1 7-2.645A3.985 3.985 0 0 1 20 3zm-2 13.523c.16.091.313.194.459.307l.212.179c.35.316.826.49 1.33.491.439 0 .86-.134 1.191-.38l.137-.111c.206-.187.431-.35.67-.486V11h-4zM20 5a2 2 0 0 0-1.995 1.85L18 7v2h4V7a2 2 0 0 0-2-2z"></path></svg>
+            <p>수영장</p>
+          </div>
+          <div class="icon-box">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 30px; width: 30px; fill: #222;" aria-hidden="true" role="presentation" focusable="false"><path d="M16 1c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15C1 7.716 7.716 1 16 1zm0 2C8.82 3 3 8.82 3 16s5.82 13 13 13 13-5.82 13-13S23.18 3 16 3zm2 5a5 5 0 0 1 .217 9.995L18 18h-5v6h-2V8zm0 2h-5v6h5a3 3 0 0 0 .176-5.995z"></path></svg>
+            <p>건물 내 무료 주차</p>
+          </div>
+          <div class="icon-box">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display: block; height: 30px; width: 30px; fill: #222;" aria-hidden="true" role="presentation" focusable="false"><path d="M17 1v4.03l4.026-2.324 1 1.732L17 7.339v6.928l6-3.464V5h2v4.648l3.49-2.014 1 1.732L26 11.381l4.026 2.325-1 1.732L24 12.535l-6 3.464 6 3.465 5.026-2.902 1 1.732L26 20.618l3.49 2.016-1 1.732L25 22.351V27h-2v-5.804l-6-3.465v6.929l5.026 2.902-1 1.732L17 26.97V31h-2v-4.031l-4.026 2.325-1-1.732L15 24.66v-6.929l-6 3.464V27H7v-4.65l-3.49 2.016-1-1.732 3.489-2.016-4.025-2.324 1-1.732 5.025 2.901 6-3.464-6-3.464-5.025 2.903-1-1.732L6 11.38 2.51 9.366l1-1.732L7 9.648V5h2v5.803l6 3.464V7.339L9.974 4.438l1-1.732L15 5.03V1z"></path></svg>
+            <p>에어컨</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="mt-5 mb-3 fw-bold">한국의 다른 근사한 휴가 숙소</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div class="col">
+            <div class="card border-0">
+              <div class="img-box">
+                <img src="img/04.webp" class="card-img-top room_img2 rounded-3 mb-2" alt="...">
+              </div>
+              <div class="card-body p-0">
+                <div class="w-100 d-flex mb-0" style="height: 24px;">
+                  <p style="width: 80%; height: 24px;" class="title flex-grow-1 mb-0">마포구의 공동 주택</p>
+                  <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+                </div>
+                <p class="sm_article">TERRACE HOUSE in Mangwon [PETIT REST 작은 휴식]
+                  ‘Terrace House’ in Mangwon-dong, a place where you can heal your mind and soul with drinking warm tea or coffee while looking at the terrace view with quiet music. You can take a walk, sit back, relax and enjoy the sparkling gloss, beautiful sky, and sunset of the Han River Park which is nearby. You can also experience various tasty foods in Mangwon Market and restaurants and cafes in Mangridan-gil area. Enjoy the charm of Mangwon-dong, the one of the best place to live and to travel in Korea.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <div class="img-box">
+                <img src="img/05.webp" class="card-img-top room_img2 rounded-3 mb-2" alt="...">
+              </div>
+              <div class="card-body p-0">
+                <div class="w-100 d-flex mb-0" style="height: 24px;">
+                  <p style="width: 80%; height: 24px;" class="title flex-grow-1 mb-0">마포구의 공동 주택</p>
+                  <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+                </div>
+                <p class="sm_article">TERRACE HOUSE in Mangwon [PETIT REST 작은 휴식]
+                  ‘Terrace House’ in Mangwon-dong, a place where you can heal your mind and soul with drinking warm tea or coffee while looking at the terrace view with quiet music. You can take a walk, sit back, relax and enjoy the sparkling gloss, beautiful sky, and sunset of the Han River Park which is nearby. You can also experience various tasty foods in Mangwon Market and restaurants and cafes in Mangridan-gil area. Enjoy the charm of Mangwon-dong, the one of the best place to live and to travel in Korea.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <div class="img-box">
+                <img src="img/06.webp" class="card-img-top room_img2 rounded-3 mb-2" alt="...">
+              </div>
+              <div class="card-body p-0">
+                <div class="w-100 d-flex mb-0" style="height: 24px;">
+                  <p style="width: 80%; height: 24px;" class="title flex-grow-1 mb-0">마포구의 공동 주택</p>
+                  <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+                </div>
+                <p class="sm_article">TERRACE HOUSE in Mangwon [PETIT REST 작은 휴식]
+                  ‘Terrace House’ in Mangwon-dong, a place where you can heal your mind and soul with drinking warm tea or coffee while looking at the terrace view with quiet music. You can take a walk, sit back, relax and enjoy the sparkling gloss, beautiful sky, and sunset of the Han River Park which is nearby. You can also experience various tasty foods in Mangwon Market and restaurants and cafes in Mangridan-gil area. Enjoy the charm of Mangwon-dong, the one of the best place to live and to travel in Korea.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <div class="img-box">
+                <img src="img/07.webp" class="card-img-top room_img2 rounded-3 mb-2" alt="...">
+              </div>
+              <div class="card-body p-0">
+                <div class="w-100 d-flex mb-0" style="height: 24px;">
+                  <p style="width: 80%; height: 24px;" class="title flex-grow-1 mb-0">마포구의 공동 주택</p>
+                  <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+                </div>
+                <p class="sm_article">TERRACE HOUSE in Mangwon [PETIT REST 작은 휴식]
+                  ‘Terrace House’ in Mangwon-dong, a place where you can heal your mind and soul with drinking warm tea or coffee while looking at the terrace view with quiet music. You can take a walk, sit back, relax and enjoy the sparkling gloss, beautiful sky, and sunset of the Han River Park which is nearby. You can also experience various tasty foods in Mangwon Market and restaurants and cafes in Mangridan-gil area. Enjoy the charm of Mangwon-dong, the one of the best place to live and to travel in Korea.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <div class="img-box">
+                <img src="img/08.webp" class="card-img-top room_img2 rounded-3 mb-2" alt="...">
+              </div>
+              <div class="card-body p-0">
+                <div class="w-100 d-flex mb-0" style="height: 24px;">
+                  <p style="width: 80%; height: 24px;" class="title flex-grow-1 mb-0">마포구의 공동 주택</p>
+                  <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+                </div>
+                <p class="sm_article">TERRACE HOUSE in Mangwon [PETIT REST 작은 휴식]
+                  ‘Terrace House’ in Mangwon-dong, a place where you can heal your mind and soul with drinking warm tea or coffee while looking at the terrace view with quiet music. You can take a walk, sit back, relax and enjoy the sparkling gloss, beautiful sky, and sunset of the Han River Park which is nearby. You can also experience various tasty foods in Mangwon Market and restaurants and cafes in Mangridan-gil area. Enjoy the charm of Mangwon-dong, the one of the best place to live and to travel in Korea.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <div class="img-box">
+                <img src="img/09.webp" class="card-img-top room_img2 rounded-3 mb-2" alt="...">
+              </div>
+              <div class="card-body p-0">
+                <div class="w-100 d-flex mb-0" style="height: 24px;">
+                  <p style="width: 80%; height: 24px;" class="title flex-grow-1 mb-0">마포구의 공동 주택</p>
+                  <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+                </div>
+                <p class="sm_article">TERRACE HOUSE in Mangwon [PETIT REST 작은 휴식]
+                  ‘Terrace House’ in Mangwon-dong, a place where you can heal your mind and soul with drinking warm tea or coffee while looking at the terrace view with quiet music. You can take a walk, sit back, relax and enjoy the sparkling gloss, beautiful sky, and sunset of the Han River Park which is nearby. You can also experience various tasty foods in Mangwon Market and restaurants and cafes in Mangridan-gil area. Enjoy the charm of Mangwon-dong, the one of the best place to live and to travel in Korea.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <div class="img-box">
+                <img src="img/10.webp" class="card-img-top room_img2 rounded-3 mb-2" alt="...">
+              </div>
+              <div class="card-body p-0">
+                <div class="w-100 d-flex mb-0" style="height: 24px;">
+                  <p style="width: 80%; height: 24px;" class="title flex-grow-1 mb-0">마포구의 공동 주택</p>
+                  <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+                </div>
+                <p class="sm_article">TERRACE HOUSE in Mangwon [PETIT REST 작은 휴식]
+                  ‘Terrace House’ in Mangwon-dong, a place where you can heal your mind and soul with drinking warm tea or coffee while looking at the terrace view with quiet music. You can take a walk, sit back, relax and enjoy the sparkling gloss, beautiful sky, and sunset of the Han River Park which is nearby. You can also experience various tasty foods in Mangwon Market and restaurants and cafes in Mangridan-gil area. Enjoy the charm of Mangwon-dong, the one of the best place to live and to travel in Korea.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <div class="img-box">
+                <img src="img/11.webp" class="card-img-top room_img2 rounded-3 mb-2" alt="...">
+              </div>
+              <div class="card-body p-0">
+                <div class="w-100 d-flex mb-0" style="height: 24px;">
+                  <p style="width: 80%; height: 24px;" class="title flex-grow-1 mb-0">마포구의 공동 주택</p>
+                  <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star mb-0"></i> 4.9 (48)</p>
+                </div>
+                <p class="sm_article">TERRACE HOUSE in Mangwon [PETIT REST 작은 휴식]
+                  ‘Terrace House’ in Mangwon-dong, a place where you can heal your mind and soul with drinking warm tea or coffee while looking at the terrace view with quiet music. You can take a walk, sit back, relax and enjoy the sparkling gloss, beautiful sky, and sunset of the Han River Park which is nearby. You can also experience various tasty foods in Mangwon Market and restaurants and cafes in Mangridan-gil area. Enjoy the charm of Mangwon-dong, the one of the best place to live and to travel in Korea.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- 부트스트랩 및 부트스트랩 Datepicker JavaScript 파일 추가 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script>
+      // Datepicker 초기화
+      $(function() {
+        $('#datepicker').datepicker({
+          language: 'kr', // 한국어 언어 설정
+          autoclose: true, // 선택 시 자동으로 닫기
+          todayHighlight: true // 오늘 날짜 강조 표시
+        });
+
+        $('#datepicker2').datepicker({
+          language: 'kr', // 한국어 언어 설정
+          autoclose: true, // 선택 시 자동으로 닫기
+          todayHighlight: true // 오늘 날짜 강조 표시
+        });
+      });
+      
+      !function(a){a.fn.datepicker.dates.kr={days:["일요일","월요일","화요일","수요일","목요일","금요일","토요일"],daysShort:["일","월","화","수","목","금","토"],daysMin:["일","월","화","수","목","금","토"],months:["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"],monthsShort:["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]},a.fn.datepicker.deprecated('The language code "kr" is deprecated and will be removed in 2.0. For korean support use "ko" instead.')}(jQuery);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
