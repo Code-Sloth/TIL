@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .card {
+      width: 23%;
+      min-width: 150px;
+    }
+
+    .box {
+      position: relative;
+    }
+    .box::after {
+      display: block;
+      content: "";
+      padding-bottom: 100%;
+    }
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-text {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+    @media screen and (max-width: 768px) {
+      .card {
+        width: 48%;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .card {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="card" style="padding:0;">
+      <div class="card-img-top box">
+        <img src="https://a0.muscache.com/im/pictures/2b526bbb-0461-46cd-8b89-68cb4a251475.jpg?im_w=720" class="card-img-top content" alt="...">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  
+
+  
+    
+    <div class="card" style="padding:0;">
+      <div class="card-img-top box">
+        <img src="https://a0.muscache.com/im/pictures/2b526bbb-0461-46cd-8b89-68cb4a251475.jpg?im_w=720" class="card-img-top content" alt="...">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  
+
+  
+    
+    <div class="card" style="padding:0;">
+      <div class="card-img-top box">
+        <img src="https://a0.muscache.com/im/pictures/2b526bbb-0461-46cd-8b89-68cb4a251475.jpg?im_w=720" class="card-img-top content" alt="...">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  
+
+  
+    
+    <div class="card" style="padding:0;">
+      <div class="card-img-top box">
+        <img src="https://a0.muscache.com/im/pictures/2b526bbb-0461-46cd-8b89-68cb4a251475.jpg?im_w=720" class="card-img-top content" alt="...">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
