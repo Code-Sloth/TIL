@@ -25,7 +25,7 @@
 |**🔥 Day75 (3.10)**|**🔥 Day82 (3.17)**|
 |[Airbnb_CloneCoding](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/3.10/pj3.10.html)|[]()|
 |**☁ Day76 (3.11) / Weekend**|**☁ Day83 (3.18) / Weekend**|
-|[]()|[]()|
+|[CSS_Tip](https://github.com/Code-Sloth/TIL/tree/master/kdt_week11)|[]()|
 |**☁ Day77 (3.12) / Weekend**|**☁ Day84 (3.19) / Weekend**|
 |[]()|[]()|
 
