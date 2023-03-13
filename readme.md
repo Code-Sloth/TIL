@@ -15,7 +15,7 @@
 |week 11|week 12|
 |--|--|
 |**🔥 Day71 (3.6)**|**🔥 Day78 (3.13)**|
-|[HTML/CSS3.6/Bootstrap](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/html3.6.md) <br/> [HTML_Practice3.6.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/html_practice3.6/html_practice3.6.2.html) <br/> [HTML_Practice3.6.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/html_practice3.6/html_practice3.6.3.html)|[]()|
+|[HTML/CSS3.6/Bootstrap](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/html3.6.md) <br/> [HTML_Practice3.6.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/html_practice3.6/html_practice3.6.2.html) <br/> [HTML_Practice3.6.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/html_practice3.6/html_practice3.6.3.html)|[JavaScript3.13/DOM](https://github.com/Code-Sloth/TIL/blob/master/kdt_week12/html3.13.md) <br/> [JS_Practice3.13.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week12/html_practice3.13/js3.13.1.html) <br/> [JS_Practice3.13.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week12/html_practice3.13/js3.13.2.html)|
 |**🔥 Day72 (3.7)**|**🔥 Day79 (3,14)**|
 |[HTML/CSS3.7/Grid](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/html3.7.md) <br/> [NETFLIX_CloneCoding_Bootstrap](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/html_practice3.7/netflix_clonecoding/netflix.html)|[]()|
 |**🔥 Day73 (3.8)**|**🔥 Day80 (3.15)**|
