@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Event</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5 d-flex flex-column justify-content-center align-items-center">
+    <span id="result" class="display-1">0</span>
+    <div class="d-flex gap-2">
+      <input type="number" value="0" id="number" class="form-control">
+      <button id="plus" class="btn btn-lg btn-outline-primary">+</button>
+      <button id="minus" class="btn btn-lg btn-outline-danger">-</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+  /*
+    + - 버튼을 누를 때 마다 result 요소의 텍스트 변화(더하기, 빼기)
+    단, id가 number인 input의 value 만큼 더하기 빼기 수행
+  */
+  const resultId = document.querySelector('#result')
+  const inputTag = document.querySelector('#number')
+  const plusBtn = document.querySelector('#plus')
+  const minusBtn = document.querySelector('#minus')
+  let num = 0
+
+  inputTag.addEventListener('input', (event) => {
+    num = parseInt(event.target.value)
+  })
+
+  plusBtn.addEventListener('click', _ => {
+    newNum = parseInt(resultId.textContent) + num
+
+    if (-9 <= newNum && newNum <= 9) {
+    resultId.textContent = newNum
+    } else if (newNum > 9) {
+      resultId.textContent = 9
+    } else {
+      resultId.textContent = -9
+    }
+  })
+
+  minusBtn.addEventListener('click', _ => {
+    newNum = parseInt(resultId.textContent) - num
+
+    if (-9 <= newNum && newNum <= 9) {
+    resultId.textContent = newNum
+    } else if (newNum > 9) {
+      resultId.textContent = 9
+    } else {
+      resultId.textContent = -9
+    }
+  })
+
+</script>
+
+</html>
