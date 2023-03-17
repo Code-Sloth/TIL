@@ -23,7 +23,7 @@
 |**🔥 Day74 (3.9)**|**🔥 Day81 (3.16)**|
 |[MYBOX_CloneCoding](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/3.9/pj3.9.1.html)|[JavaScript3.16/Event](https://github.com/Code-Sloth/TIL/blob/master/kdt_week12/js3.16.md) <br/> [JS_Practice3.16.1](https://github.com/Code-Sloth/TIL/blob/master/kdt_week12/js_practice3.16/js3.16.1.html) <br/> [JS_Practice3.16.2](https://github.com/Code-Sloth/TIL/blob/master/kdt_week12/js_practice3.16/js3.16.2.html) <br/> [JS_Practice3.16.3](https://github.com/Code-Sloth/TIL/blob/master/kdt_week12/js_practice3.16/js3.16.3.html)|
 |**🔥 Day75 (3.10)**|**🔥 Day82 (3.17)**|
-|[Airbnb_CloneCoding](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/3.10/pj3.10.html)|[]()|
+|[Airbnb_CloneCoding](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/3.10/pj3.10.html)|[Lotto_CloneCoding](https://github.com/Code-Sloth/TIL/blob/master/kdt_week12/web_lotto/lotto_clone.html)|
 |**☁ Day76 (3.11) / Weekend**|**☁ Day83 (3.18) / Weekend**|
 |[Bootstrap](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/bootstrap.html) <br/> [Carousel](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/carousel.html)|[]()|
 |**☁ Day77 (3.12) / Weekend**|**☁ Day84 (3.19) / Weekend**|
