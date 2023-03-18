@@ -25,9 +25,9 @@
 |**🔥 Day75 (3.10)**|**🔥 Day82 (3.17)**|
 |[Airbnb_CloneCoding](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/3.10/pj3.10.html)|[Lotto_CloneCoding](https://github.com/Code-Sloth/TIL/blob/master/kdt_week12/web_lotto/lotto_clone.html)|
 |**☁ Day76 (3.11) / Weekend**|**☁ Day83 (3.18) / Weekend**|
-|[Bootstrap](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/bootstrap.html) <br/> [Carousel](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/carousel.html)|[]()|
+|[Bootstrap](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/bootstrap.html) <br/> [Carousel](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/carousel.html)|[Resposnsive](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/responsive.html)|
 |**☁ Day77 (3.12) / Weekend**|**☁ Day84 (3.19) / Weekend**|
-|[Image](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/image.html) <br/> [Resposnsive](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/responsive.html)|[]()|
+|[Image](https://github.com/Code-Sloth/TIL/blob/master/kdt_week11/image.html)|[]()|
 
 |week 9|week 10|
 |--|--|
