@@ -21,7 +21,7 @@
 <br/>
 
 ## [JavaScript](KDT/JavaScript)
-- [DOM](KDT/JavaScript/js3.13.md)
+- [DOM](KDT/JavaScript/Js3.13.md)
 - [Grammar](KDT/JavaScript/js3.14.md)
 - [Function/Object](KDT/JavaScript/js3.15.md)
 - [Event](KDT/JavaScript/js3.16.md)
@@ -60,9 +60,10 @@
 - [Time Complexity](KDT/Algorithm/algorithm1.17.md)
 - [Two-Dimensional List](KDT/Algorithm/algorithm1.30.md)
 - [Exhaustive Search](KDT/Algorithm/algorithm2.1.md)
-- [Implementation](KDT/Algorithm/algorithm2.6.md)
+- [DFS](KDT/Algorithm/algorithm2.6.md)
+- [Implementation](KDT/Algorithm/algorithm2.7.md)
 - [Collections](KDT/Algorithm/collections.md)
-- [Queue](KDT/Algorithm/queue.md)
+- [Stack/Queue](KDT/Algorithm/queue.md)
 - [Heap](KDT/Algorithm/heap.md)
 - [Speed Improvement](KDT/Algorithm/python_speedup.md)
 
