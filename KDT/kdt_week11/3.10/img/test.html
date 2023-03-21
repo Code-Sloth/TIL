@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- 부트스트랩 및 부트스트랩 Datepicker CSS 파일 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    
+    <!-- 부트스트랩 Datepicker 언어 파일 추가 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.kr.min.js"></script>
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/24c831e198.js" crossorigin="anonymous"></script>
+    <style>
+      a {
+        text-decoration: none;
+        font-weight: bold;
+      }
+      @media (max-width:767px) {
+        .container {
+          margin-left: 0;
+          max-width: 100%;
+        }
+        .main-box { 
+          width : 100%;
+          margin-top: 30px;
+          padding: 32px;
+          z-index: 2;
+          background-color: white;
+          border-radius: 15px;
+          box-shadow: 0px 6px 20px rgb(0 0 0/20%);
+        }
+      }
+
+      @media (min-width:768px) {
+        .container {
+          margin-left: 80px;
+        }
+        .main-box { 
+          width : 420px;
+          margin-top: 30px;
+          padding: 32px;
+          z-index: 2;
+          background-color: white;
+          border-radius: 15px;
+          box-shadow: 0px 6px 20px rgb(0 0 0/20%);
+        }
+
+        .rowcontainer {
+          width: 440px;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        .container {
+          margin: auto;
+        }
+      }
+
+      .input_box {
+        border: solid 2px lightgrey;
+        border-radius: 8px;
+        padding: 8px 16px;
+        margin-bottom: 8px;
+      }
+
+      .input_box2 {
+        border: solid 2px lightgrey;
+        border-radius: 8px;
+        padding: 0;
+        margin-bottom: 8px;
+      }
+
+      .label1 {
+        font-size: 5px;
+      }
+
+      .title {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+        <nav class="navbar sticky-top  bg-body-tertiary">
+            <div class="container-fluid d-flex">
+              <a class="navbar-brand" href="#">
+                <div class="d-flex">
+                    <span><svg  class="me-2" viewBox="0 0 1000 1000" role="img" color= "#ff385c" aria-hidden="false" aria-label="에어비앤비 홈페이지" focusable="false" style="height: 32px; width: 32px; display: block; fill: currentColor;"><path d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"></path></svg></span>
+                    <span style="color: #ff385c;">airbnb</span>
+                </div>
+              </a>
+              <div>
+                <a class="text-dark me-2" href="">호스팅 시작하기</a>
+                <a class="text-dark me-2" href="">회원가입</a>
+                <a class="text-dark" href="">로그인</a>
+              </div>
+            </div>
+        </nav>
+
+        
+        <div class="main-box">
+            <h2 class="fw-bold mx-0 mt-0 mb-2">한국의 휴가 임대 시설</h2>
+            <p class="p-1">에어비앤비에서 독특한 숙소를 예약하세요.</p>
+            <div class="input_box" >
+              <p class="m-0 label1">위치</p>
+              <div>      
+                  <input type="text" class="form-control" style="border:none; padding:0px; height: fit-content;"  id="place" value="한국" placeholder="어디든지">
+              </div>
+            </div>
+            <div class="input_box2 d-flex">
+              <div style="padding: 8px 16px;">
+                <p class="m-0 label1">체크인</p>
+                <input type="text" class="form-control" style="border:none; padding:0px; height: fit-content;"  id="datepicker" placeholder="날짜 입력">
+              </div>
+              <div style="padding: 8px 16px;">
+                <p class="m-0 label1">체크아웃</p>
+                <input type="text" class="form-control" style="border:none; padding:0px; height: fit-content;"  id="datepicker2" placeholder="날짜 입력">
+              </div>
+            </div>
+            <div class="input_box2 d-flex">
+              <div style="width: 50%; padding: 8px 16px;">
+                <p class="m-0 label1">성인</p>
+                <select style="border: none; font-size: 16px;" class="form-select p-0">
+                  <option selected>1</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                </select>
+              </div>
+              <div style="width: 50%; padding: 8px 16px;">
+                <p class="m-0 label1">어린이</p>
+                <select style="border: none; font-size: 16px;" class="form-select p-0">
+                  <option selected>0</option>
+                  <option value="1">0</option>
+                  <option value="2">1</option>
+                  <option value="3">2</option>
+                  <option value="4">3</option>
+                  <option value="5">4</option>
+                  <option value="6">5</option>
+                  <option value="7">6</option>
+                </select>
+              </div>
+            </div>
+            <button type="button" class="btn mt-3" style="border-radius: 8px; width:356px; height:48px; background-color: #e41d53; color: white;">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>검색</span>
+            </button>
+        </div>
+
+        <div>
+          <h1>최고 평점을 받은 한국의 휴가 숙소</h1>
+          <p>위치, 청결도 등에서 게스트의 높은 평가를 받은 숙소입니다.</p>
+          <div class="row">
+            <div class="rowcontainer col-md-4">
+              <div class="d-flex flex-column">
+                <img class="img-fluid" src="01.webp" alt="">
+                <div class="w-100 d-flex">
+                  <p style="width: 90%; height: 24px;" class="title flex-grow-1">전주시 완산구의 집 afsd ads fasdfasdfs dafasd fasdfadssa dfadsfad  sfasdfasd fasad sfasfasfdsa dsfa sdfads fafadsfsaf</p>
+                  <p style="width: 90px;" class="me-0"><i class="fa-sharp fa-solid fa-star"></i> 4.9 (48)</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+          </div>
+        </div>
+
+
+        
+    </div>
+    
+
+
+    <!-- 부트스트랩 및 부트스트랩 Datepicker JavaScript 파일 추가 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script>
+      // Datepicker 초기화
+      $(function() {
+        $('#datepicker').datepicker({
+          language: 'kr', // 한국어 언어 설정
+          autoclose: true, // 선택 시 자동으로 닫기
+          todayHighlight: true // 오늘 날짜 강조 표시
+        });
+
+        $('#datepicker2').datepicker({
+          language: 'kr', // 한국어 언어 설정
+          autoclose: true, // 선택 시 자동으로 닫기
+          todayHighlight: true // 오늘 날짜 강조 표시
+        });
+      });
+      
+      !function(a){a.fn.datepicker.dates.kr={days:["일요일","월요일","화요일","수요일","목요일","금요일","토요일"],daysShort:["일","월","화","수","목","금","토"],daysMin:["일","월","화","수","목","금","토"],months:["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"],monthsShort:["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]},a.fn.datepicker.deprecated('The language code "kr" is deprecated and will be removed in 2.0. For korean support use "ko" instead.')}(jQuery);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>

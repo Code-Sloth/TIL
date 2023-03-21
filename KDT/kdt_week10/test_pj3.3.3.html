@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/24c831e198.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+    font-family: 'TTCrownMychewR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/TTCrownMychewR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;}
+    body {
+      border: 5px solid black; /*전체 박스 테두리*/
+      padding: 20px; /*전체 박스의 border와 content사이 거리*/
+      width: 400px; /*전체 박스 크기*/
+      margin: auto; /*전체 박스 중앙 정렬*/
+      margin-top: 20px; /*전체 박스 위 마진 거리*/
+    }
+    .img {
+      margin: auto;
+      display: block;
+    }
+
+    a:link {color: black;}
+    a:visited {color: black;}
+    a:hover {color: gray;}
+    a:active {color: purple;}
+
+    h1,h2 {
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Shantell Sans', cursive;
+      margin-top: 0px;
+    }
+
+    .justin {
+      font-family: 'Pacifico', cursive;
+      font-weight: 700;
+      font-size: 50px;
+      margin: auto;
+      margin-bottom: 0px;
+    }
+
+    div {
+      font-family: 'TTCrownMychewR';
+      display: inline-block;
+      padding: 5px;
+      text-align: center;
+      background-color: deepskyblue;
+    }
+
+    .box1 {
+      width: 50px;
+    }
+    .box2 {
+      width: 80px;
+    }
+    .box3 {
+      width: 110px;
+    }
+    
+    span {
+      display: flex;
+      justify-content: space-between;
+      width: 300px;
+      margin: 20px auto;
+    }
+
+    .insta {
+      width: 100%;
+      height: auto;
+    }
+
+    .asize {
+      width: 45px;
+      height: 45px;
+    }
+
+    .flex {
+      display: flex; /*플렉스로 만든다*/
+      margin: 20px auto; /*플렉스를 중앙 정렬*/
+      width: 280px; /*플렉스 크기*/
+      align-items: center; /*수직축 가운데 정렬*/
+      justify-content: space-between; /*플렉스 안에서 박스들을 사이간격 일정하게 정렬*/
+    }
+
+  </style>
+</head>
+<body>
+  <strong>
+    <img class="img" src="../kdt_week9/justin.png" alt="justin">
+    <h1 class="justin">Justin Bieber</h1>
+    <h2>Singer-songwriter</h2>
+    <h2>POP R&B</h2>
+    <h2>
+        <a href="https://www.youtube.com/watch?v=pb4hWWMlFYg">Love Yourself</a>  <a href="https://www.youtube.com/watch?v=ENjrJ_zyeUcg">Off My Face</a>  <a href="https://www.youtube.com/watch?v=kTJczUoc26U">Stay</a>
+      </h2>
+    <span><div class="box1">#뜨또</div> <div class="box2">#헤일리 비버</div> <div class="box3">#아일랜드 레코드</div></span>
+    <h1 class="flex">
+        <a class="asize" href="https://www.justinbiebermusic.com/"><i class="fa-solid fa-house fa-lg" style="color:black"></i></a>
+
+
+        <a class='asize' href="https://www.instagram.com/justinbieber/"><img class="insta" src="instagram.png" alt="insta"></a>
+
+
+        <a class="asize" href="https://twitter.com/JustinBieber"><i class="fa-brands fa-twitter fa-lg fa-lg" style="color:blue"></i></a>
+
+
+        <a class="asize" href="https://www.youtube.com/user/kidrauhl"><i class="fa-brands fa-youtube fa-lg" style="color:red"></i></a>
+
+
+        <a class="asize" href="https://www.facebook.com/JustinBieber"><i class="fa-brands fa-square-facebook fa-lg" style="color:blue"></i></a>
+    </h1>
+  </strong>
+</body>
+</html>
