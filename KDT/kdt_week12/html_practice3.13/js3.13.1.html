@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM</title>
+  <style>
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .big {
+      margin: 1rem;
+      padding: 1rem;
+      font-size: 2rem;
+      font-weight: 900;
+      height: 300px;
+      width: 300px;
+    }
+
+    .small {
+      margin: 0.5rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      font-weight: 900;
+      height: 75px;
+      width: 75px;
+    }
+
+    .blue {
+      background-color: lightblue;
+    }
+
+    .green {
+      background-color: lightgreen;
+    }
+
+    .red {
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="red big box">
+      red 1
+    </div>
+    <div class="blue big box">
+      <p class="red small box">
+        red 2
+      </p>
+      <div class="red small box">
+        red 3
+      </div>
+      <div id="green" class="green small box">
+        green 1
+      </div>
+      <p class="red small box">
+        red 4
+      </p>
+    </div>
+    <div class="green big box">
+      green 2
+    </div>
+  </div>
+</body>
+
+<script>
+  // DOM 선택
+  // 1. class가 red인 첫 번째 요소 하나를 선택하고 해당 요소의 텍스트 출력
+  const redTag = document.querySelector('.red')
+  console.log(redTag.textContent)
+
+  // 2. class가 red인 모든 요소를 선택하고 요소 목록 출력
+  const redallTag = document.querySelectorAll('.red')
+  console.log(redallTag)
+
+  // 3. p 요소 중 class가 red인 첫 번째 요소 하나를 선택하고 해당 요소의 텍스트 출력
+  const predTag = document.querySelector('p.red')
+  console.log(predTag.textContent)
+
+  // 4. class가 red small인 모든 요소를 선택하고 요소 목록 출력
+  const redsmallTag = document.querySelectorAll('.red.small')
+  console.log(redsmallTag)
+
+  // 5. id가 green인 요소를 선택하고 해당 요소의 텍스트 출력
+  const greenTag = document.querySelector('.green')
+  console.log(greenTag.textContent)
+
+  // 6. div 요소 중 class가 small인 모든 요소를 선택하고 요소 목록 출력
+  const greenallTag = document.querySelectorAll('div.small')
+  console.log(greenallTag)
+
+</script>
+
+</html>

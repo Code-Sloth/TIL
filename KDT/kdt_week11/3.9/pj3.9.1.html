@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/24c831e198.js" crossorigin="anonymous"></script>
+  <script>
+    const myCarouselElement = document.querySelector('#myCarousel')
+    const carousel = new bootstrap.Carousel(myCarouselElement, {
+      interval: 2000,
+      touch: false,
+      wrap : false
+    })
+    </script>
+</head>
+  <style>
+    .collapse {
+      text-align: right;
+    }
+
+    .title {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+    .description {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: 12px;
+    }
+
+    .date {
+      font-size: 12px;
+    }
+
+    a:link {
+
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    * {
+    font-family: 'NanumGothicLight';
+    font-family: 'NanumGothic';
+    font-family: 'NanumGothicBold';
+    font-family: 'NanumGothicExtraBold';
+    letter-spacing: 0.1px;
+    }
+
+    .box {
+      width: 70%;
+    }
+
+    .box > img {
+      width: 70%;
+    }
+    
+  </style>
+<body>
+  <div class="container">
+    
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg">
+          
+          <div class="container-fluid d-flex justify-content-end">
+
+            <img class="me-auto" src="img/logo.png" alt="logo">
+            
+            <a class="text-primary" href="">MYBOX 바로가기</a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div style="min-width: 200px;">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">이용권</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">공식블로그</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">고객센터</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+              
+          </div>
+        </nav>
+  </div>
+
+        <!-- main -->
+  <div>
+    <div class="container mt-5">
+      <h1 class="mb-5">MYBOX 새 소식</h1>
+      <div class="row row-cols-1 row-cols-lg-2 g-5">
+        <div class="col d-flex" style="height: 100px;">
+          <img class="rounded" src="img/01.png" alt="01" style="width:100px; height:100px;">
+          <div class="d-flex ms-4 flex-column">
+            <strong class="title mb-1">PC웹 올리기가 쉽고 편하게 개선되었습니다.</strong>
+            <p class="description mb-3">안녕하세요, 네이버 MYBOX 팀입니다. PC웹의 개선된 올리기로 파일 및 폴더를 편하게 올리세요
+
+              파일 및 폴더가 잘 올라가는지 한눈에 알 수 있어요.
+              
+              전체 올리기 진행율은 프로그레스바로 알 수 있고,
+              
+              파일 및 폴더의 올리기 진행 중 / 완료 / 실패 상태는 아이콘으로 한눈에 확인하실 수 있어요.</p>
+            <p class="date text-muted mb-0">2023.02.22</p>
+          </div>
+        </div>
+
+        <div class="col d-flex">
+          <img class="rounded" src="img/02.png" alt="02" style="width:100px; height:100px;">
+          <div class="d-flex ms-4 flex-column">
+            <strong class="title mb-1">팀 프로젝트, 여행사진 모으기, 공동 작업을 폴더 링크 공유로 간편하게</strong>
+            <p class="description mb-3">안녕하세요, 네이버 MYBOX 팀입니다.
+
+              팀 프로젝트, 친구와 여행사진 모으기 등 공동 작업이 필요할 때
+              
+              간편한 링크 공유를 통해 폴더에 파일을 올리거나 문서 공동 편집을 해보세요.
+              
+              앞으로는 링크 공유를 통해 간편하게 폴더의 편집 권한을 설정할 수 있습니다.
+              
+              1단계. 공동 작업을 위해 폴더 링크 공유하기
+              
+              폴더 링크 공유 메뉴를 선택하면 공유 설정에서 편집 권한을 설정할 수 있습니다.</p>
+            <p class="date text-muted mb-0">2022.12.13</p>
+          </div>
+        </div>
+
+        <div class="col d-flex">
+          <img class="rounded" src="img/03.png" alt="03" style="width:100px; height:100px;">
+          <div class="d-flex ms-4 flex-column">
+            <strong class="title mb-1">MYBOX 활용백서 대공개! 📖 (활용팁 모음 A to Z)</strong>
+            <p class="description mb-3">안녕하세요, 네이버 MYBOX 입니다.  MYBOX를 처음 시작하는 분들도, 사용하고는 있지만 아직 어떻게 활용하는지 잘 모르겠는 분들도, 모두를 위해 MYBOX의 꿀팁을 모은 활용백서를 준비했어요.</p>
+            <p class="date text-muted mb-0">2022.12.06</p>
+          </div>
+        </div>
+
+        <div class="col d-flex">
+          <img class="rounded" src="img/04.png" alt="04" style="width:100px; height:100px;">
+          <div class="d-flex ms-4 flex-column">
+            <strong class="title mb-1">MYBOX iOS 앱 업데이트</strong>
+            <p class="description mb-3">안녕하세요 네이버 MYBOX 팁입니다. 22년 12월, 올해의 마지막 iOS 앱 업데이트 소식을 가지고 돌아왔습니다. 업데이트 내용이 많으니 하나씩 살펴보시고 MYBOX 앱 이용 꿀팁을 챙기세요.</p>
+            <p class="date text-muted mb-0">2022.12.02</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 mx-auto" style="width: max-content;">
+        <button type="button" class="btn btn-primary btn-lg mt-5 py-3 px-5 mb-5">
+          공식 블로그 바로가기
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="bg-light pb-5">
+    <div class="container pt-5">
+      <div class="row d-flex align-itmes-center mb-5">
+        <div class="col-12 text-center">
+          <strong class="fs-3 fs-lg-1">언제 어디서든 안전한 보관</strong>
+        </div>
+        <div class="text-center text-lg-end col-12 col-lg-7">
+          <p class="fs-6 fs-lg-5 mt-1 mb-0">30GB 무료 저장 용량과 다양한 유료 혜택!</p>
+        </div>
+        <div class="text-center text-lg-start col-12 col-lg-5">
+          <button type="button" class="btn btn-primary mt-2 mt-lg-0">
+            자세히 보기
+          </button>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-lg-3 text-center g-3">
+        <div class="col">
+          <div class="box mx-auto mb-3">
+            <img src="img/05.png" alt="백업동기화">
+          </div>
+          <strong class="fs-5">자동 백업 및 동기화</strong>
+          <p>일일이 업로드하지 않아도 쉽고 안전하게 보관할 수 있습니다</p>
+          <div class="d-none d-lg-block">
+            <button type="button" class="btn btn-outline-secondary text-black mt-2 mt-lg-0">
+              모바일 앱
+            </button>
+            <button type="button" class="btn btn-outline-secondary text-black mt-2 mt-lg-0">
+              Window/Mac 앱
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="box mx-auto mb-3">
+            <img src="img/06.png" alt="언제어디서나">
+          </div>
+          <strong class="fs-5">언제 어디서나 접근</strong>
+          <p>스마트폰, 태블릿, 모바일과 PC의 브라우저로 언제 어디서나 이용하세요.</p>
+        </div>
+        <div class="col">
+          <div class="box mx-auto mb-3">
+            <img src="img/07.png" alt="보관">
+          </div>
+          <strong class="fs-5">어떤 파일이든 보관</strong>
+          <p>사진, 영상 뿐 아니라 라이브 포토, 음악, 문서 어떤 파일이든 보관하세요.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="container  mb-5">
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/08.png" class="d-block mx-auto w-75" alt="강아지">
+      </div>
+      <div class="carousel-item">
+        <img src="img/09.png" class="d-block mx-auto w-75" alt="스마일">
+      </div>
+      <div class="carousel-item">
+        <img src="img/10.png" class="d-block mx-auto w-75" alt="여행">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <i class="fa-solid fa-circle-chevron-left" style="font-size:50px; color: gray;" aria-hidden="true"></i>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <i class="fa-solid fa-circle-chevron-right" aria-hidden="true" style="font-size:50px; color: gray;"></i>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> 
+</div>
+
+
+<div class="container">
+  <p class="fs-3 text-center mb-0"> <strong> 네이버 메일, 블로그를 사용하신다면</strong></p> 
+  <p class="fs-3 text-center mb-5"> <strong>더운 편리한 MYBOX!</strong></p>
+
+  <div class="row row-cols-1 row-cols-lg-2">
+    <div class="d-flex flex-column align-items-center mt-2">
+      <img src="img/11.png" class="mb-5 w-75" alt="메일">
+      <div class="d-flex align-itmes-start justify-content-center">
+        <img src="https://ssl.pstatic.net/static/pwe/cloud/img/common/voucher/ico-intro-mail.png" alt="" width="70" height="70" class="icon d-none d-lg-block me-4">
+        <div class="d-flex flex-column text-center text-lg-start" style="width: 400px;">
+          <p class="mb-2 fs-6 fs-lg-3"><strong>메일에서 MYBOX파일</strong></p>
+          <p>대용량 파일을 받았을때 MYBOX로 바로 저장할 수 있어요! 또 파일 첨부 할때도 MYBOX에서 바로 첨부할수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-column align-items-center mt-2">
+      <img src="img/12.png" class="mb-5 w-75" alt="메일">
+      <div class="d-flex align-itmes-start justify-content-center">
+        <img src="https://ssl.pstatic.net/static/pwe/cloud/img/common/voucher/ico-intro-blog.png" alt="" width="70" height="70" class="icon d-none d-lg-block me-4">
+      <div class="d-flex flex-column text-center text-lg-start" style="width: 400px;">
+        <p class="mb-2 fs-6 fs-lg-3"><strong>블로그에서 MYBOX 사진</strong></p>
+        <p>블로그에서 MYBOX 사진 첨부를 한번에 할 수 있어요. 만약 여행 사진을 MYBOX에 올리셨다면, 블로그에서 여행기를 작성하면서 필요한 사진을 선택해보세요~! 여행기 작성이 더 편리해집니다</p>
+      </div> 
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
