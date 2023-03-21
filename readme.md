@@ -12,11 +12,31 @@
 
 ## [Django](Django)
 - [Guide](Django/django_guide.md)
+- [Server](https://github.com/Code-Sloth/TIL/blob/master/KDT/kdt_week13/django3.20.md)
+- [Design Pattern](https://github.com/Code-Sloth/TIL/blob/master/KDT/kdt_week13/django3.21.md)
+
+## [CloneCoding](CloneCoding)
+- [Insta](CloneCoding/insta/insta.html)
+
+## [E-Learning](mlp)
+- [Algorithm](mlp)
+- [Python](python_lecture)
+
+## [JavaScript](KDT)
+- [DOM](https://github.com/Code-Sloth/TIL/blob/master/KDT/kdt_week12/html3.13.md)
+- [Grammar](https://github.com/Code-Sloth/TIL/blob/master/KDT/kdt_week12/js3.14.md)
+- [Function/Object](https://github.com/Code-Sloth/TIL/blob/master/KDT/kdt_week12/js3.15.md)
+- [Event](https://github.com/Code-Sloth/TIL/blob/master/KDT/kdt_week12/js3.16.md)
+
+## Web
+
+
+## []
 
 <br/>
 
 <details>
-<summary>강의 날짜별 정리</summary>
+<summary>KDT 날짜별</summary>
 
 |week 13|week 14|
 |--|--|

@@ -9,7 +9,7 @@
 <br/>
 
 ### Box 구성
-![box1](https://raw.githubusercontent.com/Code-Sloth/TIL/master/kdt_week9/box1.png)
+![box1](box1.png)
 - Margin : 이 박스와 다른 박스 요소 사이의 공백/ 가장 바깥쪽 영역
 - Border : 콘텐츠와 패딩을 감싸는 테두리 영역
 - Padding : 콘텐츠 주위에 위치하는 공백 영역
