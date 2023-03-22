@@ -6,11 +6,12 @@
 - [Guide](KDT/Django/django_guide.md)
 - [Server](KDT/Django/django3.20.md)
 - [Design Pattern](KDT/Django/django3.21.md)
+- [Template](KDT/Django/django3.22.md)
 
 <br/>
 
 ## [CloneCoding](CloneCoding)
-- [Insta](CloneCoding/insta/insta.html)
+- [Insta](CloneCoding/insta)
 
 <br/>
 
@@ -107,7 +108,7 @@
 |**🔥 Day86 (3.21)**|**🔥 Day93 (3.28)**|practice/
 |[Django3.21/Design_Pattern](KDT/Django/django3.21.md) <br/> [Django_guide](KDT/Django/django_guide.md)|[]()|
 |**🔥 Day87 (3.22)**|**🔥 Day94 (3.29)**|
-|[]()|[]()|
+|[Django3.22/Template](KDT/Django/django3.22.md)|[]()|
 |**🔥 Day88 (3.23)**|**🔥 Day95 (3.30)**|
 |[]()|[]()|
 |**🔥 Day89 (3.24)**|**🔥 Day96 (3.31)**|
