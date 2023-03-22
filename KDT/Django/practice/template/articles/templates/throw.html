@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="w-25 mx-auto p-5">
+    <form action="/catch/" method="GET">
+      <input type="text" name="message">
+      <input class="btn btn-primary" type="submit">
+    </form>
+  </div>
+  
+{% endblock content %}

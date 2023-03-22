@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="w-25 mx-auto p-5">
+
+    <form action="/lotto/" method="GET">
+      <input type="number" name="win_number1">
+      <input type="number" name="win_number2">
+      <input type="number" name="win_number3">
+      <input type="number" name="win_number4">
+      <input type="number" name="win_number5">
+      <input type="number" name="win_number6">
+
+      <input class="mt-5" type="number" name="number">
+      <input class="btn btn-primary mx-auto" type="submit">
+    </form>
+
+  </div>
+  
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="w-25 mx-auto p-5">
+
+    <p>당첨 번호는 {{win_numbers}}입니다.</p>
+    
+    {% for lotto_number in lotto_numbers %}
+      <p>{{ lotto_number }}</p>
+    {% endfor %}
+
+    <a onclick="history.back();" class="btn btn-primary">뒤로 가기</a>
+
+  </div>
+
+{% endblock content %}
