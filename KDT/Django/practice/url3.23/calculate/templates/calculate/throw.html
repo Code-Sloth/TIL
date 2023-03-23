@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="d-flex justify-content-center mt-5">
+
+    <form action="{% url 'calculate:calculate' number1=4 number2=2 %}" method="GET">
+      <input type="number" name="num1">
+      <input type="number" name="num2">
+      <input class="btn btn-primary" type="submit">
+    </form>
+
+  </div>
+  
+{% endblock content %}
