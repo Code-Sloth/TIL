@@ -7,6 +7,7 @@
 - [Server](KDT/Django/django3.20.md)
 - [Design Pattern](KDT/Django/django3.21.md)
 - [Template](KDT/Django/django3.22.md)
+- [URL](KDT/Django/URL3.23.md)
 
 <br/>
 
@@ -110,7 +111,7 @@
 |**🔥 Day87 (3.22)**|**🔥 Day94 (3.29)**|
 |[Django3.22/Template](KDT/Django/django3.22.md)|[]()|
 |**🔥 Day88 (3.23)**|**🔥 Day95 (3.30)**|
-|[]()|[]()|
+|[Django3.23/URL](KDT/Django/URL3.23.md)|[]()|
 |**🔥 Day89 (3.24)**|**🔥 Day96 (3.31)**|
 |[]()|[]()|
 |**☁ Day90 (3.25) / Weekend**|**☁ Day97 (4.1) / Weekend**|
