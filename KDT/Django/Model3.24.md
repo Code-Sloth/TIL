@@ -77,6 +77,7 @@
     - 추가하는 필드의 기본 값을 입력해야 하는 상황
     - 날짜 데이터이기 때문에 직접 입력하기보다 django가 제안하는 기본 값을 사용 권장
     - 아무것도 입력하지 않고 enter를 누르면 django가 제안하는 기본 값으로 설정 됨 (timezone.now)
+    - CharField 같은 경우 ''을 입력해주거나, (max_length=10, black=True)로 설정
 - 002 파일이 생성된 후 `$ python manage.py migrate`
 - 새로운 파일이 생성 되는 이유
   - model class에 변경사항이 생겼다면, 반드시 새로운 설계도를 생성하고 이를 DB에 반영해야 함
