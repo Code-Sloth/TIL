@@ -116,7 +116,7 @@
 |**🔥 Day89 (3.24)**|**🔥 Day96 (3.31)**|
 |[Django3.24/Model](KDT/Django/Model3.24.md)|[]()|
 |**☁ Day90 (3.25) / Weekend**|**☁ Day97 (4.1) / Weekend**|
-|[]()|[]()|
+|[MLP_Algorithm16](mlp/mlp_algorithm16.md)|[]()|
 |**☁ Day91 (3.26) / Weekend**|**☁ Day98 (4.2) / Weekend**|
 |[]()|[]()|
 
