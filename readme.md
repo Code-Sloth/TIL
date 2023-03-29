@@ -10,6 +10,7 @@
 - [URL](KDT/Django/URL3.23.md)
 - [Model](KDT/Django/Model3.24.md)
 - [ORM](KDT/Django/ORM3.28.md)
+- [ORM2](KDT/Django/ORM(2)3.29.md)
 
 <br/>
 
@@ -111,7 +112,7 @@
 |**🔥 Day86 (3.21)**|**🔥 Day93 (3.28)**|practice/
 |[Django3.21/Design_Pattern](KDT/Django/django3.21.md) <br/> [Django_guide](KDT/Django/django_guide.md)|[Django3.28/ORM](KDT/Django/ORM3.28.md)|
 |**🔥 Day87 (3.22)**|**🔥 Day94 (3.29)**|
-|[Django3.22/Template](KDT/Django/django3.22.md)|[]()|
+|[Django3.22/Template](KDT/Django/django3.22.md)|[Django3.29/ORM2](KDT/Django/ORM(2)3.29.md)|
 |**🔥 Day88 (3.23)**|**🔥 Day95 (3.30)**|
 |[Django3.23/URL](KDT/Django/URL3.23.md)|[]()|
 |**🔥 Day89 (3.24)**|**🔥 Day96 (3.31)**|
