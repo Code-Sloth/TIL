@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+{% endblock style %}
+
+{% block content %}
+  <div class="container">
+    <h1>작성 완료</h1>
+    <a class="btn btn-primary" href="{% url 'todos:index' %}">메인으로</a>
+  </div>
+{% endblock content %}

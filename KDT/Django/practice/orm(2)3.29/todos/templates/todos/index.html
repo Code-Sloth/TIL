@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+{% endblock style %}
+
+
+{% block content %}
+
+<div class="container">
+
+  <h1>Index</h1>
+  <a href="{% url 'todos:new' %}">New</a>
+  <hr>
+  {% for todo in todos %}
+    <div>
+      <a href="{% url 'todos:detail' todo.pk %}">
+        {{ todo.title }}
+      </a>
+    </div>
+    <hr>
+  {% endfor %}
+
+</div>
+
+{% endblock content %}

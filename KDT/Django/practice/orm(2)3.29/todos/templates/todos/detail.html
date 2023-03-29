@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+{% endblock style %}
+
+
+{% block content %}
+
+  <div class="container">
+
+    <h1>Detail</h1>
+    <hr>
+    <h2>{{ todo.title }}</h2>
+    <hr>
+    <p>{{ todo.content }}</p>
+    <hr>
+    <p>{{ todo.completed }}</p>
+    <hr>
+    <p>{{ todo.priority }}</p>
+    <hr>
+    <p>{{ todo.created_at }}</p>
+    <hr>
+    <p>{{ todo.deadline }}</p>
+    <hr>
+    <div>
+      <img src="{{ todo.image.url }}" alt="#">
+    </div>
+    <hr> 
+    <a class="btn btn-primary" href="{% url 'todos:index' %}">메인으로</a>
+    <a class="btn btn-primary" href="{% url 'todos:remove' todo.pk %}">삭제</a>
+  </div>
+  
+{% endblock content %}
