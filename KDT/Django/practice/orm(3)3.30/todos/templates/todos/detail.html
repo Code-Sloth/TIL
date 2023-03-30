@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class='container'>
+    <h1 class='mb-5'>Detail</h1>
+
+    <p>할 일 제목 : {{ todo.title }}</p>
+    <hr>
+    <p>할 일 내용 : {{ todo.content }}</p>
+    <hr>
+    <p>
+      완료 여부 : 
+      {% if todo.completed %}
+        완료
+      {% elif todo.deadline %}
+        {{day}}일 남았습니다.
+      {% else %}
+        미완료
+      {% endif %}
+    </p>
+    <hr>
+    <p>우선 순위 : {{ todo.priority }}</p>
+    <hr>
+    <p>생성 날짜 : {{ todo.created_at }}</p>
+    <hr>
+    <p>수정 날짜 : {{ todo.updated_at }}</p>
+    <hr>
+    {% if todo.deadline %}
+      <p>마감 기한 : {{ todo.deadline }}</p>
+      <hr>
+    {% endif %}
+    {% if todo.image %}
+      <div>
+        <img src="{{ todo.image.url }}" alt="{{ todo.title }}">
+      </div>
+      <hr>
+    {% endif %}
+    
+    <div class="d-flex align-items-center mb-4">
+      
+      <a class="btn btn-primary" href="{% url 'todos:index' %}">메인</a>
+
+      <a class="btn btn-primary ms-3" href="{% url 'todos:edit' todo.pk %}">수정</a>
+      
+      <form class="ms-3" action="{% url 'todos:delete' todo.pk %}" method="POST">
+        {% csrf_token %}
+        <button class="btn btn-primary" type="submit" value="delete">삭제</button>
+      </form>
+
+
+
+    </div>
+
+
+
+  </div>
+{% endblock content %}

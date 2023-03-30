@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class='container'>
+    <h1 class='mb-5'>New</h1>
+
+    <form class="d-flex flex-column" action="{% url 'todos:create' %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div>
+        <input type="text" name="title">
+      </div>
+      <br>
+
+      <div>
+        <textarea name="content" cols="30" rows="10"></textarea>
+      </div>
+      <br>
+
+      <div>
+        <input type="number" name="priority">
+      </div>
+      <br>
+
+      <div>
+        <input type="date" name="deadline">
+      </div>
+      <br>
+
+      <div>
+        <input type="file" name="image">
+      </div>
+      <br>
+
+      <input type="submit">
+
+    </form>
+
+  </div>
+
+{% endblock content %}

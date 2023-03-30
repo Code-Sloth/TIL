@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class='container'>
+    <h1 class='mb-5'>Edit</h1>
+
+    <form class="d-flex flex-column" action="{% url 'todos:update' todo.pk %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div>
+        <input type="text" name="title" value="{{ todo.title }}">
+      </div>
+      <hr>
+
+      <div>
+        <textarea name="content" cols="30" rows="10">{{ todo.content }}</textarea>
+      </div>
+      <hr>
+
+      <div>
+        <input type="number" name="priority" value="{{ todo.priority }}">
+      </div>
+      <hr>
+
+      <div>
+        <input type="date" name="deadline" value="{{ todo.deadline|date:'Y-m-d' }}">
+      </div>
+      <hr>
+
+      <div>
+        <input type="file" name="image">
+      </div>
+
+      {% if todo.image %}
+        <div class='w-25 h-25 mt-3'>
+          <img src="{{ todo.image.url }}" alt="{{ todo.title }}">
+        </div>
+      {% endif %}
+      <hr>
+
+      <input class='mb-3' type="submit">
+
+    </form>
+
+  </div>
+
+{% endblock content %}

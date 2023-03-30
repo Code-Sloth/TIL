@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  #sub {
+    background-color: white;
+    color: gray;
+    border: none;
+  }
+  #sub:hover { color: black; }
+{% endblock style %}
+
+{% block content %}
+ <div class='container'>
+  <h1 class="mb-5">Index</h1>
+  <a href="{% url 'todos:new' %}">New</a>
+  <hr>
+  {% for todo in todos %}
+    <div class='d-flex justify-content-between'>
+      <a href="{% url 'todos:detail' todo.pk %}">
+        {{ todo.title }}
+      </a>
+      <form id="form" class="ms-5" action="{% url 'todos:check' todo.pk %}" method='POST'>
+        {% csrf_token %}
+        <div class="d-flex align-items-center">
+          <input id="check" style="width:20px; height:20px; margin-right:10px;" type="checkbox" name='completed' {% if todo.completed %}checked{% endif %}>
+          <input id="sub" type="submit" value="적용">
+        </div>
+      </form>
+    </div>
+    <hr>
+  {% endfor %}
+ </div>
+
+{% endblock content %}
