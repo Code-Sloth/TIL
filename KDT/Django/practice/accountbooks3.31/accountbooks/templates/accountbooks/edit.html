@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block style %}
+{% endblock style %}
+
+
+{% block content %}
+<div class='container'>
+  <h1>Edit</h1>
+  <hr>
+  <form class="d-flex flex-column" action="{% url 'accountbooks:update' book.pk %}" method="POST">
+    {% csrf_token %}
+    <div>
+      <label for="note">내용 :</label>
+      <input type="text" name="note" id='note' value="{{ book.note }}">
+    </div>
+    <hr>
+    <div>
+      <label for="category">분류 :</label>
+      <input type="text" name="category" id='category' value="{{ book.category }}">
+    </div>
+    <hr>
+     <div>
+      <label for="amount">사용 금액 :</label>
+      <input type="number" name="amount" id="amount" value="{{ book.amount }}">
+    </div> 
+    <hr>
+    <div>
+      <label for="date">사용 날짜 :</label>
+      <input type="date" name="date" id="date" value="{{ book.date|date:'Y-m-d' }}">
+    </div>
+    <hr>
+    <div>
+      <label for="description">메모 :</label>
+      <textarea name="description" cols="30" rows="10" id="description">{{ book.description }}</textarea>
+    </div>
+    <hr>
+    <input class='btn btn-primary' type="submit" value="가게부 수정">
+  </form>
+
+</div>
+{% endblock content %}

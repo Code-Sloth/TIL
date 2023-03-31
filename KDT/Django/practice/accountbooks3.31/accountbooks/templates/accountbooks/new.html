@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block style %}
+{% endblock style %}
+
+
+{% block content %}
+<div class='container'>
+  <h1>New</h1>
+  <hr>
+  <form class="d-flex flex-column" action="{% url 'accountbooks:create' %}" method="POST">
+    {% csrf_token %}
+    <div>
+      <label for="note">내용 :</label>
+      <input type="text" name="note" id='note'>
+    </div>
+    <hr>
+    <div>
+      <label for="category">분류 :</label>
+      <select name="category" id="category">
+        <option value="">--분류 선택--</option>
+        <option value="식비">식비</option>
+        <option value="고정비">고정비</option>
+        <option value="여가비">여가비</option>
+        <option value="교통비">교통비</option>
+        <option value="의료비">의료비</option>
+      </select>
+    </div>
+    <hr>
+     <div>
+      <label for="amount">사용 금액 :</label>
+      <input type="number" name="amount" id="amount">
+    </div> 
+    <hr>
+    <div>
+      <label for="date">사용 날짜 :</label>
+      <input type="date" name="date" id="date">
+    </div>
+    <hr>
+    <div>
+      <label for="description">메모 :</label>
+      <textarea name="description" cols="30" rows="10" id="description"></textarea>
+    </div>
+    <hr>
+    <input class='btn btn-primary' type="submit" value="가계부 작성">
+  </form>
+
+</div>
+
+{% endblock content %}

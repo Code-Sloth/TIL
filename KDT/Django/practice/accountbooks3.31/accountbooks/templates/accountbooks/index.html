@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  .list {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .list:hover {
+    color: none;
+  }
+{% endblock style %}
+
+
+{% block content %}
+<div class='container w-50'>
+  <div class='d-flex justify-content-between align-items-center my-3'>
+    <h1>Index</h1>
+    <a class='btn btn-outline-primary' href="{% url 'accountbooks:new' %}">가계부 작성</a>
+  </div>
+  <form class='d-flex align-items-center my-4' action="{% url 'accountbooks:index' %}" method='POST'>
+    {% csrf_token %}
+        <select class="form-select" name="category2" id="category2">
+          <option value="">--분류 선택--</option>
+          <option value="식비">식비</option>
+          <option value="고정비">고정비</option>
+          <option value="여가비">여가비</option>
+          <option value="교통비">교통비</option>
+          <option value="의료비">의료비</option>
+          <option value="전체">전체</option>
+        </select>
+    <input class="btn btn-secondary" type="submit" value="이동">
+  </form>
+  <hr>
+
+  {% for book in books %}
+    <a class='list ms-3 btn 
+    {% if book.category == '식비' %}
+    btn-outline-primary
+    {% elif book.category == '고정비' %}
+    btn-outline-success
+    {% elif book.category == '여가비'%}
+    btn-outline-warning
+    {% elif book.category == '교통비' %}
+    btn-outline-danger
+    {% else %}
+    btn-outline-info
+    {% endif %}' href="{% url 'accountbooks:detail' book.pk %}">{{ book.note }} : {{book.amount}}원</a>
+    <hr>
+  {% endfor %}
+
+</div>
+
+{% endblock content %}
