@@ -12,6 +12,7 @@
 - [ORM](KDT/Django/ORM3.28.md)
 - [ORM2](KDT/Django/ORM(2)3.29.md)
 - [ORM3](KDT/Django/ORM(3)3.30.md)
+- [Image](KDT/Django/BulletinBoard/djangoimage.md)
 
 <br/>
 
@@ -119,7 +120,7 @@
 |**🔥 Day89 (3.24)**|**🔥 Day96 (3.31)**|
 |[Django3.24/Model](KDT/Django/Model3.24.md)|[AccountBook3.31](KDT/Django/practice/accountbooks3.31/)|
 |**☁ Day90 (3.25) / Weekend**|**☁ Day97 (4.1) / Weekend**|
-|[MLP_Algorithm16](mlp/mlp_algorithm16.md)|[]()|
+|[MLP_Algorithm16](mlp/mlp_algorithm16.md)|[Django Image](KDT/Django/BulletinBoard/djangoimage.md)|
 |**☁ Day91 (3.26) / Weekend**|**☁ Day98 (4.2) / Weekend**|
 |[MLP_Algorithm22](mlp/mlp_algorithm22.md)|[]()|
 
