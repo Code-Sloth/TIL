@@ -21,15 +21,25 @@
   <form class='d-flex align-items-center my-4' action="{% url 'accountbooks:index' %}" method='POST'>
     {% csrf_token %}
         <select class="form-select" name="category2" id="category2">
-          <option value="">--분류 선택--</option>
-          <option value="식비">식비</option>
-          <option value="고정비">고정비</option>
-          <option value="여가비">여가비</option>
-          <option value="교통비">교통비</option>
-          <option value="의료비">의료비</option>
-          <option value="전체">전체</option>
+          <option selected value="">--분류 선택--</option>
+          <option {% if cate == '식비' %}selected{% endif %} value="식비">식비</option>
+          <option {% if cate == '고정비' %}selected{% endif %} value="고정비">고정비</option>
+          <option {% if cate == '여가비' %}selected{% endif %} value="여가비">여가비</option>
+          <option {% if cate == '교통비' %}selected{% endif %} value="교통비">교통비</option>
+          <option {% if cate == '의료비' %}selected{% endif %} value="의료비">의료비</option>
+          <option {% if cate == '전체' %}selected{% endif %} value="전체">전체</option>
         </select>
-    <input class="btn btn-secondary" type="submit" value="이동">
+
+        <select class="form-select" name="sort" id="sort">
+          <option value="">--정렬 선택--</option>
+          <option {% if sort == 'pk' %}selected{% endif %} value="pk">입력 순서(오래된순)</option>
+          <option {% if sort == 'pk_desc' %}selected{% endif %} value="pk_desc">입력 순서(최신순)</option>
+          <option {% if sort == 'amount' %}selected{% endif %} value="amount">사용 금액(오름차순)</option>
+          <option {% if sort == 'amount_desc' %}selected{% endif %} value="amount_desc">사용 금액(내림차순)</option>
+          <option {% if sort == 'date_desc' %}selected{% endif %} value="date_desc">사용 날짜(최신순)</option>
+          <option {% if sort == 'date' %}selected{% endif %} value="date">사용 날짜(오래된순)</option>
+        </select>
+    <input class="btn btn-secondary" type="submit" value="적용">
   </form>
   <hr>
 

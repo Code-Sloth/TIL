@@ -4,21 +4,42 @@ from .models import AccountBook
 # Create your views here.
 def index(request):
     books = AccountBook.objects.all()[::-1]
+    cate = request.POST.get('category2')
+    sort = request.POST.get('sort')
+    
     if request.method == 'POST':
-        if request.POST['category2'] == '식비':
-            books = AccountBook.objects.filter(category='식비')[::-1]
-        elif request.POST['category2'] == '고정비':
-            books = AccountBook.objects.filter(category='고정비')[::-1]
-        elif request.POST['category2'] == '여가비':
-            books = AccountBook.objects.filter(category='여가비')[::-1]
-        elif request.POST['category2'] == '교통비':
-            books = AccountBook.objects.filter(category='교통비')[::-1]
-        elif request.POST['category2'] == '의료비':
-            books = AccountBook.objects.filter(category='의료비')[::-1]
+        if request.POST.get('category2') == '식비':
+            books = AccountBook.objects.filter(category='식비')
+        elif request.POST.get('category2') == '고정비':
+            books = AccountBook.objects.filter(category='고정비')
+        elif request.POST.get('category2') == '여가비':
+            books = AccountBook.objects.filter(category='여가비')
+        elif request.POST.get('category2') == '교통비':
+            books = AccountBook.objects.filter(category='교통비')
+        elif request.POST.get('category2') == '의료비':
+            books = AccountBook.objects.filter(category='의료비')
         else:
-            books = AccountBook.objects.all()[::-1]
+            books = AccountBook.objects.all()
+        
+        if request.POST.get('sort') == 'amount':
+            books = books.order_by('amount')
+        elif request.POST.get('sort') == 'amount_desc':
+            books = books.order_by('-amount')
+        elif request.POST.get('sort') == 'date':
+            books = books.order_by('date')
+        elif request.POST.get('sort') == 'date_desc':
+            books = books.order_by('-date')
+        elif request.POST.get('sort') == 'pk':
+            books = books.order_by('pk')
+        elif request.POST.get('sort') == 'pk_desc':
+            books = books.order_by('-pk')
+        else:
+            books = books[::-1]
+        
     context = {
-        'books': books
+        'books': books,
+        'cate' : cate,
+        'sort' : sort
     }
     return render(request, 'accountbooks/index.html', context)
 
