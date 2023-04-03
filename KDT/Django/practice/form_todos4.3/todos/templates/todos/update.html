@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+{% endblock style %}
+
+{% block content %}
+  <div class='container w-50 mt-3'>
+    <h1>수정</h1>
+    <hr>
+    <form method='POST'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit">
+    </form>
+  </div>
+{% endblock content %}

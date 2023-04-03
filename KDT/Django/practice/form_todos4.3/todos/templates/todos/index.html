@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  
+{% endblock style %}
+
+{% block content %}
+  <div class='container w-50'>
+    <div class='d-flex justify-content-between align-items-center mt-3'>
+      <h1>할 일 목록</h1>
+      <a class='btn btn-outline-primary' href="{% url 'todos:create' %}">추가</a>
+    </div>
+    <hr>
+    <div class='d-flex justify-content-between text-center'>
+      <p class='w-25'>할 일 제목</p>
+      <p class='w-25'>우선 순위</p>
+      <p class='w-25'>남은 기한</p>
+      <p class='w-25'>완료 여부</p>
+    </div>
+    <hr>
+    {% for todo in todos %}
+      <div href="{% url 'todos:detail' todo.pk %}" class='d-flex justify-content-between text-center flex-nowrap'>
+        <div style='width:23%;'>
+          <a class='text-black text-decoration-none link-primary' href="{% url 'todos:detail' todo.pk %}">
+            {{ todo.title }}
+          </a>
+        </div>
+
+        <div style='width:23%;'>
+          {% for i in todo.priority %}
+            <svg height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.867 53.867" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon style="fill:#EFCE4A;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798 10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 "></polygon> </g></svg>
+          {% endfor %}
+        </div>
+
+        <div style='width:23%;'>{{ todo.deadline|timeuntil }}</div>
+
+        <div class="d-flex justify-content-center" style='width:23%;'>
+          <a href="{% url 'todos:check' todo.pk %}">
+            {% if todo.completed == True %}
+              <svg width="20px" height="20px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#0c2bc6" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Check"> <path id="Vector" d="M6 12L10.2426 16.2426L18.727 7.75732" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+            {% else %}
+              <svg width="20px" height="20px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Shape / Circle"> <path id="Vector" d="M3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z" stroke="#000000" stroke-width="0.744" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+            {% endif %}
+          </a>
+        </div>
+      </div>
+      <hr>
+    {% endfor %}
+  </div>
+{% endblock content %}
