@@ -14,6 +14,7 @@
 - [ORM3](KDT/Django/ORM(3)3.30.md)
 - [Image](KDT/Django/BulletinBoard/djangoimage.md)
 - [Form](KDT/Django/form4.3.md)
+- [Authentication](KDT/Django/authentication4.4.md)
 
 <br/>
 
@@ -113,7 +114,7 @@
 |**🔥 Day99 (4.3)**|**🔥 Day106 (4.10)**|
 |[Django4.3/Form](KDT/Django/form4.3.md)|[]()|
 |**🔥 Day100 (4.4)**|**🔥 Day107 (4.11)**|
-|[]()|[]()|
+|[Django4.4/Authentication](KDT/Django/authentication4.4.md)|[]()|
 |**🔥 Day101 (4.5)**|**🔥 Day108 (4.12)**|
 |[]()|[]()|
 |**🔥 Day102 (4.6)**|**🔥 Day109 (4.13)**|
