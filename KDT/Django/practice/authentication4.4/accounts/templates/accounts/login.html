@@ -1,0 +1,48 @@
+{% extends 'accounts/index.html' %}
+
+{% block index__style %}
+  .container {margin-top: 100px;}
+  input[name='password'], input[name='username'] {
+    width:100%;
+    background-color:white;
+    border-radius:5px;
+  }
+  input[type='submit'] {opacity:0.9}
+  input[type='submit']:hover {opacity:1;}
+
+{% endblock index__style %}
+
+{% block index__content %}
+
+{% block title %}
+  Login
+{% endblock title %}
+
+  <div class='container w-50 d-flex justify-content-center'>
+    <div>
+      <div>
+        <h3 class="fw-light p-2 mb-3 text-center">Sign in to Index</h3>
+      </div>
+      <div class='bg-light border rounded p-4' style='width:308px;'>
+        <form action="{% url 'accounts:login' %}" method="POST">
+          {% csrf_token %}
+          
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username or email address</label>
+            <br>
+            {{ form.username }}
+          </div>
+  
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <br>
+            {{ form.password }}
+          </div>
+  
+          <input class='w-100 bg-success text-white rounded border-0' style='height:35px;' type="submit" value='Sign in'>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock index__content %}
