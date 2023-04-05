@@ -1,0 +1,19 @@
+{% extends 'accounts/login.html' %}
+
+{% block title %}
+  Update
+{% endblock title %}
+
+{% block form__content %}
+
+    <form class='w-50' action="{% url 'accounts:update' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input class='w-100 bg-success text-white rounded border-0' style='height:35px;' type="submit" value="정보수정">
+      
+      <a class='w-100 btn bg-success text-white rounded border-0 mt-3' style='height:35px;' href='../password/'>
+        비밀번호 변경
+      </a>
+    </form>
+
+{% endblock form__content %}

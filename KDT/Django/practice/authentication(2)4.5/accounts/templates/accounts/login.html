@@ -1,0 +1,21 @@
+{% extends 'accounts/index.html' %}
+
+{% block index__content %}
+
+  {% block title %}Login{% endblock title %}
+
+  <div class='container w-50 d-flex justify-content-center' style="margin-top:150px;">
+    <div class='d-flex justify-content-center align-items-center w-75'>
+      
+      {% block form__content %}
+        <form class='w-50' action="{% url 'accounts:login' %}" method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input class='w-100 bg-success text-white rounded border-0' style='height:35px;' type="submit" value="로그인">
+        </form>
+      {% endblock form__content %}
+
+    </div>
+  </div>
+
+{% endblock index__content %}

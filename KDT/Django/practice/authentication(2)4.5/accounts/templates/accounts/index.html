@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  li a {text-decoration:none;}
+  li input:hover, li a:hover {text-decoration:underline;}
+  {% block index__style %}
+  
+  {% endblock index__style %}
+
+{% endblock style %}
+
+{% block content %}
+
+  <nav class="navbar navbar-dark bg-dark fixed-top" data-bs-theme="dark">
+    <h1 class="ms-5">
+      {% block title %}
+        Index
+      {% endblock title %}
+    </h1>
+
+    <button class="navbar-toggler me-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="offcanvasDarkNavbarLabel">{{ user }}</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+          {% if request.user.is_authenticated %}
+
+            <li class="nav-item py-3">
+              <a class="text-white" href="{% url 'accounts:update' %}">회원 정보 수정</a>
+            </li>
+
+            <li class="nav-item py-3">
+              <form action="{% url 'accounts:logout' %}" method="POST">
+                {% csrf_token %}
+                <input class="text-white bg-dark border-0 p-0" type="submit" value="로그 아웃">
+              </form>
+            </li>
+
+            <li class="nav-item py-3">
+              <form action="{% url 'accounts:delete' %}" method="POST">
+                {% csrf_token %}
+                <input class="text-white bg-dark border-0 p-0" type="submit" value="회원 탈퇴">
+              </form>
+            </li>
+
+          {% else %}
+
+            <li class="nav-item py-3">
+              <a class='text-white' href="{% url 'accounts:login' %}">로그인</a>
+            </li>
+
+            <li class="nav-item py-3">
+              <a class='text-white' href="{% url 'accounts:signup' %}">회원가입</a>
+            </li>
+
+          {% endif %}
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {% block index__content %}
+  
+  {% endblock index__content %}
+
+{% endblock content %}

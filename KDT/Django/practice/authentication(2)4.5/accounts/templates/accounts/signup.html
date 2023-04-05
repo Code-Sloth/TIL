@@ -1,0 +1,15 @@
+{% extends 'accounts/login.html' %}
+
+{% block title %}
+  Sign up
+{% endblock title %}
+
+{% block form__content %}
+
+  <form class='w-50' action="{% url 'accounts:signup' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class='w-100 bg-success text-white rounded border-0' style='height:35px;' type="submit" value="회원가입">
+  </form>
+
+{% endblock form__content %}
