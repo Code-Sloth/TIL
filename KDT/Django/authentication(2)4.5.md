@@ -263,9 +263,9 @@
           if request.method == 'POST':
               form = PasswordChangeForm(request.user, request.POST)
               if form.is_valid():
-                  form.save()
+                  user = form.save()
                   # 비밀번호 변경시 세션 무효화 방지
-                  update_session_auth_hash(request, request.user)
+                  update_session_auth_hash(request, user)
                   return redirect('articles:index')
           else:
               form = PasswordChangeForm(request.user)
