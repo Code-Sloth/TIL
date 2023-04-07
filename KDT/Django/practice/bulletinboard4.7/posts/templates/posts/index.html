@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  .post-title {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  .post-title:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+{% endblock style %}
+
+{% block content %}
+
+    <div class="d-flex align-items-center justify-content-between p-4 bg-black" style="border: 0.5px solid gray; border-radius:10px;">
+      <form class="d-flex w-25" action="{% url 'posts:index' %}" method='POST'>
+        {% csrf_token %}
+        <select class='form-select' style="width:120px;" name="sort">
+          <option {% if sor == '최신순' %}selected{% endif %} value="최신순">최신순</option>
+          <option {% if sor == '오래된순' %}selected{% endif %} value="오래된순">오래된순</option>
+          <input class="btn btn-secondary ms-3" type="submit" value="적용">
+        </select>
+      </form>
+      <a class="btn btn-primary" href="{% url 'posts:create' %}">작성하기</a>
+    </div>
+    <div class="mt-5">
+      {% for post in posts %}
+  
+        <div class="ps-4">
+          <a class="post-title" href="{% url 'posts:detail' post.pk %}">
+            {{ post.title }}
+          </a>
+        </div>
+        <hr class="text-white">
+      {% endfor %}
+    </div>
+
+{% endblock content %}

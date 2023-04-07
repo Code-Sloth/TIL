@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+  .login-box input {
+    padding: 27px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(33 33 33)!important;
+    color: white;
+  }
+
+  .login-box input:focus { color: white; }
+
+  .login-box input::placeholder {color: rgb(108 117 125);}
+
+  .change-password {
+    margin-right: 140px; 
+    color:white; 
+    font-size:18px;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  .change-password:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+{% endblock style %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block content %}
+
+  <h1 class="text-white my-5 text-center fw-bold">
+    {% block accounts_title %}
+      로그인
+    {% endblock accounts_title %}
+  </h1>
+  <form action="{% block accounts_url %}{% url 'accounts:login' %}{% endblock accounts_url %}" method="POST">
+  {% csrf_token %}
+    <div class="login-box">
+
+      {% block accounts_form %}
+
+        {{ form.username }}
+
+        {{ form.password}}
+
+      {% endblock accounts_form %}
+
+      
+    </div>
+    <div class='d-flex justify-content-center'>
+      {% block accounts_submit %}
+        <input style="width:70%; padding:20px; font-size: 21px;" class='btn btn-danger fw-bold' type="submit" value="로그인하기">
+      {% endblock accounts_submit %}
+    </div>
+    {% block accounts_changepassword %}
+    {% endblock accounts_changepassword %}
+  </form>
+
+{% endblock content %}

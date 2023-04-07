@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+    .create-box {
+      border: 1px solid white;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+{% endblock style %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block content %}
+  <div class="create-box">
+    <h2 class="text-white mb-5">게시물 작성</h2>
+    {% block create_url %}
+    <form class="text-white" action="{% url 'posts:create'%}" method="POST">
+    {% endblock create_url %}
+      {% csrf_token %}
+      <label>카테고리</label>
+      {{ form.category }}
+
+      <label class="mt-5">제목</label>
+      {{ form.title }}
+
+      <label class="mt-5">내용</label>
+      {{ form.content }}
+      <div class="d-flex flex-row-reverse">
+        <input class="btn btn-primary mt-5 ms-3 px-4" type="submit" value="등록">
+        <a class="btn btn-outline-light mt-5 px-4" href="{% url 'posts:index' %}">취소</a>
+      </div>
+    </form>
+  </div>
+
+{% endblock content %}

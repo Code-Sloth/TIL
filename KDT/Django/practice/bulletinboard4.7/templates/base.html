@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    .side_bar {
+      position: fixed;
+      left: 70px;
+      top: 130px;
+      border: 1px solid white;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .side_bar input, .side_bar a {
+      color: white;
+      text-decoration: none;
+      background-color: black;
+      border: none;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      opacity: 0.8;
+    }
+
+    .side_bar input:hover, .side_bar a:hover {opacity:1; text-decoration:underline;}
+    
+    .nav-item a, .nav-item input {
+      color: white;
+      text-decoration: none;
+      opacity: 0.8;
+      font-size: 17px;
+      margin-left: 10px;
+    }
+
+    .nav-item a:hover, .nav-item input:hover {
+      
+      opacity: 1;
+    }
+
+    {% block style %}
+    {% endblock style %}
+  </style>
+</head>
+<body class='bg-black'>
+
+  <!-- Nav Bar -->
+
+  <nav class="navbar navbar-dark bg-black fixed-top">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center ms-5">
+      <div style="width:65px; height:65px;">
+        <img class="img-fluid" src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4c14a348-0f93-4541-91d6-dfe4f265d252%2Fhypergrowth_%25E1%2584%2585%25E1%2585%25A9%25E1%2584%2580%25E1%2585%25A9%25E1%2584%2589%25E1%2585%25B5%25E1%2586%25B7%25E1%2584%2587%25E1%2585%25A9%25E1%2586%25AF.png&blockId=a86012c3-a307-48f1-9c8f-0190bf2151cd&width=256" alt="hypergrowth">
+      </div>
+      <h1 class='text-white mt-2'>
+        Hyper Growth
+      </h1>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" style="background-color:black; border-left: 1px solid rgb(33 33 33);" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header text-white">
+        
+        <h4 class='ms-2'>{{ user }}</h4>
+
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        
+          {% if request.user.is_authenticated %}
+          
+            <li class="nav-item mb-3">
+              <a href="{% url 'accounts:update' %}">회원정보수정</a>
+            </li>
+            
+            <li class="nav-item mb-3">
+              <form action="{% url 'accounts:logout' %}" method="POST">
+                {% csrf_token %}
+                <input class="bg-black border-0 p-0" type="submit" value="로그아웃">
+              </form>
+            </li>
+
+            <li class="nav-item mb-3">
+                <form action="{% url 'accounts:delete' %}" method="POST">
+                    {% csrf_token %}
+                    <input class="bg-black border-0 p-0" type="submit" value="회원탈퇴">
+                </form>
+            </li>
+
+          {% else %}
+
+            <li class="nav-item mb-3">
+              <a href="{% url 'accounts:login' %}">로그인</a>
+            </li>
+
+            <li class="nav-item mb-3">
+              <a href="{% url 'accounts:signup' %}">회원가입</a>
+            </li>
+
+          {% endif %}
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  </nav>
+
+  <!-- Side Bar -->
+  {% block sidebar %}
+
+    <div class="side_bar bg-black m-0 p-5 shadow">
+      <h3 class='text-white mb-5 fw-bold'>
+        IT 정보 공유
+      </h3>
+      <div>
+        <p>
+          <form action="{% url 'posts:index' %}" method="POST">
+              {% csrf_token %}
+              <input type="hidden" name="cate" value="">
+              <input type="submit" value="모든 글">
+          </form>
+        </p>
+        <p>
+          <form action="{% url 'posts:index' %}" method="POST">
+              {% csrf_token %}
+              <input type="submit" name="cate" value="개발">
+          </form>
+        </p>
+        <p>
+          <form action="{% url 'posts:index' %}" method="POST">
+              {% csrf_token %}
+              <input type="submit" name="cate" value="CS">
+          </form>
+        </p>
+        <p>
+          <form action="{% url 'posts:index' %}" method="POST">
+              {% csrf_token %}
+              <input type="submit" name="cate" value="신기술">
+          </form>
+        </p>
+
+      </div>
+    </div>
+  {% endblock sidebar %}
+
+
+
+  <!-- Content -->
+  
+  <div class="container w-50 bg-black p-0" style="margin-top:130px; margin-left:500px;">
+    {% block content %}
+    {% endblock content %}
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

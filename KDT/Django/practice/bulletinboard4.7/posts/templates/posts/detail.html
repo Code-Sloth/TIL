@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  <style>
+
+  </style>  
+
+{% endblock style %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block content %}
+    <div class="detail-box text-white">
+      <div class="p-3" style="border: 0.5px solid gray; border-radius: 10px;">
+        <p class="text-secondary">
+          정보공유 / {{ post.category }}
+        </p>
+        <hr>
+
+        <h1 class="py-5">
+          {{ post.title }}
+        </h1>
+        
+        <div>
+          {{ post.content }}
+        </div>
+      </div>
+      <div class="d-flex flex-row-reverse mt-4">
+        <a class="btn btn-primary ms-3" href="{% url 'posts:index' %}">메인</a>
+        
+        <form class="ms-3" action="{% url 'posts:delete' post.pk %}" method="POST">
+          {% csrf_token %}
+          <input class="btn btn-primary" type="submit" value="삭제">
+        </form>
+        
+        <a class="btn btn-primary" href="{% url 'posts:update' post.pk %}">수정</a>
+      </div>
+    </div>
+
+{% endblock content %}

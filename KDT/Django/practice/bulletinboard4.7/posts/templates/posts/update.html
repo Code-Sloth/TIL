@@ -1,0 +1,8 @@
+{% extends 'posts/create.html' %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block create_url %}
+  <form class="text-white" action="{% url 'posts:update' post.pk%}" method="POST">
+{% endblock create_url %}
