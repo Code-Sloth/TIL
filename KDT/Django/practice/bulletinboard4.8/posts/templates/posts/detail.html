@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block content %}
+    <div class="detail-box text-white">
+      <div class="p-3" style="border: 0.5px solid gray; border-radius: 10px;">
+        <p class="text-secondary">
+          정보공유 / {{ post.category }}
+        </p>
+        <hr>
+
+        <h1 class="py-5">
+          {{ post.title }}
+        </h1>
+        
+        <div>
+          {{ post.content }}
+        </div>
+        <div class='like-box d-flex flex-row-reverse mt-5'>
+          <div class='d-flex text-center my-4'>
+
+            <div class='p-2 d-flex align-items-center justify-content-center' style='width:35px; height:38px; border: 1px solid white; border-top-left-radius: 5px; border-bottom-left-radius: 5px; '>
+              <form action="{% url 'posts:detail' post.pk %}" method="POST">
+                {% csrf_token %}
+                <button class='btn text-white p-0' type='submit' name='like' value='unlike'>
+                  <svg width='20px' height='20px' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="hover:text-red-500 group-hover:text-red-500 h-4 w-4"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path></svg>
+                </button>
+              </form>
+            </div>
+
+            <div class='p-2' style='width:55px; height:38px; border: 1px solid white; line-height:17px;'>
+              {{ post.count_like }}
+            </div>
+
+            <div class='p-2 d-flex align-items-center justify-content-center' style='width:35px; height:38px; border: 1px solid white; border-top-right-radius: 5px; border-bottom-right-radius: 5px; line-height:15px;'>
+              <form action="{% url 'posts:detail' post.pk %}" method="POST">
+                {% csrf_token %}
+                <button class='btn text-white p-0 d-flex align-items-center' type='submit' name='like' value='like'>
+                  <svg width='20px' height='20px' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="hover:text-blue-500 group-hover:text-blue-500 h-4 w-4"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path></svg>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row-reverse mt-4">
+        <a class="btn btn-primary ms-3" href="{% url 'posts:index' %}">메인</a>
+        
+        <form class="ms-3" action="{% url 'posts:delete' post.pk %}" method="POST">
+          {% csrf_token %}
+          <input class="btn btn-primary" type="submit" value="삭제">
+        </form>
+        
+        <a class="btn btn-primary" href="{% url 'posts:update' post.pk %}">수정</a>
+      </div>
+    </div>
+
+{% endblock content %}

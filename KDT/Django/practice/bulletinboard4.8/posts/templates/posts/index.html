@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  .post-title {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  .post-title:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+
+  .form__sort input {
+    background: black;
+    color: white;
+    border: none;
+    opacity: 0.8;
+  }
+
+  .form__sort input:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+{% endblock style %}
+
+{% block content %}
+
+    <div class="d-flex align-items-center justify-content-between p-4 bg-black" style="position: relative; border: 0.5px solid gray; border-radius:10px;">
+
+      <a class="btn btn-secondary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+
+        <svg width='22px' height='22px' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"></path></svg>
+
+        {% if sor == '최신순' %}
+          최신순
+        {% elif sor == '오래된순' %}
+          오래된순
+        {% elif sor == '조회순' %}
+          조회순
+        {% elif sor == '추천순' %}
+          추천순
+        {% else %}
+          최신순
+        {% endif %}
+      </a>
+
+      <div class="collapse multi-collapse" id="multiCollapseExample1" style='position: absolute; left: -110px; top: 0;'>
+        <div class="text-white p-2 rounded bg-black" style="border: 1px solid white; width:100px;">
+          
+          <form class='form__sort' action="{% block index__url %}{% url 'posts:index' %}{% endblock index__url %}">
+            <input {% if sor == '최신순' %}class='text-warning'{% endif %} type="submit" name='sort' value='최신순'>
+            <input style='margin-top:10px;' {% if sor == '오래된순' %}class='text-warning'{% endif %} type="submit" name='sort' value='오래된순'>
+            <input style='margin-top:10px;' {% if sor == '조회순' %}class='text-warning'{% endif %} type="submit" name='sort' value='조회순'>
+            <input style='margin-top:10px;' {% if sor == '추천순' %}class='text-warning'{% endif %} type="submit" name='sort' value='추천순'>
+          </form>
+
+        </div>
+      </div>
+      <a class="btn btn-primary" href="{% url 'posts:create' %}">작성하기</a>
+    </div>
+    <div class="mt-5">
+      {% for post in posts %}
+  
+        <div class="ps-4">
+          <p class='m-0 text-light' style="font-size: 14px; opacity:0.3;">
+            {{ post.category }} / 
+            {{ post.created_time|timesince }} 전
+          </p>
+          <div class='d-flex justify-content-between'>
+            <a class="post-title" href="{% url 'posts:detail' post.pk %}">
+              {{ post.title }}
+            </a>
+            <div class="text-light d-flex align-items-center justify-content-between" style="width:80px; opacity:0.5;">
+              <svg width='20px' height='20px' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              {{ post.count_hit }}
+              <svg width='20px' height='20px' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path></svg>
+              {{ post.count_like }}
+            </div>
+          </div>
+        </div>
+        <hr class="text-white">
+      {% endfor %}
+    </div>
+
+{% endblock content %}

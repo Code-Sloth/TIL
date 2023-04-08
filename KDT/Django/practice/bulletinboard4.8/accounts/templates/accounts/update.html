@@ -1,0 +1,35 @@
+{% extends 'accounts/login.html' %}
+
+{% block sidebar %}
+{% endblock sidebar %}
+
+{% block accounts_title %}
+  회원정보수정
+{% endblock accounts_title %}
+
+{% block accounts_url %}
+  {% url 'accounts:update' %}
+{% endblock accounts_url %}
+
+{% block accounts_form %}
+
+  <label class='my-3 text-secondary' style='margin-left:140px;'>이메일</label>
+  {{ form.email }}
+
+  <label class='my-3 text-secondary' style='margin-left:140px;'>성</label>
+  {{ form.first_name }}
+
+  <label class='my-3 text-secondary' style='margin-left:140px;'>이름</label>
+  {{ form.last_name }}
+
+{% endblock accounts_form %}
+
+{% block accounts_submit %}
+  <input style="width:70%; padding:20px; font-size: 21px;" class='btn btn-danger fw-bold my-5' type="submit" value="정보수정">
+{% endblock accounts_submit %}
+
+{% block accounts_changepassword %}
+  <div class='d-flex flex-row-reverse'>
+    <a class="change-password" href="{% url 'accounts:change_password' %}">비밀번호 변경</a>
+  </div>
+{% endblock accounts_changepassword %}
