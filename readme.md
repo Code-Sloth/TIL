@@ -123,7 +123,7 @@
 |**🔥 Day103 (4.7)**|**🔥 Day110 (4.14)**|
 |[PJT_BulletinBoard/4.7](KDT/Django/practice/bulletinboard4.7/)|[]()|
 |**☁ Day104 (4.8) / Weekend**|**☁ Day111 (4.15) / Weekend**|
-|[]()|[]()|
+|[PJT_BulletinBoard/4.8](KDT/Django/practice/bulletinboard4.8/)|[]()|
 |**☁ Day105 (4.9) / Weekend**|**☁ Day112 (4.16) / Weekend**|
 |[]()|[]()|
 
