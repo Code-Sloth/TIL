@@ -9,13 +9,23 @@
 - ```python
     # models.py
 
+    from django.conf import settings
+    import os
+
     image = models.ImageField(upload_to='image/', null=True, blank=True)
+
+      def delete(self, *args, **kargs):
+        if self.image:
+            os.remove(os.path.join(settings.MEDIA_ROOT, self.image.path))
+        super(Todo, self).delete(*args, **kargs)
 
     # 이미지필드로 모델을 만들고 기본 경로를 image폴더 안으로 지정
 
     # null : 데이터베이스의 레코드가 해당 필드에 대해 null값을 가질 수 있음(비어있을 수 있음)
 
     # blank : 양식을 채울 때 필드를 비워 둘 수 있으며 Django가 유효성 검사 오류를 발생시키지 않음
+
+    # delete : 글을 삭제했을 때 경로를 설정한 폴더에서도 image를 삭제
   ```
 
 <br/>
