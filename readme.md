@@ -16,6 +16,7 @@
 - [Form](KDT/Django/form4.3.md)
 - [Authentication](KDT/Django/authentication4.4.md)
 - [Authentication2](KDT/Django/authentication(2)4.5.md)
+- [BulletinBoard](KDT/Django/BulletinBoard.md)
 
 <br/>
 
@@ -125,7 +126,7 @@
 |**☁ Day104 (4.8) / Weekend**|**☁ Day111 (4.15) / Weekend**|
 |[PJT_BulletinBoard/4.8](KDT/Django/practice/bulletinboard4.8/)|[]()|
 |**☁ Day105 (4.9) / Weekend**|**☁ Day112 (4.16) / Weekend**|
-|[]()|[]()|
+|[BulletinBoard4.9](KDT/Django/BulletinBoard.md)|[]()|
 
 <br/>
 
