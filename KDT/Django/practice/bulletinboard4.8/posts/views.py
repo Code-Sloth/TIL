@@ -8,7 +8,6 @@ def index(request):
     posts = Post.objects.all()
     sor = request.GET.get('sort','')
     posts = sort_func(Post.objects.all(),sor)
-
     return render(request, 'posts/index.html',{'posts':posts,'sor':sor})
 
 def development(request):

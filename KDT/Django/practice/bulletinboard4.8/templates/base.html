@@ -119,31 +119,18 @@
         IT 정보 공유
       </h3>
       <div>
-        <p>
-          <form action="{% url 'posts:index' %}" method="POST">
-              {% csrf_token %}
-              <input type="hidden" name="cate" value="">
-              <input type="submit" value="모든 글">
-          </form>
+        <p class='my-5'>
+          <a href="{% url 'posts:index' %}">모든 글</a>
+        </p>
+        <p class='my-5'>
+          <a href="{% url 'posts:development' %}">개발</a>
+        </p>
+        <p class='my-5'>
+          <a href="{% url 'posts:cs' %}">CS</a>
         </p>
         <p>
-          <form action="{% url 'posts:development' %}">
-              <input type="submit" name="cate" value="개발">
-          </form>
+          <a href="{% url 'posts:newtech' %}">신기술</a>
         </p>
-        <p>
-          <form action="{% url 'posts:cs' %}" method="POST">
-              {% csrf_token %}
-              <input type="submit" name="cate" value="CS">
-          </form>
-        </p>
-        <p>
-          <form action="{% url 'posts:newtech' %}" method="POST">
-              {% csrf_token %}
-              <input type="submit" name="cate" value="신기술">
-          </form>
-        </p>
-
       </div>
     </div>
   {% endblock sidebar %}

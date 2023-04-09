@@ -71,7 +71,3 @@ class CustomUserPasswordChangeForm(PasswordChangeForm):
 
         self.fields['new_password2'].widget.attrs['class'] = 'form-control'
         self.fields['new_password2'].widget.attrs['placeholder'] = '새 비밀번호 확인' 
- 
-
-        # self.fields['password'].widget.attrs['class'] = 'form-control'
-        # self.fields['password'].widget.attrs['placeholder'] = '비밀번호' 
