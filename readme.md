@@ -17,6 +17,7 @@
 - [Authentication](KDT/Django/authentication4.4.md)
 - [Authentication2](KDT/Django/authentication(2)4.5.md)
 - [BulletinBoard](KDT/Django/BulletinBoard.md)
+- [StaticFiles](KDT/Django/staticfiles4.10.md)
 
 <br/>
 
@@ -114,7 +115,7 @@
 |week 15|week 16|
 |--|--|
 |**🔥 Day99 (4.3)**|**🔥 Day106 (4.10)**|
-|[Django4.3/Form](KDT/Django/form4.3.md)|[]()|
+|[Django4.3/Form](KDT/Django/form4.3.md)|[Django4.10/StaticFiles](KDT/Django/staticfiles4.10.md)|
 |**🔥 Day100 (4.4)**|**🔥 Day107 (4.11)**|
 |[Django4.4/Authentication](KDT/Django/authentication4.4.md)|[]()|
 |**🔥 Day101 (4.5)**|**🔥 Day108 (4.12)**|
