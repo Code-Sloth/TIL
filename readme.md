@@ -16,8 +16,9 @@
 - [Form](KDT/Django/form4.3.md)
 - [Authentication](KDT/Django/authentication4.4.md)
 - [Authentication2](KDT/Django/authentication(2)4.5.md)
-- [BulletinBoard](KDT/Django/BulletinBoard.md)
+- [BulletinBoard](KDT/Django/BulletinBoard/BulletinBoard.md)
 - [StaticFiles](KDT/Django/staticfiles4.10.md)
+- [Relationship](KDT/Django/relationship4.11.md)
 
 <br/>
 
@@ -117,7 +118,7 @@
 |**🔥 Day99 (4.3)**|**🔥 Day106 (4.10)**|
 |[Django4.3/Form](KDT/Django/form4.3.md)|[Django4.10/StaticFiles](KDT/Django/staticfiles4.10.md)|
 |**🔥 Day100 (4.4)**|**🔥 Day107 (4.11)**|
-|[Django4.4/Authentication](KDT/Django/authentication4.4.md)|[]()|
+|[Django4.4/Authentication](KDT/Django/authentication4.4.md)|[Django4.11/Relationship](KDT/Django/relationship4.11.md)|
 |**🔥 Day101 (4.5)**|**🔥 Day108 (4.12)**|
 |[Django4.5/Authentication2](KDT/Django/authentication(2)4.5.md)|[]()|
 |**🔥 Day102 (4.6)**|**🔥 Day109 (4.13)**|
@@ -127,7 +128,7 @@
 |**☁ Day104 (4.8) / Weekend**|**☁ Day111 (4.15) / Weekend**|
 |[PJT_BulletinBoard/4.8](KDT/Django/practice/bulletinboard4.8/)|[]()|
 |**☁ Day105 (4.9) / Weekend**|**☁ Day112 (4.16) / Weekend**|
-|[BulletinBoard4.9](KDT/Django/BulletinBoard.md)|[]()|
+|[BulletinBoard4.9](KDT/Django/BulletinBoard/BulletinBoard.md)|[]()|
 
 <br/>
 
