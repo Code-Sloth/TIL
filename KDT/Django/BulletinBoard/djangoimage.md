@@ -9,17 +9,30 @@
 - ```python
     # models.py
 
+    from django.db import models
     from django.conf import settings
     import os
 
-    image = models.ImageField(upload_to='image/', null=True, blank=True)
+    class Todo(models.Model):
+      author = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True, on_delete=models.CASCADE) # accounts쪽에서 만든 user정보와 연결
 
-      def delete(self, *args, **kargs):
-        if self.image:
-            os.remove(os.path.join(settings.MEDIA_ROOT, self.image.path))
-        super(Todo, self).delete(*args, **kargs)
+      def todos_image_path(instance, filename): # 이미지 저장 경로 설정 함수
+        return f'images/{instance.author.username}/{filename}' # images/유저의 아이디/경로로 저장 *여기서 적은 author은 바로 위에서 만든 author
 
-    # 이미지필드로 모델을 만들고 기본 경로를 image폴더 안으로 지정
+      image = models.ImageField(upload_to=todos_image_path,blank=True,null=True)
+
+        def delete(self, *args, **kargs): # 글을 삭제하면 저장된 이미지도 삭제
+          if self.image:
+              os.remove(os.path.join(settings.MEDIA_ROOT, self.image.path))
+          super(Todo, self).delete(*args, **kargs)
+
+        def save(self, *args, **kwargs): # 이미지를 수정하면 기존의 이미지를 삭제
+          if self.id:
+              old_post = Todo.objects.get(id=self.id)
+              if self.img_file != old_post.img_file:
+                  if old_post.img_file:
+                      os.remove(os.path.join(settings.MEDIA_ROOT, old_post.img_file.path))
+          super(Todo, self).save(*args, **kwargs)
 
     # null : 데이터베이스의 레코드가 해당 필드에 대해 null값을 가질 수 있음(비어있을 수 있음)
 
@@ -40,7 +53,7 @@
     # Django는 MEDIA_ROOT에서 지정한 디렉토리에 이미지 파일을 저장하고, 이미지를 웹 페이지에 표시하려면 MEDIA_URL에 지정된 URL을 사용하여 이미지 파일에 연결
   ```
   ```python
-    # urls.py (앱이 아닌 프로젝트의 url에 설정해야 함)
+    # urls.py (!!!앱이 아닌 프로젝트의 url에 설정해야 함)
 
     from django.conf.urls.static import static
     from django.conf import settings

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class='container w-50 mt-5'>
+
+    <form action="{% url 'accounts:signup' %}" method="POST">
+      {% csrf_token %}
+      {{ form.username }}
+      {{ form.password1 }}
+      {{ form.password2 }}
+      <input class='btn btn-primary' type="submit" value='회원가입'>
+    </form>
+
+  </div>
+
+{% endblock content %}

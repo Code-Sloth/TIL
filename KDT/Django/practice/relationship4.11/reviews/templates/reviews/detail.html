@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load custom_tags %}
+
+{% block content %}
+
+  <div class='container w-50'>
+    <h5 class='mt-3'>작성자 : {{ review.author }}</h5>
+    <hr>
+    <div style="width:50px">
+      {% if review.image %}
+        <img class='w-100' src="{{ review.image.url }}" alt="{{ review.title }}">
+      {% endif %}
+    </div>
+    {{ review.movie }}
+    <hr>
+    <h2>{{ review.title }}</h2>
+    {{ review.content }}
+    <hr>
+    {% for comment in comments %}
+      <div class='d-flex align-items-center'>
+        {{ comment.author }} : 
+        <hr>
+        {{ comment.content }}
+        <div class='d-flex flex-grow-1 flex-row-reverse'>
+          <form action="{% url 'reviews:comment_delete' review.pk comment.pk %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="삭제">
+          </form>
+          <p style='font-size:14px; opacity:0.8; margin:0 10px; line-height:30px;'>
+            {{ review.created_time|format_time_since }}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+    <form action="{% url 'reviews:comment_create' review.pk %}" method="POST">
+      {% csrf_token %}
+      <div class='d-flex mt-5'>
+        {{ comment_form.content }}
+        <input class="btn btn-primary" type="submit" value="작성">
+      </div>
+    </form>
+    <hr>
+    <div class='d-flex flex-row-reverse'>
+      <div class='d-flex'>
+        <a class='btn btn-outline-primary me-3' href="{% url 'reviews:index' %}">메인</a>
+        <form action="{% url 'reviews:delete' review.pk %}" method="POST">
+          {% csrf_token %}
+          <input class="btn btn-danger" type="submit" value="삭제">
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
