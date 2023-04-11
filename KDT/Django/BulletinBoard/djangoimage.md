@@ -58,6 +58,31 @@
 
 <br/>
 
+### 이미지 폼 설정
+- `pip install django-imagekit` 이미지킷 설치
+- settings.py의 INSTALLED_APPS에 'imagekit' 추가
+- ```python
+    # forms.py
+
+    from imagekit.forms import ProcessedImageField
+    from imagekit.processors import ResizeToFill
+
+    class TodoForm(forms.ModelForm):
+      image = ProcessedImageField(
+          spec_id='albums:image',
+          processors=[ResizeToFill(100,150)], # 100x150 픽셀로 설정
+          format='JPEG', # JPEG파일로 저장
+          options={'quality' : 90}, # 화질을 90%로 바꿈
+          required=False, # 이미지 첨부를 하지 않아도 오류가 나지 않도록 설정
+      )
+
+      class Meta:
+          model = Todo
+          fields = ('image',)
+  ```
+
+<br/>
+
 ### 이미지 첨부
 - ```html
     <!-- new.html -->
