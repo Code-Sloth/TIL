@@ -19,6 +19,7 @@
 - [BulletinBoard](KDT/Django/BulletinBoard/BulletinBoard.md)
 - [StaticFiles](KDT/Django/staticfiles4.10.md)
 - [Relationship](KDT/Django/relationship4.11.md)
+- [Relationship2](KDT/Django/relationship(2)4.12.md)
 
 <br/>
 
@@ -120,7 +121,7 @@
 |**🔥 Day100 (4.4)**|**🔥 Day107 (4.11)**|
 |[Django4.4/Authentication](KDT/Django/authentication4.4.md)|[Django4.11/Relationship](KDT/Django/relationship4.11.md)|
 |**🔥 Day101 (4.5)**|**🔥 Day108 (4.12)**|
-|[Django4.5/Authentication2](KDT/Django/authentication(2)4.5.md)|[]()|
+|[Django4.5/Authentication2](KDT/Django/authentication(2)4.5.md)|[Django4.12/Relationship(2)](KDT/Django/relationship(2)4.12.md)|
 |**🔥 Day102 (4.6)**|**🔥 Day109 (4.13)**|
 |[Algorithm/CodeReview](baek/codereview/)|[]()|
 |**🔥 Day103 (4.7)**|**🔥 Day110 (4.14)**|
