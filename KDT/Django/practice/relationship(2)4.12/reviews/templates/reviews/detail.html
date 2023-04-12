@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load custom_tags %}
+
+{% block content %}
+
+  <div class='container w-50' style='margin-top:100px;'>
+
+    <div class='d-flex align-items-center'>
+
+      {% if review.author.image %}
+        <div style='width:25px; margin-right:5px;'>
+          <img class='w-100 rounded-circle' src="{{ review.author.image.url }}" alt="#">
+        </div>
+      {% endif %}
+
+      <h5 class='m-0'>{{ review.author }}</h5>
+
+      <p class='m-0 ms-3' style='font-size:14px;'>{{ review.created_time|format_time_since }}</p>
+      
+    </div>
+
+
+    <hr>
+    <div class='d-flex'>
+      <div style="width:50px;" class='me-3'>
+        {% if review.image %}
+          <img class='w-100' src="{{ review.image.url }}" alt="{{ review.title }}">
+        {% endif %}
+      </div>
+      <div class='fw-bold' style='line-height:70px;'>
+        {{ review.movie }}
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>{{ review.title }}</h2>
+    {{ review.content }}
+
+    <hr>
+
+    {% for comment in comments %}
+      <div class='d-flex align-items-center'>
+        {% if review.author.image %}
+          <div style='width:20px; margin-right:5px;'>
+            <img class='w-100 rounded-circle' src="{{ comment.author.image.url }}" alt="#">
+          </div>
+        {% endif %}
+        {{ comment.author }} : 
+        <hr>
+        {{ comment.content }}
+        <div class='d-flex flex-grow-1 flex-row-reverse'>
+          {% if request.user == comment.author %}
+            <form action="{% url 'reviews:comment_delete' review.pk comment.pk %}" method="POST">
+              {% csrf_token %}
+              <input type="submit" value="삭제">
+            </form>
+          {% endif %}
+          <p style='font-size:14px; opacity:0.8; margin:0 10px; line-height:30px;'>
+            {{ comment.created_time|format_time_since }}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+
+    {% if request.user != review.author %}
+      <form action="{% url 'reviews:comment_create' review.pk %}" method="POST">
+        {% csrf_token %}
+        <div class='d-flex mt-5'>
+          {{ comment_form.content }}
+          <input class="btn btn-primary" type="submit" value="작성">
+        </div>
+      </form>
+
+      <hr>
+    {% endif %}
+
+
+    <div class='d-flex flex-row-reverse'>
+      <div class='d-flex'>
+        {% if request.user == review.author %}
+          <a class='btn btn-outline-primary me-3' href="{% url 'reviews:update' review.pk %}">수정</a>
+          <form action="{% url 'reviews:delete' review.pk %}" method="POST">
+            {% csrf_token %}
+            <input class="btn btn-outline-danger" type="submit" value="삭제">
+          </form>
+        {% endif %}
+        <a class='btn btn-outline-primary ms-3' href="{% url 'reviews:index' %}">메인</a>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

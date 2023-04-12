@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class='container w-50' style='margin-top:100px;'>
+    <h1>프로필 수정</h1>
+    <hr>
+    <form action="{% url 'accounts:update' %}" method="POST", enctype='multipart/form-data'>
+      {% csrf_token %}
+      {{ form.image }}
+      <div class='d-flex flex-row-reverse'>
+        <input class='btn btn-primary' type="submit" value='정보수정'>
+      </div>
+    </form>
+  </div>
+
+{% endblock content %}

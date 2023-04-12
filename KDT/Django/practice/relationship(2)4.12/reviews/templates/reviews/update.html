@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class='container w-50' style='margin-top:100px;'>
+    <h1>글 수정</h1>
+    <hr>
+    <form action="{% url 'reviews:update' review.pk %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.title }}
+      {{ form.content }}
+      {{ form.movie }}
+      {{ form.image }}
+      <div class='d-flex flex-row-reverse'>
+        <input class='btn btn-primary' type="submit" value="수정">
+        <a class='btn btn-outline-primary me-3' href="{% url 'reviews:detail' review.pk %}">취소</a>
+      </div>
+    </form>
+  </div>
+
+{% endblock content %}
