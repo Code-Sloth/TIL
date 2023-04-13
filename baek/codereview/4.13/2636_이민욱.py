@@ -15,24 +15,24 @@ def bfs(x,y):
         x,y = q.popleft()
         for dx,dy in d:
             nx,ny = x+dx, y+dy
-            if 0 <= nx < n and 0 <= ny < m:
-                if not g[nx][ny] and not vi[nx][ny]:
-                    vi[nx][ny] = 1
+            if 0 <= nx < n and 0 <= ny < m: # 인덱스를 벗어나지 않으면
+                if not g[nx][ny] and not vi[nx][ny]: # 공기이고, 방문한 적 없으면
+                    vi[nx][ny] = 1 # 방문 처리
                     q.append((nx,ny))
 
-                elif g[nx][ny]:
-                    g[nx][ny] = 0
-                    vi[nx][ny] = 1
+                elif g[nx][ny]: # 치즈이면
+                    g[nx][ny] = 0 # 녹게 함
+                    vi[nx][ny] = 1 # 방문 처리
                     t += 1
-    return t
+    return t # 녹게 만든 칸의 수를 리턴
 
 result = []
 time = 0
 while 1:
     t = bfs(0,0)
     result.append(t)
-    if t == 0: break
+    if t == 0: break # 다 녹았을 때 멈춤
     time += 1
 
 print(time)
-print(result[-2])
+print(result[-2]) # 다 녹기 1시간 전이니 result의 끝에서 2번째를 출력
