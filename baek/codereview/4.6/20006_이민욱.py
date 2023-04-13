@@ -1,6 +1,9 @@
 # 20006 랭킹전 대기열
 # 31388KB / 44ms
 
+import sys
+input = sys.stdin.readline
+
 n, m = map(int,input().split())
 g = [[] for _ in range(301)]
 t = 1

@@ -1,6 +1,9 @@
 # 4659 비밀번호 발음하기
 # 31256KB / 52ms
 
+import sys
+input = sys.stdin.readline
+
 g = ['a','e','i','o','u']
 
 while 1:

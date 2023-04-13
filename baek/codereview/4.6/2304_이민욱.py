@@ -1,6 +1,9 @@
 # 2304 창고 다각형
 # 31256KB / 40ms
 
+import sys
+input = sys.stdin.readline
+
 mxl = mxh = 0
 g = []
 
