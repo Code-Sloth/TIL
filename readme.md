@@ -123,7 +123,7 @@
 |**🔥 Day101 (4.5)**|**🔥 Day108 (4.12)**|
 |[Django4.5/Authentication2](KDT/Django/authentication(2)4.5.md)|[Django4.12/Relationship(2)](KDT/Django/relationship(2)4.12.md)|
 |**🔥 Day102 (4.6)**|**🔥 Day109 (4.13)**|
-|[Algorithm/CodeReview](baek/codereview/)|[]()|
+|[Algorithm/CodeReview4.6](baek/codereview/)|[Algorithm/CodeReview4.13](baek/codereview/4.13/)|
 |**🔥 Day103 (4.7)**|**🔥 Day110 (4.14)**|
 |[PJT_BulletinBoard/4.7](KDT/Django/practice/bulletinboard4.7/)|[]()|
 |**☁ Day104 (4.8) / Weekend**|**☁ Day111 (4.15) / Weekend**|
