@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Detail</h1>
+  <hr>
+  <div class='d-flex'>
+    {% if request.user.profile_image %}
+    <div style='width:200px;'>
+      <img class='rounded-circle w-100' src="{{ request.user.profile_image.url }}" alt="{{ request.user.username }}">
+    </div>
+    {% endif %}
+    <div class='ms-3' style='font-size:20px;'>
+      <div>
+        ID : {{ request.user.username }}
+      </div>
+      <div>
+        email : {{ request.user.email }}
+      </div>
+    </div>
+  </div>
+  <div class='accounts-sign'>
+    <a class='update-a btn btn-primary' style='font-size: 18px; line-height: 35px;' href="{% url 'accounts:update' %}">회원정보수정</a>
+  </div>
+{% endblock content %}

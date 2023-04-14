@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Create</h1>
+
+  <form action="{% block create__url %}{% url 'reviews:create' %}{% endblock create__url %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">  
+      <label for="title" class="form-label">제목</label>
+      {{ form.title }}
+    </div>
+
+    <div class="mb-3">  
+      <label for="content" class="form-label">내용</label>
+      {{ form.content }}
+    </div>
+
+    <div class="mb-3">  
+      <label for="movie" class="form-label">영화제목</label>
+      {{ form.movie }}
+    </div>
+
+    <div class="mb-3">  
+      <label for="image" class="form-label">이미지</label>
+      {{ form.image }}
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="제출">
+  </form>
+  
+
+{% endblock content %}

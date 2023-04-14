@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+
+    nav {
+      background-color: rgb(16 19 34);
+      box-shadow: 0 -4px 16px rgba(0,0,0,.32);
+    }
+
+    .navbar div {
+      padding: 5px 20px;
+      width: 150px;
+    }
+
+    .navbar div a {
+      color: white;
+      opacity: 0.7;
+      text-decoration: none;
+    }
+
+    .navbar div a:hover {
+      opacity: 1;
+    }
+
+    .accounts-sign input[type="submit"], .accounts-sign .update-a {
+      margin-top: 100px;
+      width: 100%;
+      background: rgb(59 72 105);
+      border: none;
+      height: 50px;
+    }
+  
+    .accounts-sign label {
+      color: rgb(189 198 213);
+    }
+  
+    .accounts-sign input:not([type="submit"]) {
+      background-color: rgb(23 32 54);
+      border: 1px solid rgb(37 48 74);
+      color: white;
+      height: 50px;
+    }
+    
+    .accounts-sign input:not([type="submit"]):focus {
+      background-color: rgb(23 32 54);
+      color: white;
+    }
+  
+    .accounts-sign input:not([type="submit"])::placeholder {
+      color: rgb(189 198 213);
+    }
+
+    .accounts-sign div {
+      margin-bottom: 20px;
+      color: gray;
+    }
+
+    {% block style %}
+    {% endblock style %}
+  </style>
+</head>
+<body style="background-color:rgb(16 19 34);">
+  <nav class='fixed-bottom'>
+    <div class='navbar container w-50 d-flex justify-content-around text-center' style='font-size:25px;'>
+      <div>
+        <a href="{% url 'reviews:index' %}">홈</a>
+      </div>
+      <div>
+        <a href="{% url 'reviews:create' %}">새 글</a>
+      </div>
+      {% if request.user.is_authenticated %}
+      
+        <div>
+          <a href="{% url 'accounts:detail' %}">내 정보</a>
+        </div>
+
+        <div>
+          <a href="{% url 'accounts:logout' %}">로그아웃</a>
+        </div>
+
+      {% else %}
+
+        <div>
+          <a href="{% url 'accounts:signup' %}">회원가입</a>
+        </div>
+
+        <div>
+          <a href="{% url 'accounts:login' %}">로그인</a>
+        </div>
+
+      {% endif %}
+    </div>
+  </nav>
+  
+  <div class='container sticky-top w-50 text-center text-white p-3' style="background-color: rgb(16 19 34);">
+    <h2>
+      {% block title %}
+      {% endblock title %}
+    </h2>
+  </div>
+
+  <div class='container w-50 text-white' style='margin-bottom:100px;'>
+    {% block content %}
+    {% endblock content %}
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

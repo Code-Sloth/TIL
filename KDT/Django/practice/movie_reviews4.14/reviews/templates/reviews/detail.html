@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  .font-detailMovie {
+    font-size: 30px;
+    margin-top: 6px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #efefef;
+  }
+
+  .img-fluid-cus {
+    height: 100%;
+  }
+
+  .font-detailTitle {
+    font-size: 16px;
+    color: #efefef;
+    margin-top: 16px;
+    font-weight: 700;
+  }
+
+  .font-detailContent {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22.5px;
+    color: #d4d9e1;
+    margin-bottom: 16px;
+    word-break: keep-all;
+  }
+{% endblock style %}
+
+{% block title %}
+  상세페이지
+{% endblock title %}
+
+{% block content %}
+  <div class="p-2 d-flex justify-content-between">
+    <div class="d-flex align-items-center">
+      <h3 class="font-detailMovie">{{ review.movie }}</h3>
+    </div>
+    <div style="width: 99px; height: 143px">
+      {% if review.image %}
+        <img class="img-fluid-cus rounded" src="{{ review.image.url }}" alt="{{ review.title }}">   
+      {% endif %}
+    </div>
+  </div>
+
+  <div>
+    <p class="font-detailTitle">리뷰 제목</p>
+    <p class="font-detailContent">{{ review.title }}</p>
+  </div>
+  <div>
+    <p class="font-detailTitle">리뷰 작성일</p>
+    <p class="font-detailContent">{{ review.created_at }}</p>
+  </div>
+  <div>
+    <p class="font-detailTitle">리뷰 내용</p>
+    <p class="font-detailContent">{{ review.content }}</p>
+  </div>
+
+  {% for comment in comments %}
+
+  <p> {{ comment.user }} - {{ comment.content }}</p>
+
+  {% if request.user == comment.user %}
+
+    <form action="{% url 'reviews:comment_delete' review.pk comment.pk %}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="댓글삭제">
+    </form>
+
+  {% endif %}
+  {% endfor %}
+
+  <form class="mb-5" action="{% url 'reviews:comment_create' review.pk %}" method="post">
+    {% csrf_token %}
+    {{ comment_form }}
+    <input class="btn btn-primary mt-2" type="submit" value="댓글작성" {% if request.user.is_anonymous %}disabled{% endif %}>
+  </form>
+
+  <div class="d-flex">
+    {% if request.user == review.user %}
+      <form action="{% url 'reviews:delete' review.pk %}" method="POST">
+        {% csrf_token %}
+        <a class='btn btn-primary me-3' href="{% url 'reviews:index' %}">메인 돌아가기</a>
+        <button class='btn btn-primary me-3' type="submit"> 리뷰 삭제</button>
+      </form>
+      <a class='btn btn-primary me-3' href="{% url 'reviews:update' review.pk %}">리뷰 수정</a>
+    {% endif %}
+    
+  </div>
+  
+
+{% endblock content %}

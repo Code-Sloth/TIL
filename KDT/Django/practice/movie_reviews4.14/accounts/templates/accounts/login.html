@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  로그인
+{% endblock title %}
+
+{% block content %}
+  <form class="accounts-sign" action="{% url 'accounts:login' %}" method="POST">
+    {% csrf_token %}
+    <label>아이디</label>
+    {{ form.username }}
+    <label>비밀번호</label>
+    {{ form.password }}
+    <input class='btn btn-primary' type="submit" value="로그인">
+  </form>
+{% endblock content %}

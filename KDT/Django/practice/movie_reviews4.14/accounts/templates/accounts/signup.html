@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  회원가입
+{% endblock title %}
+
+{% block content %}
+
+  <form class="accounts-sign" action="{% url 'accounts:signup' %}" method="POST">
+    {% csrf_token %}
+
+    <label for="username" class="form-label">아이디</label>
+    {{ form.username }}
+    <div id="usernamehelp" class="form-text">150자 이하 문자, 숫자 그리고 @/./+/-/_만 가능합니다.</div>
+
+    <label for="email" class="form-label">이메일</label>
+    {{ form.email }}
+    <div id="emailhelp" class="form-text">이메일 양식을 지켜주세요. user@email.com</div>
+
+    <label for="password1" class="form-label">비밀번호</label>
+    {{ form.password1 }}
+    <div id="password1help" class="form-text">다른 개인 정보와 유사한 비밀번호는 사용할 수 없습니다. <br>
+      비밀번호는 최소 8자 이상이어야 합니다. <br>
+      통상적으로 자주 사용되는 비밀번호는 사용할 수 없습니다. <br>
+      숫자로만 이루어진 비밀번호는 사용할 수 없습니다.</div>
+
+    <label for="password2" class="form-label">비밀번호 확인</label>
+    {{ form.password2 }}
+    <div id="password2help" class="form-text">확인을 위해 이전과 동일한 비밀번호를 입력하세요.</div>
+
+    <input class='btn btn-primary' type="submit" value="회원가입">
+  </form>
+{% endblock content %}

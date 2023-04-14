@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  회원정보수정
+{% endblock title %}
+
+{% block content %}
+  <form class="accounts-sign" action="{% url 'accounts:update' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">  
+      <label for="username" class="form-label">아이디</label>
+      {{ form.username }}
+      <div id="usernamehelp" class="form-text">150자 이하 문자, 숫자 그리고 @/./+/-/_만 가능합니다.</div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">이메일</label>
+      {{ form.email }}
+      <div id="emailhelp" class="form-text">이메일 양식을 지켜주세요. user@email.com</div>
+    </div>
+    <div class="mb-3">
+      <label for="profile_image" class="form-label">프로파일 이미지</label>
+      {{ form.profile_image }}
+    </div>
+
+    <input class='btn btn-primary' type="submit" value="회원가입">
+  </form>
+{% endblock content %}

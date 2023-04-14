@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% load cutom_filter %}
+
+{% block style %}
+  .font-reviewMovieTitle {
+    text-decoration-line: none;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .font-reviewUser {
+    color: #98a4b7;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .font-reviewTimeSince {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #586a85;
+  }
+
+  .font-reviewContent {
+    text-decoration-line: none;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 21px;
+    overflow: hidden;
+    color: #efefef;
+  }
+{% endblock style %}
+
+{% block title %}
+  최신 리뷰 모아보기
+{% endblock title %}
+
+{% block content %}
+
+  {% for review in reviews %}
+    <div class=" asdf rounded mb-3" style="background-color: rgb(23 32 54); padding: 20px;">
+      <div>
+        <div class="d-flex">
+          <div style="width: 48px; height: 64px">
+            {% if review.image %}
+              <a href="{% url 'reviews:detail' review.pk%}">
+                <img class="img-fluid rounded" src="{{ review.image.url }}" alt="{{ review.title }}">
+              </a>
+            {% endif %}
+          </div>
+          <div class="d-flex flex-column flex-grow-1 px-2">
+            <div class="d-flex justify-content-between">
+              <a class="font-reviewMovieTitle" href="{% url 'reviews:detail' review.pk %}">
+                <h5>{{ review.movie }}</h5>
+              </a>
+              <p class="font-reviewTimeSince">{{ review.created_time|format_time_since }}</p>
+            </div>
+            <div>
+              <p class="font-reviewUser">{{ review.user }}님의 평가</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-3">
+        <a class="font-reviewContent" href="{% url 'reviews:detail' review.pk %}">{{ review.title }}</a>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock content %}

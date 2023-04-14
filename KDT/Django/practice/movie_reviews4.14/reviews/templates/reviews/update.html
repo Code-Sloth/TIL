@@ -1,0 +1,5 @@
+{% extends 'reviews/create.html' %}
+
+{% block create__url %}
+  {% url 'reviews:update' review.pk %}
+{% endblock create__url %}
