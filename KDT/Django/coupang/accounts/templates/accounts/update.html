@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  회원정보수정
+{% endblock title %}
+
+
+{% block content %}
+  <form class="accounts-sign" action="{% url 'accounts:update' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% if request.user.image %}
+      <img src="{{ request.user.image.url }}" alt="{{ request.user }}">
+    {% else %}
+      <img src="{% static 'img/no_image.png' %}" alt="no image">
+    {% endif %}
+
+    <label class="form-label">아이디</label>
+    {{ request.user }}
+
+    <label class="form-label">이메일</label>
+    {{ form.email }}
+    
+    <label class="form-label">이름</label>
+    {{ form.last_name }}
+
+    <label class="form-label">비밀번호변경</label>
+    {{ password_form.old_password }}
+    {{ password_form.new_password1 }}
+    {{ password_form.new_password2 }}
+
+    <label for="profile_image" class="form-label">프로필 이미지</label>
+    {{ form.profile_image }}
+
+    <input class='btn btn-primary' type="submit" value="회원가입">
+  </form>
+{% endblock content %}

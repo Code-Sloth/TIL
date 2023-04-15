@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  쿠팡
+{% endblock title %}
+
+{% block content %}
+  <h1>Create</h1>
+  <form action="{% url 'products:create' %}" method='POST' enctype='multipart/form-data'>
+    {% csrf_token %}
+    {{ form.as_p }}
+      <input type="submit" class='btn' value='등록하기'>
+      <button class="btn" onclick=back()>뒤로가기</button>
+{% endblock content %}

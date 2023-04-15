@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  회원가입
+{% endblock title %}
+
+{% block content %}
+
+  <form class="accounts-sign" action="{% url 'accounts:join' %}" method="POST">
+    {% csrf_token %}
+
+    {{ form.username }}
+
+    {{ form.password1 }}
+    <div id="password1help" class="form-text">X 영문/숫자/특수문자 2가지 이상 조합 (8~20자)<br>X 3개 이상 연속되거나 동일한 문자/숫자 제외<br>X 아이디(이메일) 제외</div>
+
+    {{ form.password2 }}
+    <div id="password2help" class="form-text">확인을 위해 이전과 동일한 비밀번호를 입력하세요.</div>
+
+    {{ form.last_name }}
+
+    <input class='btn btn-primary' type="submit" value="회원가입">
+    <button class="btn" onclick=back()>뒤로가기</button>
+  </form>
+{% endblock content %}
