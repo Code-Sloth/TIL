@@ -1,65 +1,60 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm,PasswordChangeForm
-from django.contrib.auth import get_user_model
-from imagekit.forms import ProcessedImageField
-from imagekit.processors import ResizeToFill
+from .models import Product,Comment,ProductImage,CommentImage
 
-class CustomUserCreationForm(UserCreationForm):
-    class Meta(UserCreationForm):
-        model = get_user_model()
-        fields = ('username', 'password1', 'password2', 'last_name')
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        self.fields['username'].widget.attrs['class'] = 'form-control my-3'
-        self.fields['username'].widget.attrs['placeholder'] = '아이디'
-
-        self.fields['password1'].widget.attrs['class'] = 'form-control my-3'
-        self.fields['password1'].widget.attrs['placeholder'] = '비밀번호'
-        
-        self.fields['password2'].widget.attrs['class'] = 'form-control my-3'
-        self.fields['password2'].widget.attrs['placeholder'] = '비밀번호 확인'
-        
-        self.fields['last_name'].widget.attrs['class'] = 'form-control my-3'
-        self.fields['last_name'].widget.attrs['placeholder'] = '이름'
-
-class CustomUserAuthenticationForm(AuthenticationForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        self.fields['username'].widget.attrs['class'] = 'form-control my-3'
-        self.fields['username'].widget.attrs['placeholder'] = '아이디'
-
-        self.fields['password'].widget.attrs['class'] = 'form-control my-3'
-        self.fields['password'].widget.attrs['placeholder'] = '비밀번호'
-
-class CustomUserChangeForm(UserChangeForm):
-    image = ProcessedImageField(
-        spec_id='profiles:image',
-        processors=[ResizeToFill(100,150)],
-        format='JPEG',
-        options={'quality' : 90},
-        required=False,
+class ProductForm(forms.ModelForm):
+    delivery_date = forms.DateField(
+        widget=forms.DateInput(
+            attrs={'type': 'date'},
+        ),
     )
-
-    class Meta(UserChangeForm):
-        model = get_user_model()
-        fields = ('email','last_name','profile_image',)
+    class Meta:
+        model = Product
+        fields = ('title', 'price', 'delivery_date', 'content', 'category',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.fields['email'].widget.attrs['class'] = 'form-control my-3'
+        self.fields['title'].widget.attrs['class'] = 'form-control my-3'
 
-        self.fields['last_name'].widget.attrs['class'] = 'form-control my-3'
+        self.fields['price'].widget.attrs['class'] = 'form-control my-3' 
 
-        self.fields['profile_image'].widget.attrs['class'] = 'form-control my-3'
+        self.fields['delivery_date'].widget.attrs['class'] = 'form-control my-3'
 
-class CustomUserPasswordChangeForm(PasswordChangeForm):
+        self.fields['content'].widget.attrs['class'] = 'form-control my-3'
+
+        self.fields['category'].widget.attrs['class'] = 'form-control my-3'
+
+class ProductImageForm(forms.ModelForm):
+    class Meta:
+        model = ProductImage
+        fields = ('image',)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.fields['new_password1'].widget.attrs['class'] = 'form-control my-3'
-        
-        self.fields['new_password2'].widget.attrs['class'] = 'form-control my-3'
+        self.fields['image'].widget.attrs['multiple'] = True
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('title', 'content', 'star',)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['title'].widget.attrs['class'] = 'form-control my-3'
+
+        self.fields['content'].widget.attrs['class'] = 'form-control my-3'
+
+        self.fields['star'].widget.attrs['class'] = 'form-control my-3'
+
+
+class CommentImageForm(forms.ModelForm):
+    class Meta:
+        model = CommentImage
+        fields = ('comment_image',)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['comment_image'].widget.attrs['multiple'] = True
