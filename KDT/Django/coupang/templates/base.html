@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> 
   <title>{% block title %}{% endblock title %}</title>
   <link rel="icon" href="{% static 'img/coupang_favicon.ico' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -14,10 +15,179 @@
   </style>
 </head>
 <body>
-  <nav>
-      
+  {% comment %} nav bar {% endcomment %}
+  
+  <nav class='sticky-top bg-white' style="height:147px; box-shadow: 1px 7px 15px 4px rgba(0,0,0,0.1);">
+    <div class="nav-header">
+      <div class="container d-flex justify-content-between">
+        <div class="d-flex">
+          <a href="">즐겨찾기</a>
+          <a href="" class="dropdown-toggle">입점신청</a>
+        </div>
+        <div class="d-flex align-items-center">
+          {% if request.user.is_authenticated %}
+            <a href="{% url 'accounts:mypage' %}" class="fw-bold">{{ request.user.last_name }}</a>
+            <span style='font-size:11px;'>님</span>
+            <form action="{% url 'accounts:logout' %}" method='POST'>
+              {% csrf_token %}
+              <button type="submit" class="logout-btn">로그아웃</button>
+            </form>
+          {% else %}
+            <a href="{% url 'accounts:login' %}">로그인</a>
+            <a href="{% url 'accounts:join' %}">회원가입</a>
+          {% endif %}
+          <a href="">고객센터</a>
+        </div>
+      </div>
+    </div>
+    
+    {% comment %} 카테고리 {% endcomment %}
+    
+    <div class='container d-flex align-items-center'>
+
+      <div class="nav-parent">
+        <a data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+          <div class="nav-collapse-btn">
+            <img src="https://static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_180104.png" alt="#">
+            <p class='collapse-text'>카테고리</p>
+          </div>
+        </a>
+
+        <div class="nav-collapse collapse multi-collapse" id="multiCollapseExample1">
+          <form action="">
+            <div>
+              <button class='cate cate-1' type="submit">패션의류/잡화</button>
+            </div>
+            <div>
+              <button class="cate cate-2" type="submit">뷰티</button>
+            </div>
+            <div>
+              <button class="cate cate-3" type="submit">식품</button>
+            </div>
+            <div>
+              <button class="cate cate-4" type="submit">주방용품</button>
+            </div>
+            <div>
+              <button class="cate cate-5" type="submit">생활용품</button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+
+      {% comment %} 검색창 {% endcomment %}
+      <div class='d-flex flex-column'>
+        <div class='d-flex align-items-center ms-2' style='height: 83px;'>
+          <div class="ms-3">
+            <a href="{% url 'products:index' %}">
+              <img src="{% static 'img/coupang_logo.png' %}" alt="logo" class="logo">
+            </a>
+          </div>
+          <div class="search-box">
+            <form action="." method="post" class="searchform">
+              {% csrf_token %}
+              <div class="cateogory-box">
+                <a href="" class="sellect-button"></a>
+                <select class="sellect-category">
+                  <option>전체</option>
+                  <option><a href="">여성패션</a></option>
+                  <option>남성패션</option>
+                  <option>남녀 공용 의류</option>
+                  <option>유아동패션</option>
+                  <option>뷰티</li동패션>
+                  <option>식품</option>
+                  <option>주방용품</option>
+                  <option>생활용품</option>
+                </select>
+              </div>
+
+                <input class="search-txt" type="text" placeholder="찾고 싶은 상품을 검색해보세요!">
+                <a href="#" class="microphone"></a>
+                <a class="search-btn" type="submit"></a>
+            </form>
+          </div>
+          
+          <div class="d-flex flex-column align-items-center ms-3">
+            <a href=""><svg width="31px" height="33px" viewBox="0 0 64.00 64.00" xmlns="http://www.w3.org/2000/svg" stroke-width="3" stroke="#646464" fill="none" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="32" cy="20.14" r="11.14"></circle><path d="M54.55,56.85A22.55,22.55,0,0,0,32,34.3h0A22.55,22.55,0,0,0,9.45,56.85Z"></path></g></svg></a>
+            <span class="mycoupang">마이쿠팡</span>
+          </div>
+
+          <div class="d-flex flex-column align-items-center ms-3" >
+            <svg fill="#646464" width="31px" height="33px" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M 20.0079 39.6485 L 47.3596 39.6485 C 48.2735 39.6485 49.0703 38.8985 49.0703 37.8907 C 49.0703 36.8829 48.2735 36.1328 47.3596 36.1328 L 20.4063 36.1328 C 19.0704 36.1328 18.2501 35.1953 18.0391 33.7656 L 17.6641 31.3047 L 47.4062 31.3047 C 50.8281 31.3047 52.5859 29.1953 53.0783 25.8438 L 54.9532 13.4453 C 55.0003 13.1407 55.0468 12.7656 55.0468 12.5547 C 55.0468 11.4297 54.2030 10.6563 52.9142 10.6563 L 14.6407 10.6563 L 14.1954 7.6797 C 13.9610 5.8750 13.3048 4.9609 10.9141 4.9609 L 2.6876 4.9609 C 1.7501 4.9609 .9532 5.7813 .9532 6.7188 C .9532 7.6797 1.7501 8.5000 2.6876 8.5000 L 10.6094 8.5000 L 14.3594 34.2344 C 14.8516 37.5625 16.6094 39.6485 20.0079 39.6485 Z M 51.0623 14.1953 L 49.3987 25.4219 C 49.2110 26.8750 48.4377 27.7656 47.0548 27.7656 L 17.1485 27.7891 L 15.1563 14.1953 Z M 21.8594 51.0391 C 23.9688 51.0391 25.6563 49.375 25.6563 47.2422 C 25.6563 45.1328 23.9688 43.4453 21.8594 43.4453 C 19.7266 43.4453 18.0391 45.1328 18.0391 47.2422 C 18.0391 49.375 19.7266 51.0391 21.8594 51.0391 Z M 43.7735 51.0391 C 45.9062 51.0391 47.5939 49.375 47.5939 47.2422 C 47.5939 45.1328 45.9062 43.4453 43.7735 43.4453 C 41.6641 43.4453 39.9532 45.1328 39.9532 47.2422 C 39.9532 49.375 41.6641 51.0391 43.7735 51.0391 Z"></path></g></svg>
+            <span class="mycoupang">장바구니</span>
+          </div>
+
+        </div>
+        <div class="nav-rocket d-flex">
+          <div class="rocket-item d-flex">
+            <div>
+              <img class="h-75" src="{% static 'img/rocket1.png' %}" alt="#">
+            </div>
+            <a href="">로켓배송</a>
+          </div>
+          <div class="rocket-item">
+            <div>
+              <img class="h-75" src="{% static 'img/rocket2.png' %}" alt="#">
+            </div>
+            <a href="">로켓프레시</a>
+            <div>
+              <img src="{% static 'img/rocket4.png' %}" alt="#">
+            </div>
+          </div>
+          <div class="rocket-item">
+            <div>
+              <img src="{% static 'img/rocket3.png' %}" alt="#">
+            </div>
+            <a href="">쿠팡비즈</a>
+            <div>
+              <img src="{% static 'img/rocket4.png' %}" alt="#">
+            </div>
+          </div>
+          <div class="rocket-item">
+            <div>
+              <img class="h-75" src="{% static 'img/rocket5.png' %}" alt="#">
+            </div>
+            <a href="">로켓직구</a>
+          </div>
+          <div class="rocket-item">
+            <a href="">골드박스</a>
+          </div>
+          <div class="rocket-item">
+            <a href="">와우회원할인</a>
+          </div>
+          <div class="rocket-item">
+            <a href="">이벤트/쿠폰</a>
+          </div>
+          <div class="rocket-item">
+            <div>
+              <img src="{% static 'img/rocket6.png' %}" alt="#">
+            </div>
+            <a href="">착한상점</a>
+            <div>
+              <img src="{% static 'img/rocket4.png' %}" alt="#">
+            </div>
+          </div>
+          <div class="rocket-item">
+            <a href="">기획전</a>
+          </div>
+          <div class="rocket-item">
+            <div>
+              <img class="h-75" src="{% static 'img/rocket7.png' %}" alt="#">
+            </div>
+            <a href="">여행/티켓</a>
+            <div>
+              <img src="{% static 'img/rocket4.png' %}" alt="#">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </nav>
-  <section class='container'>
+
+
+  <section class='container' style="height:2000px;">
     {% block content %}
     {% endblock content %}
   </section>
@@ -30,5 +200,23 @@
     const back = () => {
         window.history.back()
     }
+
+    const collapseBtn = document.querySelector('.nav-collapse-btn');
+    const collapseArea = document.querySelector('.nav-collapse');
+    const collapseHidden = document.querySelector('.collapse-hidden');
+
+    collapseBtn.addEventListener('mouseenter', () => {
+      if (collapseArea.classList.contains('show')) {
+        return;
+      }
+
+      collapseArea.classList.add('show');
+    });
+
+    collapseArea.addEventListener('mouseleave', () => {
+      collapseArea.classList.remove('show');
+    });
+
+
 </script>
 </html>

@@ -6,5 +6,18 @@
 
 {% block content %}
   <h1>디테일</h1>
-  
+
+
+  {% for a, images in product_images %}
+    {% for image in images %}
+      {% if image %}
+        <img src="{{ image.image.url }}" alt="#">
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  <form action="{% url 'products:delete' product.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="삭제">
+  </form>
 {% endblock content %}

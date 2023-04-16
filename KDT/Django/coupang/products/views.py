@@ -1,8 +1,10 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
-from .models import Product,Comment,ProductImage
-from .forms import ProductForm,CommentForm,ProductImageForm,ProductImageFormSet
+from .models import Product, Comment, ProductImage, CommentImage
+from .forms import ProductForm, CommentForm, ProductImageForm, CommentImageForm
 from django.db.models import Q
+from django.conf import settings
+import os
 # import ModelViewSet
 # from .serializers import ProductSerializer
 
@@ -11,7 +13,15 @@ from django.db.models import Q
 
 def index(request):
     products = Product.objects.all()[::-1]
-    return render(request, 'products/index.html',{'products':products})
+    product_images = []
+    for product in products:
+        images = ProductImage.objects.filter(product=product)
+        if images:
+            product_images.append((product, images[0]))
+        else:
+            product_images.append((product, ''))
+    context = {'product_images': product_images}
+    return render(request, 'products/index.html',context)
 
 # def search(request):
 #     query = request.GET.get('q','')
@@ -28,38 +38,44 @@ def index(request):
 
 @login_required
 def create(request):
-
     if request.method == 'POST':
-        
-        form = ProductForm(request.POST, request.FILES)
-        g = []
+        form = ProductForm(request.POST)
+        files = request.FILES.getlist("image")
         if form.is_valid():
-            images = request.FILES.getlist('image')
-            for image in images:
-                post_form = form.save(commit=False)
-                post_form.user = request.user
-                g.append(image)
-                post_form.image = image
-                post_form.urls = g
-                for i in post_form.urls:
-                    print(i)
-                post_form.save()
+            f = form.save(commit=False)
+            f.user = request.user
+            f.save()
+            for i in files:
+                ProductImage.objects.create(image=i, product=f)
             return redirect('products:index')
+        else:
+            print(form.errors)
     else:
-        form = ProductForm()
-    return render(request, 'products/create.html',{'form':form})
+        product_form = ProductForm()
+        image_form = ProductImageForm()
+    return render(request, 'products/create.html', {'product_form': product_form, 'image_form':image_form,})
 
 
 def detail(request, product_pk):
     product = Product.objects.get(pk=product_pk)
     comment_form = CommentForm()
-    comments = Product.comment_set.all()
-    product.save()
+    commentimage_form = CommentImageForm()
+    comments = product.comment_set.all()
+    
+    product_images = []
+    images = ProductImage.objects.filter(product=product)
+    if images:
+        product_images.append((product, images))
+    else:
+        product_images.append((product, ''))
 
     context = {
         'product':product,
+        'product_images':product_images,
         'comment_form':comment_form,
         'comments':comments,
+        'commentimage_form':commentimage_form,
+        'like_count':product.count_likes_user(),
     }
     return render(request, 'products/detail.html',context)
 
@@ -73,31 +89,58 @@ def delete(request, product_pk):
 @login_required
 def update(request, product_pk):
     product = Product.objects.get(pk=product_pk)
-    if request.user == product.user:
-        if request.method == 'POST':
-            form = ProductForm(request.POST, request.FILES, instance=product)
-            if form.is_valid():
-                form.save()
-                return redirect('products:detail', product_pk)
+    delete_images = product.image_set.all()
+    images = ProductImage.objects.filter(product=product)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, instance=product)
+        files = request.FILES.getlist("image")
+        if form.is_valid():
+            f = form.save()
+            f.user = request.user
+
+            if request.FILES.get('image'):
+                if request.POST.get('sub') == '수정':
+                    for i in delete_images:
+                        i.delete()
+
+            for i in files:
+                ProductImage.objects.create(image=i, product=f)
+            return redirect('products:index')
         else:
-            form = ProductForm(instance=product)
-        return render(request, 'products/update.html',{'form':form,'product':product})
+            print(form.errors)
     else:
-        return redirect('products:detail', product_pk)
+        productform = ProductForm(instance=product)
+        imageform = ProductImageForm()
+    return render(request, 'products/update.html', {'productform': productform, 'imageform':imageform, 'images':images})
 
 @login_required
 def comment_create(request, product_pk):
-    product = product.objects.get(pk=product_pk)
+    product = Product.objects.get(pk=product_pk)
     comment_form = CommentForm(request.POST)
+    commentimage_form = CommentImageForm(request.FILES)
+    files = request.FILES.getlist('comment_image')
+    product_images = []
+    images = ProductImage.objects.filter(product=product)
+    product_images.append((product, images))
+    comments = product.comment_set.all()
+    
     if comment_form.is_valid():
-        comment = comment_form.save(commit=False)
-        comment.product = product
-        comment.user = request.user
-        comment.save()
-        return redirect('products:detail', product.pk)
+        c = comment_form.save(commit=False)
+        c.product = product
+        c.user = request.user
+        c.save()
+        for i in files:
+            CommentImage.objects.create(comment_image=i, product=c)
+        return redirect('products:detail', product_pk)
+    
     context = {
         'product':product,
-        'comment_form':comment_form
+        'product_images':product_images,
+        'comment_form':comment_form,
+        'comments':comments,
+        'commentimage_form':commentimage_form,
+        'like_count':product.count_likes_user(),
     }
     return render(request,'products/detail.html', context)
 
@@ -116,3 +159,4 @@ def likes(request, product_pk):
     else:
         product.like_users.add(request.user)
     return redirect('products:index', product_pk)
+

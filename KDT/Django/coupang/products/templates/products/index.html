@@ -8,11 +8,16 @@
   <h1>인덱스</h1>
   <a href="{% url 'products:create' %}">Create</a>
 
-  {% for product in products %}
+  {% for product, image in product_images %}
+  
+    {{ product.title }}
+    {{ product.price }}
     <a href="{% url 'products:detail' product.pk %}">{{ product.title }}</a>
-    {% for img in product.urls %}
-      {{img}}
-      <img src="{{ img }}" alt="#">
-    {% endfor %}
+
+    {% if image.image %}
+      <img src="{{ image.image.url }}" alt="{{ product.title }}">
+    {% endif %}
+    <hr>
+
   {% endfor %}
 {% endblock content %}

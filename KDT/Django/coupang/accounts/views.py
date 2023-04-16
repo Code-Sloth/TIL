@@ -87,10 +87,6 @@ def update(request):
 #     return render(request, 'change_password.html', context)
 
 @login_required
-def mypage(request, pk):
-    user = User.objects.get(pk=pk)
-    context = {
-        'user': user,
-    }
-    return render(request, 'accounts/mypage.html', context)
+def mypage(request):
+    return render(request, 'accounts/mypage.html')
 

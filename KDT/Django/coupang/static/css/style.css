@@ -1,0 +1,260 @@
+.nav-header {
+    background-color: rgb(240 240 240);
+    height: 32px;
+    line-height: 32px;
+}
+
+
+.nav-header a{
+    text-decoration: none;
+    color: black;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.logout-btn {
+    background-color: white;
+    font-size: 11px;
+    border: 1px solid rgb(204 204 204);
+    text-align: center;
+    width: 50px;
+    height: 21px;
+    padding:2px;
+    margin-top: 4px;
+    line-height: 16px;
+    margin: 0 9px;
+    color: rgb(157, 157, 157);
+}
+
+/* 콜랩스 */
+
+.nav-collapse-btn {
+    position: relative;
+    width: 110px;
+    height: 115px;
+    overflow: hidden;
+}
+
+.nav-collapse {
+    position: absolute;
+    width: 150px;
+    padding: 5px 0;
+    top: 150px;
+    
+    background-color: white;
+    box-shadow: 1px 4px 5px rgba(0,0,0,0.3);
+    transition: height 0.3s ease-out;
+}
+
+.nav-collapse button {
+    font-size: 12px;
+    border: none;
+    background-color: white;
+}
+
+.collapse-text {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    color: white;
+    font-size: 13px;
+}
+
+.cate {
+    font-family: apple sd gothic neo,"맑은 고딕",malgun gothic,"나눔고딕",nanumgothic,"돋움",dotum,sans-serif;
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    height: 25px;
+    color: #333;
+    font-size: 12px;
+    position: relative;
+    width: 130px;
+    padding: 5px 0 0 51px;
+    white-space: nowrap;
+    background: url("//static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver10.png") 12px 1px no-repeat;
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+.cate:hover {
+    color: rgb(0 115 233);
+    text-decoration: underline;
+}
+
+.cate-1 {
+    background-position: -8px -28px;
+    cursor: default;
+}
+.cate-2 {background-position: -8px -112px;}
+.cate-3 {background-position: -8px -196px;}
+.cate-4 {background-position: -8px -280px;}
+.cate-5 {background-position: -8px -323px;}
+
+.cate-1:hover {
+    background-position: -200px -28px;
+    cursor: default;
+}
+.cate-2:hover {background-position: -200px -112px;}
+.cate-3:hover {background-position: -200px -196px;}
+.cate-4:hover {background-position: -200px -280px;}
+.cate-5:hover {background-position: -200px -323px;}
+
+/* Search */
+
+.logo {
+    width: 174px;
+    height: 41px;
+}
+
+.searchform {
+    padding: 0;
+    margin: 0;
+}
+
+.search-box {
+    padding: 0;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    height: 39px;
+    border: 2px solid #4285f4;
+    background-position: 0 -207px;
+    position: relative;
+    z-index: 3;
+    width: 810px;
+}
+
+.search-txt {
+    padding: 0;
+    left: 135px;
+    color: #333;
+    position: absolute;
+    top: 0;
+    height: 34px;
+    margin: 0;
+    border: 0;
+    background: #fff;
+    text-indent: 10px;
+    font-size: 14px;
+    outline: 0;
+    line-height: normal;
+    width: 630px;
+}
+
+.search-btn {
+    font-size: 100%;
+    text-decoration: none;
+    background-image: url("/static/img/icon_list.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 39px;
+    background-position: -112px -71px;
+    text-indent: -9em;
+}
+
+.sellect-button {
+    background-image: url("/static/img/icon_list.png");
+    background-repeat: no-repeat;
+    background-position: 6px -165px;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+    display: block;
+    height: 30px;
+    outline: 0;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 30px;
+}
+
+.sellect-category {
+    background-color: #fff;
+    font-size: 12px;
+    display: block;
+    height: 34px;
+    left: 0;
+    line-height: 34px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 10px;
+    text-align: left;
+    top: 0;
+    width: 110px;
+    color: #555;
+    outline: 0;
+    text-decoration: none;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.cateogory-box {
+    margin: 0;
+    padding: 0;
+    z-index: 20;
+    position: absolute;;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    height: 34px;
+    border: 0;
+    width: 134px;
+    border-right: 1px solid #ddd;
+}
+
+.microphone {
+    z-index: 30;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    right: 48px;
+    width: 26px;
+    height: 26px;
+    background: url("/static/img/mic.png") 3px 1px no-repeat;
+    background-size: 20px 48px;
+}
+
+.mycoupang {
+    font-size: 12px;
+    color: #555;
+    margin-top: 3px;
+}
+
+/* nav-rocket */
+
+.nav-rocket {
+    max-width: 1160px;
+    height: 32px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.rocket-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.rocket-item div {
+    height: 25px;
+}
+
+.rocket-item img {height:60%; margin: 0 2px;}
+
+.rocket-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.rocket-item a:hover {
+    color: rgb(0 115 233);
+    text-decoration: underline;
+}

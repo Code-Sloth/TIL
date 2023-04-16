@@ -8,5 +8,5 @@ urlpatterns = [
     path('join/', views.join, name='join'),
     path('delete/', views.delete, name='delete'),
     path('update/', views.update, name='update'),
-    path('mypage/<int:pk>/', views.mypage, name='mypage'),
+    path('mypage/', views.mypage, name='mypage'),
 ]

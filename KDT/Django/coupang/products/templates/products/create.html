@@ -8,7 +8,8 @@
   <h1>Create</h1>
   <form action="{% url 'products:create' %}" method='POST' enctype='multipart/form-data'>
     {% csrf_token %}
-    {{ form.as_p }}
-      <input type="submit" class='btn' value='등록하기'>
-      <button class="btn" onclick=back()>뒤로가기</button>
+    {{ product_form.as_p }}
+    {{ image_form }}
+    <input type="submit" class='btn' value='등록하기'>
+    <button class="btn" onclick=back()>뒤로가기</button>
 {% endblock content %}
