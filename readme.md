@@ -127,9 +127,9 @@
 |**🔥 Day103 (4.7)**|**🔥 Day110 (4.14)**|
 |[PJT_BulletinBoard4.7](KDT/Django/practice/bulletinboard4.7/)|[PJT_MovieReviews4.14](KDT/Django/practice/movie_reviews4.14/)|
 |**☁ Day104 (4.8) / Weekend**|**☁ Day111 (4.15) / Weekend**|
-|[PJT_BulletinBoard4.8](KDT/Django/practice/bulletinboard4.8/)|[Coupang1](KDT/Django/coupang/)|
+|[PJT_BulletinBoard4.8](KDT/Django/practice/bulletinboard4.8/)|[Coupang_day1](KDT/Django/coupang/)|
 |**☁ Day105 (4.9) / Weekend**|**☁ Day112 (4.16) / Weekend**|
-|[BulletinBoard4.9](KDT/Django/BulletinBoard/BulletinBoard.md)|[]()|
+|[BulletinBoard4.9](KDT/Django/BulletinBoard/BulletinBoard.md)|[Coupang_day2](KDT/Django/coupang/)|
 
 <br/>
 
