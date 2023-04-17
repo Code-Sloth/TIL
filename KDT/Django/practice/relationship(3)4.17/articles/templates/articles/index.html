@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  .article-title {
+    color: black;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+
+  .article-title:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+{% endblock style %}
+
+{% block content %}
+  <h1>INDEX</h1>
+  <h3>{{ request.user }}</h3>
+  {% if request.user.is_authenticated %}
+    <div class='mb-5'>
+      <form action="{% url 'accounts:logout' %}" method="POST">
+        {% csrf_token %}
+        <p>
+          <input type="submit" value="로그아웃" autocomplete="off">
+        </p>
+      </form>
+      <a href="{% url 'articles:create' %}">[글 작성]</a>
+    </div>
+  {% else %}
+    <div class="mb-5">
+      <a href="{% url 'accounts:login' %}">[로그인]</a>
+      <a href="{% url 'accounts:signup' %}">[회원가입]</a>
+    </div>
+  {% endif %}
+  {% for article in articles %}
+
+    <a class="article-title" href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+    <hr>
+  {% endfor %}
+{%endblock content %}

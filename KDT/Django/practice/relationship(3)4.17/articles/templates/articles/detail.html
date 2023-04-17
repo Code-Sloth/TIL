@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+  .img0 {
+    background-image: url(https://ssl.pstatic.net/static.news/image/news/m/2022/05/02/sp_m_likeit_news.png);
+    -webkit-background-size: 199px 176px;
+    background-size: 199px 176px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    padding: 0;
+  }
+
+  .img1 {background-position: 0px -92px;}
+  .img2 {background-position: -92px -46px;}
+  .img3 {background-position: -42px -92px;}
+  .img4 {background-position: -84px -92px;}
+  .img5 {background-position: -138px 0px;}
+
+  .emo div {
+    width: 70px;
+    margin-top: 40px;
+    font-size: 12px;
+
+    text-align: start;
+  }
+  
+  .btn-unclick {color: gray;}
+
+  .btn-click {color: rgb(73 120 244);}
+
+  .like0 {
+    background-image: url(https://ssl.pstatic.net/static.news/image/news/m/2022/11/13/sp_comment_overwrite.png);
+    background-size: 226px 201px;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 15px;
+    opacity: 0.48;
+    border: 0;
+  }
+
+  .like1 {background-position: -213px 0px;}
+  .like2 {background-position: -213px 0px; transform: rotate(180deg);}
+
+  .like-click {font-weight:bold;}
+
+  .like11 {background-position: -192px -166px;}
+  .like22 {background-position: -192px -166px; transform: rotate(180deg);}
+{% endblock style %}
+
+{% block content %}
+  <div>
+    <p>{{article.user}}</p>
+    <h2>
+      {{article.title}}
+    </h2>
+    <p>
+      {{article.content}}
+    </p>
+  </div>
+  <hr>
+
+  {% comment %} 게시글 이모션 {% endcomment %}
+  <div class='d-flex justify-content-around mx-auto' style='width:75%;'>
+    {% for emotion in emotions %}
+      <div>
+        {% if request.user.is_authenticated %}
+        {{emotion.queryset}}
+          <form action="{% url 'articles:emotes' article.pk emotion.value %}" method="POST">
+            {% csrf_token %}
+              {% if emotion.exist %}
+                <button class="img0 img{{emotion.value}} emo" type="submit">
+                  <div class="btn-click">{{ emotion.label }}</div>
+                </button>
+              {% else %}
+                <button class="img0 img{{emotion.value}} emo" type="submit">
+                  <div class="btn-unclick">{{ emotion.label }}</div>
+                </button>
+              {% endif %}
+          </form>
+        {% else %}
+          <button disabled="disabled">{{emotion.label}}</button>
+        {% endif %}
+        <p class='ms-3 {% if emotion.exist %}btn-click{% else %}btn-unclick{% endif %}'>
+          {{ emotion.count }}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+  <hr>
+
+  <form class='d-flex align-items-center' action="{% url 'articles:comment_create' article.pk %}" method="post">
+    {% csrf_token %}
+    {{ comment_form.content }}
+    <input class="btn btn-outline-primary h-50" type="submit" value="댓글 작성">
+  </form>
+  <hr>
+
+  {% for comment in comments %}
+    <div class='d-flex justify-content-between'>
+      <p>
+        {{comment.user}} : {{comment.content}}
+      </p>
+
+      {% comment %} 댓글 이모션 {% endcomment %}
+      <div class='d-flex'>
+        {% for comment_pk, comment_emo in comment_emotions.items%}
+          {% if comment_pk == comment.pk %}
+            {% for comment_emotion in comment_emo %}
+              <div>
+                {% if request.user.is_authenticated %}
+                {{comment_emotion.queryset}}
+                  <form class='d-flex align-items-center justify-content-between me-2 pt-2' style="width:30px;" action="{% url 'articles:comment_emotes' article.pk comment.pk comment_emotion.value %}" method="POST">
+                    {% csrf_token %}
+                    {% if comment_emotion.exist %}
+                      <button class="like0 like{{ comment_emotion.value }} like{{ comment_emotion.value }}{{ comment_emotion.value }}" type="submit">
+                      </button>
+                      <div class="fw-bold">
+                        {{ comment_emotion.count }}
+                      </div>
+                    {% else %}
+                      <button class="like0 like{{ comment_emotion.value }}" type="submit">
+                      </button>
+                      {{ comment_emotion.count }}
+                    {% endif %}
+                  </form>
+                {% else %}
+                  <button disabled="disabled">{{comment_emotion.label}}</button>
+                {% endif %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        {% if comment.user == user %}
+          <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
+            {% csrf_token %}
+            <input class='btn btn-outline-secondary p-1 py-0 mt-2' style="border-radius:0;" type="submit" value="X">
+          </form>
+        {% endif %}
+      </div>
+
+    </div>
+  {% endfor %}
+  <div class='d-flex flex-row-reverse mt-5'>
+    <a class="btn btn-outline-secondary" href="{% url 'articles:index' %}">main</a>
+  </div>
+{% endblock content %}
