@@ -21,6 +21,8 @@
 - [Relationship(1:N)](KDT/Django/relationship4.11.md)
 - [Relationship2(1:N)](KDT/Django/relationship(2)4.12.md)
 - [Relationship3(M:N)](KDT/Django/relationship(3)4.17.md)
+- [Relationship4(M:N)](KDT/Django/relationship(4)4.18.md)
+- [Fixture](KDT/Django/fixture4.18.md)
 
 <br/>
 
@@ -120,7 +122,8 @@
 |**🔥 Day113 (4.17)**|**🔥 Day120 (4.24)**|
 |[Django4.17/Relationship(3)](KDT/Django/relationship(3)4.17.md)||
 |**🔥 Day114 (4.18)**|**🔥 Day121 (4.25)**|
-|||
+|[Django4.18/Relationship(4)](KDT/Django/relationship(4)4.18.md) <br/>
+[Django4.18/Fixture](KDT/Django/fixture4.18.md)||
 |**🔥 Day115 (4.19)**|**🔥 Day122 (4.26)**|
 |||
 |**🔥 Day116 (4.20)**|**🔥 Day123 (4.1027)**|
