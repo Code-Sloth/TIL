@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class='sidebar'>
+    <div class='mt-4 ms-4'>
+      <a href="{% url 'articles:index' %}">
+        <div style='width:133px;'>
+          <img class='w-100' src="{% static 'insta.png' %}" alt="#">
+        </div>
+      </a>
+    </div>
+  </div>
+  <div>
+    <div class='d-flex'>
+      <div style="padding-right:100px;">
+        <div style="width:150px">
+          {% if person.image %}
+            <img class="rounded-circle w-100" src="{{ person.image.url }}" alt="{{ person.username }}">
+          {% endif %}
+        </div>
+      </div>
+      <div>
+        <div class='d-flex'>
+
+          <div class='fw-bold me-4 d-flex align-items-center' style="font-size:20px;">
+            {{ person.username }}
+            <span class="material-symbols-outlined ms-2" style="font-size: 20px; color: rgb(0, 149, 246);">
+              verified
+              </span>
+            </span>
+          </div>
+          
+          <div>
+            <form action="{% url 'accounts:follow' person.pk %}" method="POST">
+              {% csrf_token %}
+              {% if request.user in person.followers.all %}
+                <input class='btn text-black py-1 px-3 fw-bold' style="background-color:rgb(239 239 239);" type="submit" value="팔로우 취소" {% if request.user == person or request.user.is_anonymous %}disabled{% endif %}>
+              {% else %}
+                <input class='btn text-white py-1 px-3' style="background-color:rgb(0 149 246);" type="submit" value="팔로우" {% if request.user == person or request.user.is_anonymous %}disabled{% endif %}>
+              {% endif %}
+            </form>
+          </div>
+
+        </div>
+
+        <div class='mt-4'>
+
+          <button type="button" class="btn btn-primary modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            팔로워 <span>{{ person.followers.all|length }}</span>
+          </button>
+
+          <button type="button" class="btn btn-primary modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            팔로우 <span>{{ person.following.all|length }}</span>
+          </button>
+
+        </div>
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 fw-bold" style="margin-left:190px;" id="exampleModalLabel">팔로워</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body">
+                {% for followers_user in person.followers.all %}
+                  <div class='d-flex justify-content-between mb-3'>
+
+                    <div class='d-flex align-items-center'>
+                      {% if followers_user.image %}
+                        <div style='width:44px;'>
+                          <img class="rounded-circle w-100" src="{{ followers_user.image.url }}" alt="{{ followers_user.username }}">
+                        </div>
+                      {% endif %}
+                      
+                      <div class='fw-bold ms-3'>
+                        <a style="color:black; text-decoration:none;" href="{% url 'accounts:profile' followers_user.username %}">{{ followers_user }}</a>
+                      </div>
+                    </div>
+
+                    <div class='d-flex align-items-center'>
+                      <form action="{% url 'accounts:modalfollow' followers_user.pk person.pk %}" method="POST">
+                        {% csrf_token %}
+                        {% if request.user in followers_user.followers.all %}
+                          <input class='btn text-black py-1 px-3 fw-bold' style="background-color:rgb(239 239 239);" type="submit" value="팔로우 취소" {% if request.user == followers_user or request.user.is_anonymous %}disabled{% endif %}>
+                        {% else %}
+                          <input class='btn text-white py-1 px-3' style="background-color:rgb(0 149 246);" type="submit" value="팔로우" {% if request.user == followers_user or request.user.is_anonymous %}disabled{% endif %}>
+                        {% endif %}
+                      </form>
+                    </div>
+
+                  </div>
+                {% endfor %}
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 fw-bold" style="margin-left:190px;" id="exampleModalLabel">팔로잉</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body">
+                
+                {% for following_user in person.following.all %}
+                  <div class='d-flex justify-content-between mb-3'>
+
+                    <div class='d-flex align-items-center'>
+                      {% if following_user.image %}
+                        <div style='width:44px;'>
+                          <img class="rounded-circle w-100" src="{{ following_user.image.url }}" alt="{{ following_user.username }}">
+                        </div>
+                      {% endif %}
+                      
+                      <div class='fw-bold ms-3'>
+                        <a style="color:black; text-decoration:none;" href="{% url 'accounts:profile' following_user.username %}">{{ following_user }}</a>
+                      </div>
+                    </div>
+
+                    <div class='d-flex align-items-center'>
+                      <form action="{% url 'accounts:modalfollow' following_user.pk person.pk %}" method="POST">
+                        {% csrf_token %}
+                        {% if request.user in following_user.followers.all %}
+                          <input class='btn text-black py-1 px-3 fw-bold' style="background-color:rgb(239 239 239);" type="submit" value="팔로우 취소" {% if request.user == following_user or request.user.is_anonymous %}disabled{% endif %}>
+                        {% else %}
+                          <input class='btn text-white py-1 px-3' style="background-color:rgb(0 149 246);" type="submit" value="팔로우" {% if request.user == following_user or request.user.is_anonymous %}disabled{% endif %}>
+                        {% endif %}
+                      </form>
+                    </div>
+
+                  </div>
+                {% endfor %}
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class='mt-3'>
+          {{ person.email }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="profile-fixed"></div>
+
+{% endblock content %}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <div class='mb-4'>
+      <h3 class='d-flex align-items-center'>
+        <div style="width: 40px; margin-right:10px;">
+          {% if user.image %}
+            <img class="rounded-circle w-100" src="{{ user.image.url }}" alt="{{ user.username }}">
+          {% endif %}
+        </div>
+        <a style="color: black; text-decoration:none;" href="{% url 'accounts:profile' user %}">
+          {{ user }}'s Profile
+        </a>
+      </h3>
+      <div class='d-flex justify-content-between align-items-center mt-4'>
+        <form action="{% url 'accounts:logout' %}" method="POST">
+          {% csrf_token %}
+          <p>
+            <input class='btn btn-outline-danger' type="submit" value="로그아웃" autocomplete="off">
+          </p>
+        </form>
+        <a class='btn btn-primary' href="{% url 'articles:create' %}">글 작성</a>
+      </div>
+    </div>
+  {% else %}
+    <div class='mb-4'>
+      <a class='btn btn-outline-primary' href="{% url 'accounts:login' %}">로그인</a>
+      <a class='btn btn-outline-primary' href="{% url 'accounts:signup' %}">회원가입</a>
+    </div>
+  {% endif %}
+  {% for article in articles %}
+    <div class='titles'>
+      <a href="{% url 'accounts:profile' article.user.username %}">
+        <div class='d-flex align-items-center p-1' style='color:rgb(50 50 50);'>
+          {% if article.user.image %}
+            <div style='width: 23px; margin-right: 5px;'>
+              <img class='rounded-circle w-100' src="{{ article.user.image.url }}" alt="#">
+            </div>
+          {% endif %}
+          {{ article.user.username }}
+        </div>
+      </a>
+      <a class='ms-4' style="color: black;" href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
+    </div>
+    <hr>
+  {% endfor %}
+
+  {% comment %} 페이지네이션 컴포넌트 시작 {% endcomment %}
+  <ul class="pagination justify-content-center">
+    {% comment %}
+        이전 페이지 버튼
+        이전 페이지가 존재할 경우 이전 페이지 버튼 활성화
+    {% endcomment %}
+    {% if articles.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ articles.previous_page_number }}">이전</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+      </li>
+    {% endif %}
+    {% comment %}
+        페이지 번호 리스트 생성 반복문
+    {% endcomment %}
+    {% for page_number in articles.paginator.page_range %}
+      {% comment %}
+        페이지 번호가 무한히 생성되는 것을 막는 조건문
+        현재 페이지에서 +- 5 까지 생성
+      {% endcomment %}
+      {% if page_number >= articles.number|add:-5 and page_number <= articles.number|add:5 %}
+        {% if page_number == articles.number %}
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+          </li>
+        {% else %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_number }}">{{ page_number }}</a>
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% comment %}
+        다음 페이지 버튼
+        다음 페이지가 존재할 경우 다음 페이지 버튼 활성화
+    {% endcomment %}
+    {% if articles.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ articles.next_page_number }}">다음</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+      </li>
+    {% endif %}
+  </ul>
+  {% comment %} 페이지네이션 컴포넌트 끝 {% endcomment %}
+{%endblock content %}

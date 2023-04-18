@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <style>
+      {% comment %} 프로필 {% endcomment %}
+      .sidebar {
+        position: fixed;
+        left:0;
+        top:0;
+        width:244px; 
+        height: 1400px; 
+        border-right: 1px solid rgb(220 220 220);
+      }
+    
+      .modal-btn {
+        background-color: white;
+        color: black;
+        border: none;
+        padding-left: 0;
+      }
+      
+      .modal-btn span {font-weight: bold;}
+    
+      .modal-btn:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .profile-fixed {
+        position: fixed;
+        border-top: 1px solid rgb(220 220 220);
+        top: 250px;
+        right: 0;
+        width: 1675px;
+        height: 200px;
+      }
+
+      {% comment %} index {% endcomment %}
+
+      .titles a {text-decoration: none;}
+
+      .titles a:hover {
+        text-decoration: underline;
+        text-decoration-color: black;
+        text-underline-offset: 0.2em;
+      }
+      {% block style %}{% endblock style %}
+    </style>
+  </head>
+
+  <body class="p-5">
+    <div class="container w-50">
+      {% block content %}{% endblock content %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+
+</html>

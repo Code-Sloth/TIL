@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+  <div>
+    <h3>DETAIL</h3>
+    <p><a href="{% url 'accounts:profile' article.user.username %}">게시글 작성자 -
+      {{article.user}}</a></p>
+    <p>
+      게시글 번호 -
+      {{article.pk}}
+    </p>
+    <p>
+      게시글 제목 -
+      {{article.title}}
+    </p>
+    <p>
+      게시글 내용 -
+      {{article.content}}
+    </p>
+    <a class='btn btn-primary' href="{% url 'articles:index' %}">메인</a>
+  </div>
+  <hr>
+  <form action="{% url 'articles:comment_create' article.pk %}" method="post">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <input type="submit" value="댓글 작성">
+  </form>
+  <hr>
+
+  {% for comment in comments %}
+    <div>
+      <p>댓글 작성자 -
+        {{comment.user}}</p>
+      <p>댓글 번호 -
+        {{ comment.pk }}</p>
+      <p>
+        댓글 내용 -
+        {{comment.content}}
+      </p>
+      {% if comment.user == user %}
+        <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
+          {% csrf_token %}
+          <input type="submit" value="댓글 삭제">
+        </form>
+      {% endif %}
+    </div>
+    <hr>
+  {% endfor %}
+{% endblock content %}

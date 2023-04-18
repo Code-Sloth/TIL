@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div>
+    <h1>회원정보수정</h1>
+    <form action="{% url 'accounts:update' %}" method="POST">
+      {% csrf_token %}
+      <label>이메일</label>
+      {{ form.email }}
+      <input type="submit" value="정보수정">
+    </form>
+  </div>
+{% endblock content %}
