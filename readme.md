@@ -23,6 +23,8 @@
 - [Relationship3(M:N)](KDT/Django/relationship(3)4.17.md)
 - [Relationship4(M:N)](KDT/Django/relationship(4)4.18.md)
 - [Fixture](KDT/Django/fixture4.18.md)
+- [ImproveQuery](KDT/Django/improve_query4.19.md)
+- [Ajax](KDT/Django/ajax.md)
 
 <br/>
 
@@ -125,7 +127,7 @@
 |[Django4.18/Relationship(4)](KDT/Django/relationship(4)4.18.md) <br/>
 [Django4.18/Fixture](KDT/Django/fixture4.18.md)||
 |**🔥 Day115 (4.19)**|**🔥 Day122 (4.26)**|
-|||
+|[Django4.19/ImproveQuery](KDT/Django/improve_query4.19.md) <br/> [Django4.19/Ajax](KDT/Django/ajax.md)||
 |**🔥 Day116 (4.20)**|**🔥 Day123 (4.1027)**|
 |||
 |**🔥 Day117 (4.21)**|**🔥 Day124 (4.28)**|
