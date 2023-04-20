@@ -129,7 +129,7 @@
 |**🔥 Day115 (4.19)**|**🔥 Day122 (4.26)**|
 |[Django4.19/ImproveQuery](KDT/Django/improve_query4.19.md) <br/> [Django4.19/Ajax](KDT/Django/ajax.md)||
 |**🔥 Day116 (4.20)**|**🔥 Day123 (4.1027)**|
-|||
+|[Algorithm/CodeReview4.20](baek/codereview/4.20/)||
 |**🔥 Day117 (4.21)**|**🔥 Day124 (4.28)**|
 |||
 |**☁ Day118 (4.22) / Weekend**|**☁ Day125 (4.29) / Weekend**|
@@ -146,7 +146,7 @@
 |**🔥 Day101 (4.5)**|**🔥 Day108 (4.12)**|
 |[Django4.5/Authentication2](KDT/Django/authentication(2)4.5.md)|[Django4.12/Relationship(2)](KDT/Django/relationship(2)4.12.md)|
 |**🔥 Day102 (4.6)**|**🔥 Day109 (4.13)**|
-|[Algorithm/CodeReview4.6](baek/codereview/)|[Algorithm/CodeReview4.13](baek/codereview/4.13/)|
+|[Algorithm/CodeReview4.6](baek/codereview/4.6/)|[Algorithm/CodeReview4.13](baek/codereview/4.13/)|
 |**🔥 Day103 (4.7)**|**🔥 Day110 (4.14)**|
 |[PJT_BulletinBoard4.7](KDT/Django/practice/bulletinboard4.7/)|[PJT_MovieReviews4.14](KDT/Django/practice/movie_reviews4.14/)|
 |**☁ Day104 (4.8) / Weekend**|**☁ Day111 (4.15) / Weekend**|
