@@ -1,0 +1,82 @@
+[
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$VDzrDjacJtIQB7Uod4aS56$HKql+ZhIwKD05ZN07atHkah8ASmN1BxOQCoCpGrnSho=",
+        "last_login": "2023-04-21T07:24:57.471Z",
+        "is_superuser": false,
+        "username": "apple",
+        "first_name": "minwook",
+        "last_name": "lee",
+        "email": "djqmlfsk@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-21T07:24:37.770Z",
+        "image": "profiles/apple/apple.jpg",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$kaw9SpG7sOeCdgHRQl92U8$KQm8t5nGqfDNTnOCCuU9jOCAG1ARlb+2klsK4MaG+nw=",
+        "last_login": "2023-04-21T07:25:16.271Z",
+        "is_superuser": false,
+        "username": "thebjko",
+        "first_name": "",
+        "last_name": "",
+        "email": "thebjko@email.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-21T07:25:07.933Z",
+        "image": "",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$kKmej2W0SWlLge2Fyt8Ub5$aRgoe9MEopI+ZyiOn3fA7E9tw96lFHDiClyi/UPvlEc=",
+        "last_login": "2023-04-21T07:28:21.117Z",
+        "is_superuser": false,
+        "username": "banana",
+        "first_name": "dana",
+        "last_name": "na",
+        "email": "banana@google.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-21T07:28:13.978Z",
+        "image": "profiles/banana/banana.jpg",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$QIdxxw2RPqUXQuOO9h0XJs$WMXH9JHaf77Hd8SY8hWRcsYRwmmx155nYCzUdegVUg8=",
+        "last_login": "2023-04-21T07:30:19.232Z",
+        "is_superuser": false,
+        "username": "user2",
+        "first_name": "",
+        "last_name": "",
+        "email": "user2@email.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-21T07:30:00.795Z",
+        "image": "",
+        "groups": [],
+        "user_permissions": [],
+        "followings": []
+    }
+}
+]

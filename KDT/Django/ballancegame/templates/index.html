@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Index
+{% endblock title %}
+
+{% block content %}
+  <div class='text-center'>
+    <h1 style="font-weight:900;">일반</h1>
+    {% if random_pk %}
+      <div>
+        <a class="btn btn-primary fw-bold my-5 py-2 px-3 fs-5" href="{% url 'games:detail' random_pk %}">시작하기</a>
+      </div>
+
+      <div>
+        <a class="btn btn-success fw-bold py-2 px-3 fs-5 mb-5" href="{% url 'games:index' %}">게임목록</a>
+      </div>
+
+      <div>
+        <a class="btn btn-info fw-bold py-2 px-3 fs-5 text-white" href="{% url 'games:create' %}">게임생성</a>
+      </div>
+    {% else %}
+      <h4>아직 게임이 없습니다</h4>
+      <p>게임을 만들어주세요</p>
+      <a href="{% url 'games:create' %}">게임 만들기</a>
+    {% endif %}
+  </div>
+{% endblock content %}

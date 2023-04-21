@@ -1,0 +1,104 @@
+[
+{
+    "model": "games.post",
+    "pk": 1,
+    "fields": {
+        "title": "치킨vs피자",
+        "select1_content": "치킨",
+        "select2_content": "피자",
+        "created_at": "2023-04-21T07:25:22.979Z",
+        "updated_at": "2023-04-21T07:25:22.979Z",
+        "user": 1,
+        "image1": "posts/치킨vs피자/치킨_cNYOHAm.jpg",
+        "image2": "posts/치킨vs피자/피자_dykOu23.jpg",
+        "select1_users": [],
+        "select2_users": [],
+        "like_users": []
+    }
+},
+{
+    "model": "games.post",
+    "pk": 2,
+    "fields": {
+        "title": "팩폭 vs. 빙빙 돌려 말하기",
+        "select1_content": "팩폭",
+        "select2_content": "빙빙 돌려 말하기",
+        "created_at": "2023-04-21T07:27:15.049Z",
+        "updated_at": "2023-04-21T07:27:15.049Z",
+        "user": 2,
+        "image1": "",
+        "image2": "",
+        "select1_users": [],
+        "select2_users": [],
+        "like_users": []
+    }
+},
+{
+    "model": "games.post",
+    "pk": 3,
+    "fields": {
+        "title": "엄마vs아빠",
+        "select1_content": "엄마",
+        "select2_content": "아빠",
+        "created_at": "2023-04-21T07:27:33.932Z",
+        "updated_at": "2023-04-21T07:27:33.932Z",
+        "user": 1,
+        "image1": "posts/엄마vs아빠/mom.jpg",
+        "image2": "posts/엄마vs아빠/father.jpg",
+        "select1_users": [],
+        "select2_users": [],
+        "like_users": []
+    }
+},
+{
+    "model": "games.post",
+    "pk": 4,
+    "fields": {
+        "title": "구글vs네이버",
+        "select1_content": "구글",
+        "select2_content": "네이버",
+        "created_at": "2023-04-21T07:29:38.961Z",
+        "updated_at": "2023-04-21T07:29:38.961Z",
+        "user": 3,
+        "image1": "posts/구글vs네이버/google.jpg",
+        "image2": "posts/구글vs네이버/naver.jpg",
+        "select1_users": [],
+        "select2_users": [],
+        "like_users": []
+    }
+},
+{
+    "model": "games.post",
+    "pk": 5,
+    "fields": {
+        "title": "네이버 vs. 카카오",
+        "select1_content": "네이버",
+        "select2_content": "카카오",
+        "created_at": "2023-04-21T07:29:39.232Z",
+        "updated_at": "2023-04-21T07:29:39.232Z",
+        "user": 2,
+        "image1": "",
+        "image2": "",
+        "select1_users": [],
+        "select2_users": [],
+        "like_users": []
+    }
+},
+{
+    "model": "games.post",
+    "pk": 6,
+    "fields": {
+        "title": "백준 2423 vs. 5662",
+        "select1_content": "2423",
+        "select2_content": "5662",
+        "created_at": "2023-04-21T07:31:09.429Z",
+        "updated_at": "2023-04-21T07:31:09.429Z",
+        "user": 4,
+        "image1": "",
+        "image2": "",
+        "select1_users": [],
+        "select2_users": [],
+        "like_users": []
+    }
+}
+]

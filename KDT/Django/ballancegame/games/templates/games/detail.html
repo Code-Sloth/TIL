@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Detail</h1>
+
+<p>{{ post.title }} by {{ post.user }}</p>
+
+<form action="{% url 'games:answer' post.pk post.select1_content %}" method="POST">
+  {% csrf_token %}
+  <button class="answer-btn" type="submit">{{ post.select1_content }} : {{ post.select1_users.count }}</button>
+</form>
+
+{% if post.image1 %}
+<div>
+  <img src="{{ post.image1.url }}" alt="{{ post.select1_content }}">
+</div>
+{% endif %}
+
+<form action="{% url 'games:answer' post.pk post.select2_content %}" method="POST">
+  {% csrf_token %}
+  <button class="answer-btn" type="submit">{{ post.select2_content }} : {{ post.select2_users.count }}</button>
+</form>
+<form class="like-form" data-post-id="{{ post.pk }}">
+  {% csrf_token %}
+  {% if user in post.like_users.all %}
+    <button name="like" value="detail" type="submit" id="like-{{ post.pk }}">좋아요 취소</button>
+  {% else %}
+    <button name="like" value="detail" type="submit" id="like-{{ post.pk }}">좋아요</button>
+  {% endif %}
+</form>
+
+{% if post.image2 %}
+<div>
+  <img src="{{ post.image2.url }}" alt="{{ post.select2_content }}">
+</div>
+{% endif %}
+
+<a href="{% url 'games:index' %}" class="btn btn-link">[ HOME ]</a>
+<a href="{% url 'games:detail' previous_pk %}" id="previous" class="btn btn-link">[이전 게임]</a>
+<a href="{% url 'games:detail' next_pk %}" id="next" class="btn btn-link">[다음 게임]</a>
+
+{% for comment in comments %}
+  <div class='d-flex'>
+    <p>{{ comment.user }} : {{ comment.content }}</p>
+    <form action="{% url 'games:comment_delete' post.pk comment.pk %}" method="POST">
+      {% csrf_token %}
+      <button type="submit">삭제</button>
+    </form>
+  </div>
+{% endfor %}
+
+<form action="{% url 'games:comment_create' post.pk %}" method="POST">
+  {% csrf_token %}
+  {{ comment_form }}
+  <button type="submit" {% if request.user.is_anonymous %}disabled{% endif %}>입력</button>
+</form>
+
+<script>
+  const answerBtn = document.querySelectorAll('.answer-btn')
+  {% if request.user in post.select1_users.all or request.user in post.select2_users.all %} 
+    answerBtn.forEach((btn) => {
+      btn.disabled = true
+    })
+  {% endif %}
+  {% if next_pk == post.pk %}
+    const next = document.querySelector('#next')
+    next.classList.add('disabled')
+  {% endif %}
+  {% if previous_pk == post.pk %}
+    const previous = document.querySelector('#previous')
+    previous.classList.add('disabled')
+  {% endif %}
+</script>
+{% endblock content %}

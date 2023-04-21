@@ -1,0 +1,26 @@
+.nav-bar {
+  height: 56px;
+  padding: 8px 10px;
+}
+
+.base-logo a {
+  color: black;
+  text-decoration: none;
+}
+
+.base-logo a h5 {
+  font-weight: bold;
+}
+
+.base-logbox a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  opacity: 0.7;
+  font-weight: 900;
+  margin: 0 10px;
+}
+
+.base-logbox a:hover {
+  opacity: 1;
+}

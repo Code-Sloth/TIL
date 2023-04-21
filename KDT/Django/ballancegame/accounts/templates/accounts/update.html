@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+회원정보 수정
+{% endblock title %}
+
+{% block content %}
+<form action="{% url 'accounts:update' %}" method="post" class="my-3" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">회원정보 수정</button>
+</form>
+<a href="{% url 'index' %}">메인 화면으로</a>
+{% endblock content %}

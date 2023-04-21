@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+  <h1>{{ person.username }}'s profile</h1>
+  <div>
+    {% if person.image %}
+      <img class='rounded-circle' src="{{ person.image.url }}" alt="{{ person }}'s profile image">
+    {% else %}
+      <img class='rounded-circle' src="{% static 'no-image.png' %}" alt="no-image">
+    {% endif %}
+  </div>
+  <p>{{ person.email }}</p>
+  <p>{{ person.last_name }}</p>
+  <p>{{ person.first_name }}</p>
+  <div>
+    <form id="follow-form" data-user-id="{{ person.pk }}">
+      {% csrf_token %}
+      {% if request.user in person.followers.all %}
+        <button type='submit' {% if request.user == person or request.user.is_anonymous %}disabled{% endif %}>팔로우 취소</button>
+      {% else %}
+        <button type='submit' {% if request.user == person or request.user.is_anonymous %}disabled{% endif %}>팔로우</button>
+      {% endif %}
+    </form>
+  </div>
+  <div>
+    <button>
+      팔로워 <span id='followers-count'>{{ person.followers.all|length }}</span>
+    </button>
+
+    <button>
+      팔로우 <span id='followings-count'>{{ person.followings.all|length }}</span>
+    </button>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="{% static 'accounts/follow.js' %}"></script>
+{% endblock content %}

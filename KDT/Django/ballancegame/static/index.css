@@ -1,0 +1,22 @@
+.index-box {
+  box-shadow: 1px 7px 15px 4px rgba(0,0,0,0.1);
+}
+
+.created-at {font-size:12px;}
+
+.index-title {
+  font-size:18px;
+  color: black;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.index-title:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.index-profile {
+  font-size: 14px;
+  color: gray;
+}
