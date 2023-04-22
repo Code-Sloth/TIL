@@ -25,6 +25,7 @@
 - [Fixture](KDT/Django/fixture4.18.md)
 - [ImproveQuery](KDT/Django/improve_query4.19.md)
 - [Ajax](KDT/Django/ajax.md)
+- [Paginator](KDT/Django/paginator.md)
 
 <br/>
 
@@ -133,7 +134,7 @@
 |**🔥 Day117 (4.21)**|**🔥 Day124 (4.28)**|
 |[PJT_BallanceGame4/21](KDT/Django/ballancegame/)||
 |**☁ Day118 (4.22) / Weekend**|**☁ Day125 (4.29) / Weekend**|
-|||
+|[Paginator4/22](KDT/Django/paginator.md)||
 |**☁ Day119 (4.23) / Weekend**|**☁ Day126 (4.30) / Weekend**|
 |||
 
