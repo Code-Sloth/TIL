@@ -132,11 +132,11 @@
 |**🔥 Day116 (4.20)**|**🔥 Day123 (4.1027)**|
 |[Algorithm/CodeReview4.20](baek/codereview/4.20/)||
 |**🔥 Day117 (4.21)**|**🔥 Day124 (4.28)**|
-|[PJT_BallanceGame4/21](KDT/Django/ballancegame/)||
+|[PJT_BallanceGame4.21](KDT/Django/ballancegame/)||
 |**☁ Day118 (4.22) / Weekend**|**☁ Day125 (4.29) / Weekend**|
-|[Paginator4/22](KDT/Django/paginator.md)||
+|[Paginator4.22](KDT/Django/paginator.md)||
 |**☁ Day119 (4.23) / Weekend**|**☁ Day126 (4.30) / Weekend**|
-|||
+|[Emote4.23](KDT/Django/emote.md)||
 
 |week 15|week 16|
 |--|--|
