@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Index</h1>
+  <div id="post-container"></div>
+
+  <script>
+    const API_URL = 'http://127.0.0.1:8000/articles/api/v1/'
+
+    fetch(API_URL)
+      .then(response => response.json())
+      .then(data => {
+        const postList = document.createElement('ul')
+        data.forEach(post => {
+          const listItem = document.createElement('li')
+
+          const articleTitle = document.createElement('h2')
+          articleTitle.innerText = post.title
+
+          const articleContent = document.createElement('p')
+          articleContent.innerText = post.content
+          
+          const articleImage = document.createElement('img')
+          articleImage.src = post.image
+          articleImage.alt = post.title
+
+          listItem.appendChild(articleTitle);
+          listItem.appendChild(articleContent);
+          listItem.appendChild(articleImage);
+          postList.appendChild(listItem);
+        })
+        document.getElementById('post-container').appendChild(postList);
+      })
+
+  </script>
+</body>
+</html>
