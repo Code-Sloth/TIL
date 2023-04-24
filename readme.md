@@ -26,6 +26,7 @@
 - [ImproveQuery](KDT/Django/improve_query4.19.md)
 - [Ajax](KDT/Django/ajax.md)
 - [Paginator](KDT/Django/paginator.md)
+- [RestFrameWork](KDT/Django/restframework.md)
 
 <br/>
 
@@ -123,7 +124,7 @@
 |week 17|week 18|
 |--|--|
 |**🔥 Day113 (4.17)**|**🔥 Day120 (4.24)**|
-|[Django4.17/Relationship(3)](KDT/Django/relationship(3)4.17.md)||
+|[Django4.17/Relationship(3)](KDT/Django/relationship(3)4.17.md)|[Django4.24/RestFrameWork](KDT/Django/restframework.md)|
 |**🔥 Day114 (4.18)**|**🔥 Day121 (4.25)**|
 |[Django4.18/Relationship(4)](KDT/Django/relationship(4)4.18.md) <br/>
 [Django4.18/Fixture](KDT/Django/fixture4.18.md)||
