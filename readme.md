@@ -27,6 +27,7 @@
 - [Ajax](KDT/Django/ajax.md)
 - [Paginator](KDT/Django/paginator.md)
 - [RestFrameWork](KDT/Django/restframework.md)
+- [RestFrameWork(2)](KDT/Django/restframework(2)4.25.md)
 
 <br/>
 
@@ -127,7 +128,7 @@
 |[Django4.17/Relationship(3)](KDT/Django/relationship(3)4.17.md)|[Django4.24/RestFrameWork](KDT/Django/restframework.md)|
 |**🔥 Day114 (4.18)**|**🔥 Day121 (4.25)**|
 |[Django4.18/Relationship(4)](KDT/Django/relationship(4)4.18.md) <br/>
-[Django4.18/Fixture](KDT/Django/fixture4.18.md)||
+[Django4.18/Fixture](KDT/Django/fixture4.18.md)|[Django4.25/RestFrameWork(2)](KDT/Django/restframework(2)4.25.md)|
 |**🔥 Day115 (4.19)**|**🔥 Day122 (4.26)**|
 |[Django4.19/ImproveQuery](KDT/Django/improve_query4.19.md) <br/> [Django4.19/Ajax](KDT/Django/ajax.md)||
 |**🔥 Day116 (4.20)**|**🔥 Day123 (4.1027)**|
