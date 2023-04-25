@@ -55,7 +55,7 @@
 - REST원리를 따르는 시스템을 RESTful 하다고 부름
 - REST에서 자원을 정의하고 주소를 지정하는 방법
   - 자원의 식별
-    - URL
+    - URI(Uniform Resource Identifier)
   - 자원의 행위
     - HTTP Methods
   - 자원의 표현
