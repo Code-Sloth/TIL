@@ -131,8 +131,8 @@
 |[Django4.18/Relationship(4)](KDT/Django/relationship(4)4.18.md) <br/> [Django4.18/Fixture](KDT/Django/fixture4.18.md)|[Django4.25/RestFrameWork(2)](KDT/Django/restframework(2)4.25.md)|
 |**🔥 Day115 (4.19)**|**🔥 Day122 (4.26)**|
 |[Django4.19/ImproveQuery](KDT/Django/improve_query4.19.md) <br/> [Django4.19/Ajax](KDT/Django/ajax.md)|[MultiImage4.26](KDT/Django/multi_image.md)|
-|**🔥 Day116 (4.20)**|**🔥 Day123 (4.1027)**|
-|[Algorithm/CodeReview4.20](baek/codereview/4.20/)||
+|**🔥 Day116 (4.20)**|**🔥 Day123 (4.27)**|
+|[Algorithm/CodeReview4.20](baek/codereview/4.20/)|[Algorithm/CodeReview4.27](baek/codereview/4.27/)|
 |**🔥 Day117 (4.21)**|**🔥 Day124 (4.28)**|
 |[PJT_BallanceGame4.21](KDT/Django/ballancegame/)||
 |**☁ Day118 (4.22) / Weekend**|**☁ Day125 (4.29) / Weekend**|
