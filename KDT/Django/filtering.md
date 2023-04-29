@@ -81,38 +81,41 @@
   ```
 - ```python
     def listing(request):
-        # products = get_list_or_404(Product)
-        category = request.GET.get('category','')
-        alcohol_percentage = request.GET.get('dosu','')
-        if alcohol_percentage: a1,a2 = alcohol_percentage.split(',')
-        else: a1,a2 = 0,100
-        sweetness = request.GET.get('sweet','')
-        sourness = request.GET.get('sourness','')
-        bitterness = request.GET.get('bitterness','')
-        carbonated = request.GET.get('carbonated','')
-        price = request.GET.get('price','')
-        if price: p1,p2 = price.split(',')
-        else: p1,p2 = 0,1000000
+      category = request.GET.get('category','')
+      alcohol_percentage = request.GET.getlist('dosu','')
+      a1,a2 = 100,0
+      if alcohol_percentage:
+          for alcohol_per in alcohol_percentage:
+              a1 = min(a1,int(alcohol_per.split(',')[0]))
+              a2 = max(a2,int(alcohol_per.split(',')[1]))
+      else: a1,a2 = 0,100
+      sweetness = request.GET.getlist('sweet',['low','middle','strong'])
+      sourness = request.GET.getlist('sourness',['low','middle','strong'])
+      bitterness = request.GET.getlist('bitterness',['low','middle','strong'])
+      carbonated = request.GET.getlist('carbonated',['True','False'])
+      price = request.GET.get('price','')
+      if price: p1,p2 = price.split(',')
+      else: p1,p2 = 0,1000000
+      print(a1,a2)
+      if category == 'all':
+          products = Product.objects.all()
+      else:
+          products = Product.objects.filter(category = category)
 
-        if category == 'all':
-            products = Product.objects.all()
-        else:
-            products = Product.objects.filter(category = category)
+      products = products.filter(
+          alcohol_percentage__gte=int(a1),
+          alcohol_percentage__lte=int(a2),
+          sweetness__in=sweetness,
+          sourness__in=sourness,
+          bitterness__in=bitterness,
+          carbonated__in=carbonated,
+          discounted_price__gte=int(p1),
+          discounted_price__lte=int(p2)
+      )
 
-        products = products.filter(
-            alcohol_percentage__gte=int(a1),
-            alcohol_percentage__lte=int(a2),
-            sweetness__icontains=sweetness,
-            sourness__icontains=sourness,
-            bitterness__icontains=bitterness,
-            carbonated__icontains=carbonated,
-            discounted_price__gte=int(p1),
-            discounted_price__lte=int(p2)
-        )
-
-        context = {
-            'products': products,
-            'category': category,
-        }
-        return render(request, 'products/listing.html', context)
+      context = {
+          'products': products,
+          'category': category,
+      }
+      return render(request, 'products/listing.html', context)
   ```
