@@ -138,7 +138,7 @@
 |**☁ Day118 (4.22) / Weekend**|**☁ Day125 (4.29) / Weekend**|
 |[Paginator4.22](KDT/Django/paginator.md)|[Filtering2](KDT/Django/filtering2.md)|
 |**☁ Day119 (4.23) / Weekend**|**☁ Day126 (4.30) / Weekend**|
-|[Emote4.23](KDT/Django/emote.md)||
+|[Emote4.23](KDT/Django/emote.md)|[StarCount](KDT/Django/star_count.md)|
 
 |week 15|week 16|
 |--|--|
