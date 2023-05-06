@@ -136,7 +136,7 @@
 |**🔥 Day131 (5.5)**|**🔥 Day138 (5.12)**|
 |[Ajax_Comment_Update](KDT/Django/ajax_comment.md)||
 |**☁ Day132 (5.6) / Weekend**|**☁ Day139 (5.13) / Weekend**|
-|||
+|[Kakao_API](KDT/Django/kakao_api.md)||
 |**☁ Day133 (5.7) / Weekend**|**☁ Day140 (5.14) / Weekend**|
 |||
 
