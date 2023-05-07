@@ -138,7 +138,7 @@
 |**☁ Day132 (5.6) / Weekend**|**☁ Day139 (5.13) / Weekend**|
 |[Kakao_API](KDT/Django/kakao_api.md)||
 |**☁ Day133 (5.7) / Weekend**|**☁ Day140 (5.14) / Weekend**|
-|||
+|[GPT_API](KDT/Django/gpt_api.md)||
 
 |week 17|week 18|
 |--|--|
