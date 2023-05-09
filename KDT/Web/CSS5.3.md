@@ -2,6 +2,16 @@
 
 <br/>
 
+### Link
+- ```css
+    a:link {color: black;}
+    a:visited {color: black;}
+    a:hover {color: gray;}
+    a:active {color: purple;}
+  ```
+
+<br/>
+
 ### Text 1줄
 - ```css
     .single-line {
@@ -75,4 +85,30 @@
           transform: scale( .9 );
       }
     }
+  ```
+
+<br/>
+
+### Image Hover Transform
+- ```css
+    .imgDiv {
+      width: 269px;
+      overflow: hidden;
+    }
+
+    .imgDiv img {
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .imgDiv img:hover {
+      transform: scale(1.05);
+    }
+  ```
+
+<br/>
+
+### 투명색
+- ```css
+    background: rgba(255, 255, 255, 0.5);
   ```
