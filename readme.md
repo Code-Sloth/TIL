@@ -128,7 +128,7 @@
 |**🔥 Day127 (5.1)**|**🔥 Day134 (5.8)**|
 |[StarCount2](KDT/Django/star_count.md)|[Distribution](KDT/Django/distribution.md)|
 |**🔥 Day128 (5.2)**|**🔥 Day135 (5.9)**|
-|[Session](KDT/DJango/session.md)||
+|[Session](KDT/DJango/session.md)|[UpdateCSS/Reference](KDT/Web/CSS5.3.md)|
 |**🔥 Day129 (5.3)**|**🔥 Day136 (5.10)**|
 |[CSS/Reference](KDT/Web/CSS5.3.md)||
 |**🔥 Day130 (5.4)**|**🔥 Day137 (5.11)**|
