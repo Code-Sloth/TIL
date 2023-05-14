@@ -110,5 +110,25 @@
 
 ### 투명색
 - ```css
-    background: rgba(255, 255, 255, 0.5);
+    div {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  ```
+
+<br/>
+
+### input 우측 x표 제거
+- ```css
+    input::-webkit-search-cancel-button {
+      display: none;
+    }
+  ```
+
+<br/>
+
+### input 입력 시, outline 제거
+- ```css
+    input:focus {
+      outline: none;
+    }
   ```
