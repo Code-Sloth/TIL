@@ -128,7 +128,7 @@
 |**🔥 Day141 (5.15)**|**🔥 Day148 (5.22)**|
 |[Like_Unlike_Ajax](KDT/Django/like_unlike.md)||
 |**🔥 Day142 (5.16)**|**🔥 Day149 (5.23)**|
-|||
+|[Create_asynchronous](KDT/Django/create_asynchronous.md)||
 |**🔥 Day143 (5.17)**|**🔥 Day150 (5.24)**|
 |||
 |**🔥 Day144 (5.18)**|**🔥 Day151 (5.25)**|
