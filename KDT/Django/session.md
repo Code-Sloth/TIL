@@ -45,55 +45,83 @@
         return render(request, 'products/quiz.html', {'index': next_index})
   ```
   ```html
-    {% if index == 1 %}
+    {% if index == 0 %}
 
-        <div class='question-title'>
-          원하는 주종을 <br>
-          선택해주세요.
+      <div>
+
+        <div class='zero-title'>
+          1분만에<br>
+          분석해 드려요
+        </div>
+
+        <div class='zero-content'>
+          무슨 술을 마실지 고민되시나요?
+        </div>
+
+        <div class='zero-img'>
+          <img class='w-100' src="{% static 'image/zero-back.png' %}" alt="zero-back">
+          <div class='zero-ai'>
+            <img class='w-100' src="{% static 'image/ai.png' %}" alt="ai">
+          </div>
         </div>
 
         <form action="{% url 'products:quiz_response' %}" method="POST">
           {% csrf_token %}
           <input type="hidden" name='index' value='{{ index }}'>
-
-          <div class='quiz1'>
-            <button name='response' value='all' type='submit'>
-              <div style='width:30px; margin-right: 20px;'>
-                <img class='w-100' src="{% static 'image/전체.svg' %}" alt="전체">
-              </div>
-              <p>전체</p>
-            </button>
-
-            <button name='response' value='traditional' type='submit'>
-              <div>
-                <img class='w-100' src="{% static 'image/전통주.png' %}" alt="전통주">
-              </div>
-              <p>전통주</p>
-            </button>
-
-            <button name='response' value='beer' type='submit'>
-              <div>
-                <img style='opacity: 0.8;' class='w-100' src="{% static 'image/맥주.png' %}" alt="맥주">
-              </div>
-              <p>맥주</p>
-            </button>
-
-            <button name='response' value='whiskey' type='submit'>
-              <div>
-                <img class='w-100' src="{% static 'image/위스키.svg' %}" alt="위스키">
-              </div>
-              <p>위스키</p>
-            </button>
-
-            <button name='response' value='wine' type='submit'>
-              <div>
-                <img class='w-100' src="{% static 'image/와인.svg' %}" alt="와인">
-              </div>
-              <p>와인</p>
-            </button>
-          </div>
+          <button class='zero-btn' name='response' value='None' type='submit'>시작하기</button>
         </form>
 
-      {% elif index == 2 %}
+      </div>
+
+    {% if index == 1 %}
+
+      <div class='question-title'>
+        원하는 주종을 <br>
+        선택해주세요.
+      </div>
+
+      <form action="{% url 'products:quiz_response' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name='index' value='{{ index }}'>
+
+        <div class='quiz1'>
+          <button name='response' value='all' type='submit'>
+            <div style='width:30px; margin-right: 20px;'>
+              <img class='w-100' src="{% static 'image/전체.svg' %}" alt="전체">
+            </div>
+            <p>전체</p>
+          </button>
+
+          <button name='response' value='traditional' type='submit'>
+            <div>
+              <img class='w-100' src="{% static 'image/전통주.png' %}" alt="전통주">
+            </div>
+            <p>전통주</p>
+          </button>
+
+          <button name='response' value='beer' type='submit'>
+            <div>
+              <img style='opacity: 0.8;' class='w-100' src="{% static 'image/맥주.png' %}" alt="맥주">
+            </div>
+            <p>맥주</p>
+          </button>
+
+          <button name='response' value='whiskey' type='submit'>
+            <div>
+              <img class='w-100' src="{% static 'image/위스키.svg' %}" alt="위스키">
+            </div>
+            <p>위스키</p>
+          </button>
+
+          <button name='response' value='wine' type='submit'>
+            <div>
+              <img class='w-100' src="{% static 'image/와인.svg' %}" alt="와인">
+            </div>
+            <p>와인</p>
+          </button>
+        </div>
+      </form>
+
+    {% elif index == 2 %}
       ...
   ```
