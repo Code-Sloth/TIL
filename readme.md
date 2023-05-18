@@ -132,7 +132,7 @@
 |**🔥 Day143 (5.17)**|**🔥 Day150 (5.24)**|
 |[Update_Session](KDT/Django/session.md)||
 |**🔥 Day144 (5.18)**|**🔥 Day151 (5.25)**|
-|||
+|[Django_Tip](KDT/Django/tip.md)||
 |**🔥 Day145 (5.19)**|**🔥 Day152 (5.26)**|
 |||
 |**☁ Day146 (5.20) / Weekend**|**☁ Day153 (5.27) / Weekend**|
