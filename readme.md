@@ -134,7 +134,7 @@
 |**🔥 Day144 (5.18)**|**🔥 Day151 (5.25)**|
 |[Django_Tip](KDT/Django/tip.md)||
 |**🔥 Day145 (5.19)**|**🔥 Day152 (5.26)**|
-|||
+|[Update_Django_Tip](KDT/Django/tip.md)||
 |**☁ Day146 (5.20) / Weekend**|**☁ Day153 (5.27) / Weekend**|
 |||
 |**☁ Day147 (5.21) / Weekend**|**☁ Day154 (5.28) / Weekend**|
