@@ -132,3 +132,30 @@
       outline: none;
     }
   ```
+
+<br/>
+
+### media query
+- ```css
+    @media(max-width: 1200px) {
+      .comment-detail-container {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .comment-detail-left-header {
+        width: 100%;
+      }
+    }
+
+    @media(max-width: 1024px) {
+      .comment-detail-right {
+        display: none;
+      }
+
+      .detail-left-footer-box h2 div {
+        font-size: 12px;
+      }
+    }
+  ```
+
