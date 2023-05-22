@@ -33,31 +33,23 @@
 
 ### 별점 저장 및 삭제
 - ```python
-    # models.py/Comments model
+    # models.py/Comment model
     def save(self, *args, **kwargs):
         super(Comment, self).save(*args, **kwargs)
-        total_star = 0
-        for comment in self.product.comments.all():
-            total_star += comment.star
 
-        if self.product.comments.count() >= 1:
-            self.product.star = total_star / self.product.comments.count()
-        else:
-            self.product.star = 0
- 
+        total_star = sum(comment.star for comment in self.product.comments.all())
+        comment_count = self.product.comments.count()
+
+        self.product.star = total_star / comment_count if comment_count >= 1 else 0
         self.product.save()
 
     def delete(self, *args, **kargs):
         super(Comment, self).delete(*args, **kargs)
-        total_star = 0
-        for comment in self.product.comments.all():
-            total_star += comment.star
+        
+        total_star = sum(comment.star for comment in self.product.comments.all())
+        comment_count = self.product.comments.count()
 
-        if self.product.comments.count() >= 1:
-            self.product.star = total_star / self.product.comments.count()
-        else:
-            self.product.star = 0
-
+        self.product.star = total_star / comment_count if comment_count >= 1 else 0
         self.product.save()
   ```
 
