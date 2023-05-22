@@ -126,7 +126,7 @@
 |week 21|week 22|
 |--|--|
 |**🔥 Day141 (5.15)**|**🔥 Day148 (5.22)**|
-|[Like_Unlike_Ajax](KDT/Django/like_unlike.md)||
+|[Like_Unlike_Ajax](KDT/Django/like_unlike.md)|[Update_Star_Count_5.22](KDT/Django/star_count.md)|
 |**🔥 Day142 (5.16)**|**🔥 Day149 (5.23)**|
 |[Create_asynchronous](KDT/Django/create_asynchronous.md)||
 |**🔥 Day143 (5.17)**|**🔥 Day150 (5.24)**|
