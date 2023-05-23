@@ -46,13 +46,13 @@
         body = models.CharField(max_length=400)
 
         def delete(self, *args, **kwargs): # 게시글이 삭제될 때
-            images = self.images_set.all() # 연결된 모든 이미지를
+            images = self.images.all() # 연결된 모든 이미지를
             for image in images: # 하나씩 꺼내서
                 image.delete() # 삭제 // 2번으로 이동
             super(Post, self).delete(*args, **kwargs)
 
-    class Images(models.Model): # 이미지 필드 생성
-        post = models.ForeignKey(Post, on_delete=models.CASCADE) # 1:N
+    class PostImage(models.Model): # 이미지 필드 생성
+        post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='images') # 1:N
 
         def get_image_filename(instance, filename): # 저장될 때 글의 pk폴더 안에 저장
             return f'products/{instance.post.pk}/{filename}'
@@ -81,7 +81,7 @@
 - ```python
     class ImageForm(forms.ModelForm):
     class Meta:
-        model = Images
+        model = PostImage
         fields = ('image', )
 
     def __init__(self, *args, **kwargs):
@@ -110,7 +110,7 @@
         if form.is_valid():
             f = form.save()
             for i in files: # 리스트로 저장한 이미지들을 하나씩 꺼내서
-                Images.objects.create(image=i, post=f) # Images모델에 추가
+                PostImage.objects.create(image=i, post=f) # PostImage모델에 추가
             return redirect('posts:index')
         else:
             print(form.errors)
@@ -123,7 +123,7 @@
 
     def update(request, product_pk):
     post = Post.objects.get(pk=product_pk)
-    images = Images.objects.filter(post=post)
+    postimages = PostImage.objects.filter(post=post)
 
     if request.method == 'POST':
         form = PostForm(request.POST, instance=post)
@@ -133,11 +133,11 @@
 
             if request.FILES.get('image'): # 요청받은 이미지가 있을 때
                 if request.POST.get('sub') == '수정': # 수정을 클릭했으면
-                    for i in images: # 기존에 존재하던 이미지들 삭제
+                    for i in postimages: # 기존에 존재하던 이미지들 삭제
                         i.delete()
 
             for i in files:
-                Images.objects.create(image=i, post=f) # 새 이미지들 추가
+                PostImage.objects.create(image=i, post=f) # 새 이미지들 추가
             return redirect('posts:index')
         else:
             print(form.errors)
@@ -152,4 +152,15 @@
     }
 
     return render(request, 'update.html', context)
+  ```
+
+<br/>
+
+### 출력
+- ```html
+    {% for post in posts %}
+        {% for image in post.images.all %}
+            <img src="{{ image.url }}" alt="post.title">
+        {% endfor %}
+    {% endfor %}
   ```
