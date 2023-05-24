@@ -130,7 +130,7 @@
 |**🔥 Day142 (5.16)**|**🔥 Day149 (5.23)**|
 |[Create_asynchronous](KDT/Django/create_asynchronous.md)|[Update_Multi_Image](KDT/Django/multi_image.md)|
 |**🔥 Day143 (5.17)**|**🔥 Day150 (5.24)**|
-|[Update_Session](KDT/Django/session.md)||
+|[Update_Session](KDT/Django/session.md)|[Update_Ckeditor](KDT/Django/ckdeditor.md)|
 |**🔥 Day144 (5.18)**|**🔥 Day151 (5.25)**|
 |[Django_Tip](KDT/Django/tip.md)||
 |**🔥 Day145 (5.19)**|**🔥 Day152 (5.26)**|
