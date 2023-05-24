@@ -26,6 +26,8 @@
     urlpatterns = [
         ...
         path('ckeditor/', include('ckeditor_uploader.urls')),
+        path(r'^upload/', login_required(views_ckeditor.upload), name='ckeditor_upload'),
+        path(r'^browse/', never_cache(login_required(views_ckeditor.browse)), name='ckeditor_browse'),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
   ```
 
@@ -61,8 +63,9 @@
 
 ### venv/Lib/site-packages/ckeditor_uploader/urls.py
 - ```python
+    # 프로젝트 단위 urls에 r'^upload/' 부분들 없으면 아래에 추가
     urlpatterns = [
-        url(r'^upload/', views.upload, name='ckeditor_upload'),
-        url(r'^browse/', never_cache(views.browse), name='ckeditor_browse'),
+        re_path(r'^upload/', views.upload, name='ckeditor_upload'),
+        re_path(r'^browse/', never_cache(views.browse), name='ckeditor_browse'),
     ]
   ```
