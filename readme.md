@@ -134,7 +134,7 @@
 |**🔥 Day144 (5.18)**|**🔥 Day151 (5.25)**|
 |[Django_Tip](KDT/Django/tip.md)|[Algorithm/CodeReview5.25](baek/codereview/5.25/)|
 |**🔥 Day145 (5.19)**|**🔥 Day152 (5.26)**|
-|[Update_Django_Tip](KDT/Django/tip.md)||
+|[Update_Django_Tip](KDT/Django/tip.md)|[Search_Asynchronous](KDT/Django/search_asynchronous.md)|
 |**☁ Day146 (5.20) / Weekend**|**☁ Day153 (5.27) / Weekend**|
 |[Update_Star_Count](KDT/Django/star_count.md)||
 |**☁ Day147 (5.21) / Weekend**|**☁ Day154 (5.28) / Weekend**|
