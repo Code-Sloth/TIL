@@ -136,7 +136,7 @@
 |**🔥 Day145 (5.19)**|**🔥 Day152 (5.26)**|
 |[Update_Django_Tip](KDT/Django/tip.md)|[Search_Asynchronous](KDT/Django/search_asynchronous.md)|
 |**☁ Day146 (5.20) / Weekend**|**☁ Day153 (5.27) / Weekend**|
-|[Update_Star_Count](KDT/Django/star_count.md)||
+|[Update_Star_Count](KDT/Django/star_count.md)|[Update_Ckeditor](KDT/Django/ckdeditor.md)|
 |**☁ Day147 (5.21) / Weekend**|**☁ Day154 (5.28) / Weekend**|
 |[Update_CSS/Reference](KDT/Web/CSS5.3.md)||
 

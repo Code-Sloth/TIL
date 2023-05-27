@@ -30,6 +30,8 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      /* 줄바꿈 */
+      word-break: break-word;
     }
   ```
 
@@ -157,5 +159,12 @@
         font-size: 12px;
       }
     }
+  ```
+
+<br/>
+
+### 가운데 .
+- ```html
+    <span>&nbsp;·&nbsp;</span>
   ```
 
