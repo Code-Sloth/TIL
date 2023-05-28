@@ -123,6 +123,23 @@
 <details>
 <summary>KDT 날짜별</summary>
 
+|week 23|week 24|
+|--|--|
+|**🔥 Day155 (5.29)**|**🔥 Day162 (6.5)**|
+|||
+|**🔥 Day156 (5.30)**|**🔥 Day163 (6.6)**|
+|||
+|**🔥 Day157 (5.31)**|**🔥 Day164 (6.7)**|
+|||
+|**🔥 Day158 (6.1)**|**🔥 Day165 (6.8)**|
+|||
+|**🔥 Day159 (6.2)**|**🔥 Day166 (6.9)**|
+|||
+|**☁ Day160 (6.3) / Weekend**|**☁ Day167 (6.10) / Weekend**|
+|||
+|**☁ Day161 (6.4) / Weekend**|**☁ Day168 (6.11) / Weekend**|
+|||
+
 |week 21|week 22|
 |--|--|
 |**🔥 Day141 (5.15)**|**🔥 Day148 (5.22)**|
@@ -138,7 +155,7 @@
 |**☁ Day146 (5.20) / Weekend**|**☁ Day153 (5.27) / Weekend**|
 |[Update_Star_Count](KDT/Django/star_count.md)|[Update_Ckeditor](KDT/Django/ckdeditor.md)|
 |**☁ Day147 (5.21) / Weekend**|**☁ Day154 (5.28) / Weekend**|
-|[Update_CSS/Reference](KDT/Web/CSS5.3.md)||
+|[Update_CSS/Reference](KDT/Web/CSS5.3.md)|[OwlCarousel](KDT/Django/owlcarousel.md)|
 
 |week 19|week 20|
 |--|--|
