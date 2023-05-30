@@ -39,3 +39,37 @@
         else:
             return self.created_at.strftime('%Y-%m-%d')
   ```
+
+<br/>
+
+### 세션을 이용한 조회수 구현
+- ```python
+    def detail(request, market_pk):
+      post = Post.objects.get(pk=market_pk)
+
+      if not request.session.get("post_viewed_{}".format(market_pk)):
+          post.views += 1
+          post.save()
+          request.session["post_viewed_{}".format(market_pk)] = True
+
+      context = {'post': post}
+      return render(request, 'markets/detail.html', context)
+  ```
+
+<br/>
+
+### 자연스러운 d-none 처리
+- ```javascript
+    setTimeout(() => {
+      likeAlert.style.opacity = '0.9'
+      setTimeout(() => {
+        likeAlert.style.opacity = '0.8'
+        setTimeout(() => {
+          likeAlert.style.opacity = '0.7'
+          setTimeout(() => {
+            likeAlert.style.display = 'none'
+          }, 50)
+        }, 50)
+      }, 50)
+    }, 2500)
+  ```
