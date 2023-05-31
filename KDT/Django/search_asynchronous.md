@@ -29,7 +29,7 @@
 
     searchInput.addEventListener('input', async (event) => {
       const searchValue = event.target.value
-      const urlParams = new URLSearchParams(window.location.href)
+      const urlParams = new URLSearchParams(window.location.search)
       const disValue = urlParams.get('dis')
       const categoryValue = urlParams.get('category')
 

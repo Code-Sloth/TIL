@@ -73,3 +73,28 @@
       }, 50)
     }, 2500)
   ```
+
+<br/>
+
+### 공유 URL 복사
+- ```javascript
+    document.addEventListener('DOMContentLoaded', function() {
+
+      document.getElementById('moims--detail--share').addEventListener('click', function() {
+          var currentUrl = window.location.href
+          var tempInput = document.createElement('input')
+
+          tempInput.value = currentUrl
+          document.body.appendChild(tempInput)
+
+          tempInput.select()
+
+          document.execCommand('copy')
+    
+          document.body.removeChild(tempInput)
+
+          alert('URL이 복사되었습니다!')
+      })
+    })
+  ```
+
