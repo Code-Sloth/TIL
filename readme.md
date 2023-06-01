@@ -132,7 +132,7 @@
 |**🔥 Day157 (5.31)**|**🔥 Day164 (6.7)**|
 |[ADD_DajngoTip](KDT/Django/tip.md)||
 |**🔥 Day158 (6.1)**|**🔥 Day165 (6.8)**|
-|||
+|[CodeReview6.1](baek/codereview/6.1/)||
 |**🔥 Day159 (6.2)**|**🔥 Day166 (6.9)**|
 |||
 |**☁ Day160 (6.3) / Weekend**|**☁ Day167 (6.10) / Weekend**|
