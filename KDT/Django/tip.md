@@ -98,3 +98,31 @@
     })
   ```
 
+<br/>
+
+### Collapse Mouse Hover Event
+- ```javascript
+    const navbarImageBtn = document.querySelector('.nav--bar--right--image')
+    const navbarCollapse = document.querySelector('#nav--bar--right--collapse')
+
+    navbarImageBtn.addEventListener('mouseenter', (event) => {
+      navbarCollapse.classList.remove('d-none')
+    })
+
+    navbarImageBtn.addEventListener('mouseleave', function(event) {
+      if (!event.relatedTarget || !navbarCollapse.contains(event.relatedTarget)) {
+        if (!navbarCollapse.classList.contains('d-none')) {
+          navbarCollapse.classList.add('d-none')
+        }
+      }
+    })
+
+    navbarCollapse.addEventListener('mouseleave', function(event) {
+      if (!event.relatedTarget || !navbarImageBtn.contains(event.relatedTarget)) {
+        if (!navbarCollapse.classList.contains('d-none')) {
+          navbarCollapse.classList.add('d-none')
+        }
+      }
+    })
+  ```
+
