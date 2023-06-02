@@ -134,7 +134,7 @@
 |**🔥 Day158 (6.1)**|**🔥 Day165 (6.8)**|
 |[CodeReview6.1](baek/codereview/6.1/)||
 |**🔥 Day159 (6.2)**|**🔥 Day166 (6.9)**|
-|||
+|[Update_DjangoTip](KDT/Django/tip.md)||
 |**☁ Day160 (6.3) / Weekend**|**☁ Day167 (6.10) / Weekend**|
 |||
 |**☁ Day161 (6.4) / Weekend**|**☁ Day168 (6.11) / Weekend**|
