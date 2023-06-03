@@ -126,3 +126,23 @@
     })
   ```
 
+<br/>
+
+### 템플릿에서 반복문 횟수 확인
+- ```html
+    {% for join_user in post.join_users.all %}
+      <a class='moims--detail--section--member--item' href="??">
+        {% if join_user.image %}
+          <img src="{{ join_user.image.url }}" alt="{{ join_user }}">
+        {% else %}
+          <img src="{% static 'image/noimage.png' %}" alt="noimage">
+        {% endif %}
+        {% if forloop.counter == 1 %}
+          <div class='moims--detail--section--member--crown'>
+            <img src="{% static 'image/crown.png' %}" alt="crown">
+          </div>
+        {% endif %}
+      </a>
+    {% endfor %}
+  ```
+
