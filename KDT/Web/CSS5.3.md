@@ -54,6 +54,8 @@
 - ```css
     .box {
       box-shadow: 1px 7px 15px 4px rgba(0,0,0,0.1);
+      /* 오른쪽,아래쪽 */
+      box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1), 5px 5px 15px 0px rgba(0,0,0,0.1);
     }
   ```
 
@@ -113,7 +115,7 @@
 ### 투명색
 - ```css
     div {
-      background: rgba(255, 255, 255, 0.5);
+      background-color: #fff0;
     }
   ```
 
@@ -168,3 +170,31 @@
     <span>&nbsp;·&nbsp;</span>
   ```
 
+<br/>
+
+### 선택자
+- ```css
+    /* div1안에 div2가 있다 가정 */
+    .div1:hover .div2 {
+      background-color: red;
+    }
+
+    .div2:hover + .div1 {
+      background-color: red;
+    }
+
+    /* div3요소 이후의 모든 div요소들을 지정 */
+    .div3 ~ div {
+      background-color: red;
+    }
+
+    /* ul 자식 중 첫 번째 요소 선택 */
+    ul li:first-child {
+      background-color: red;
+    }
+
+    /* ul 자식 중 마지막 요소 선택 */
+    ul li:last-child {
+      background-color: red;
+    }
+  ```
