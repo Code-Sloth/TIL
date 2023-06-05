@@ -126,7 +126,7 @@
 |week 23|week 24|
 |--|--|
 |**🔥 Day155 (5.29)**|**🔥 Day162 (6.5)**|
-|[Update_OwlCarousel](KDT/Django/owlcarousel.md)||
+|[Update_OwlCarousel](KDT/Django/owlcarousel.md)|[Templatetags](KDT/Django/templatetags.md)|
 |**🔥 Day156 (5.30)**|**🔥 Day163 (6.6)**|
 |[Update_DjangoTip](KDT/Django/tip.md)||
 |**🔥 Day157 (5.31)**|**🔥 Day164 (6.7)**|
