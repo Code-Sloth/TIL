@@ -128,7 +128,7 @@
 |**🔥 Day155 (5.29)**|**🔥 Day162 (6.5)**|
 |[Update_OwlCarousel](KDT/Django/owlcarousel.md)|[Templatetags](KDT/Django/templatetags.md)|
 |**🔥 Day156 (5.30)**|**🔥 Day163 (6.6)**|
-|[Update_DjangoTip](KDT/Django/tip.md)||
+|[Update_DjangoTip](KDT/Django/tip.md)|[Recomment](KDT/Django/recomment.md)|
 |**🔥 Day157 (5.31)**|**🔥 Day164 (6.7)**|
 |[Add_DajngoTip](KDT/Django/tip.md)||
 |**🔥 Day158 (6.1)**|**🔥 Day165 (6.8)**|
