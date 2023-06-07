@@ -130,7 +130,7 @@
 |**🔥 Day156 (5.30)**|**🔥 Day163 (6.6)**|
 |[Update_DjangoTip](KDT/Django/tip.md)|[Recomment](KDT/Django/recomment.md)|
 |**🔥 Day157 (5.31)**|**🔥 Day164 (6.7)**|
-|[Add_DajngoTip](KDT/Django/tip.md)||
+|[Add_DajngoTip](KDT/Django/tip.md)|[Update_Recomment](KDT/Django/recomment.md)|
 |**🔥 Day158 (6.1)**|**🔥 Day165 (6.8)**|
 |[CodeReview6.1](baek/codereview/6.1/)||
 |**🔥 Day159 (6.2)**|**🔥 Day166 (6.9)**|
