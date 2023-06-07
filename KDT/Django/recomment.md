@@ -19,6 +19,30 @@
 
 ### views.py
 - ```python
+    def detail(request, moim_pk):
+          post = Post.objects.get(pk=moim_pk)
+          comments = post.comments.filter(parent_comment=None)
+          comment_form = CommentForm()
+
+          comment_pk = request.session.pop('comment_pk', None)
+
+          if comment_pk:
+              comment = Comment.objects.get(pk=comment_pk)
+              comment_section_id = f'comment-{comment.pk}'
+          else:
+              comment = None
+              comment_section_id = None
+
+          context = {
+              'post': post,
+              'comments': comments,
+              'comment_form': comment_form,
+              'KAKAO_JS_KEY': KAKAO_JS_KEY,
+              'comment': comment,
+              'comment_section_id': comment_section_id,
+          }
+          return render(request, 'moims/detail.html', context)
+
     def comment_create(request, moim_pk, parent_pk):
       post = Post.objects.get(pk=moim_pk)
       if request.method == 'POST':
@@ -32,36 +56,12 @@
                   parent_comment = Comment.objects.get(pk=parent_pk)
                   comment.parent_comment = parent_comment
                   comment.depth = parent_comment.depth + 10
-                  if comment.depth > 70:
+                  if comment.depth > 50:
                       comment.depth = 10
               comment.save()
               request.session['comment_pk'] = comment.pk
 
               return redirect('moims:detail', moim_pk=moim_pk)
-
-    def detail(request, moim_pk):
-      post = Post.objects.get(pk=moim_pk)
-      comments = post.comments.filter(parent_comment=None)
-      comment_form = CommentForm()
-
-      comment_pk = request.session.pop('comment_pk', None)
-
-      if comment_pk:
-          comment = Comment.objects.get(pk=comment_pk)
-          comment_section_id = f'comment-{comment.pk}'
-      else:
-          comment = None
-          comment_section_id = None
-
-      context = {
-          'post': post,
-          'comments': comments,
-          'comment_form': comment_form,
-          'KAKAO_JS_KEY': KAKAO_JS_KEY,
-          'comment': comment,
-          'comment_section_id': comment_section_id,
-      }
-      return render(request, 'moims/detail.html', context)
   ```
 
 <br/>
@@ -145,7 +145,7 @@
           </form>
         </div>
       </div>
-        
+
       {% if comment.child_comments.all %}
         <div class='moims--detail--section--recomment'>
           {% for c in comment.child_comments.all %}
@@ -250,78 +250,83 @@
 ### JS
 - ```javascript
     document.addEventListener('DOMContentLoaded', function() {
-  
       const CommentlistDiv = document.querySelectorAll('.moims--detail--section--commentitem')
       const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
 
       CommentlistDiv.forEach((listDiv) => {
-        console.log(listDiv)
-        const CommentUpdateBtn = listDiv.querySelector('.comment--update--button')
         const CommentUpdateForm = listDiv.querySelector('.moims--detail--section--comment--updateform')
         const CommentUpdateSubmitForm = CommentUpdateForm.querySelector('form')
         const CommentCancleBtn = CommentUpdateForm.querySelector('.comment-cancle')
-        const RecommentCreateBtn = listDiv.querySelector('.recomment--create--button')
         const RecommentCreateForm = listDiv.querySelector('.moims--detail--section--comment--createform')
         const RecommentCancleBtn = RecommentCreateForm.querySelector('.comment-cancle')
-      
-        RecommentCreateBtn.addEventListener('click', (event) => {
-          if (RecommentCreateForm.classList.contains('d-none')) {
-            RecommentCreateForm.classList.remove('d-none')
-          } else {
-            RecommentCreateForm.classList.add('d-none')
-          }
 
-          if (!CommentUpdateForm.classList.contains('d-none')) {
-            CommentUpdateForm.classList.add('d-none')
-          }
-        })
-      
-        RecommentCancleBtn.addEventListener('click', (event) => {
-          RecommentCreateForm.classList.add('d-none')
-        })
-      
-        CommentUpdateBtn.addEventListener('click', (event) => {
-          if (CommentUpdateForm.classList.contains('d-none')) {
-            CommentUpdateForm.classList.remove('d-none')
-          } else {
-            CommentUpdateForm.classList.add('d-none')
-          }
-
-          if (!RecommentCreateForm.classList.contains('d-none')) {
-            RecommentCreateForm.classList.add('d-none')
-          }
-        })
-      
-        CommentCancleBtn.addEventListener('click', (event) => {
-          CommentUpdateForm.classList.add('d-none')
-        })
-      
-        CommentUpdateSubmitForm.addEventListener('submit', (event) => {
-          event.preventDefault()
-          const postId = event.target.dataset.postId
-          const commentId = event.target.dataset.commentId
-          const formData = new FormData(CommentUpdateSubmitForm)
-          formData.append('comment-content', CommentUpdateSubmitForm.querySelector('textarea').value)
-      
-          axios({
-            method: "POST",
-            url: `/moims/${postId}/update/${commentId}/`,
-            headers: {'X-CSRFToken': csrftoken},
-            data: formData,
-          })
-            .then((response) => {
-              const CommentContent = listDiv.querySelector('.moims--detail--comment--content--text')
-              
-              CommentContent.textContent = response.data.commentContent
-      
+        const CommentUpdateBtn = listDiv.querySelector('.comment--update--button')
+        if (CommentUpdateBtn) {
+          CommentUpdateBtn.addEventListener('click', (event) => {
+            if (CommentUpdateForm.classList.contains('d-none')) {
+              CommentUpdateForm.classList.remove('d-none')
+            } else {
               CommentUpdateForm.classList.add('d-none')
-      
+            }
+
+            if (!RecommentCreateForm.classList.contains('d-none')) {
+              RecommentCreateForm.classList.add('d-none')
+            }
+          })
+        }
+
+        if (CommentCancleBtn) {
+          CommentCancleBtn.addEventListener('click', (event) => {
+            CommentUpdateForm.classList.add('d-none')
+          })
+        }
+
+        if (CommentUpdateSubmitForm) {
+          CommentUpdateSubmitForm.addEventListener('submit', (event) => {
+            event.preventDefault()
+            const postId = event.target.dataset.postId
+            const commentId = event.target.dataset.commentId
+            const formData = new FormData(CommentUpdateSubmitForm)
+            formData.append('comment-content', CommentUpdateSubmitForm.querySelector('textarea').value)
+
+            axios({
+              method: "POST",
+              url: `/moims/${postId}/update/${commentId}/`,
+              headers: {'X-CSRFToken': csrftoken},
+              data: formData,
             })
-            .catch((error) => {
-              console.log(error.response)
-            })
-        })
+              .then((response) => {
+                const CommentContent = listDiv.querySelector('.moims--detail--comment--content--text')
+                CommentContent.textContent = response.data.commentContent
+
+                CommentUpdateForm.classList.add('d-none')
+              })
+              .catch((error) => {
+                console.log(error.response)
+              })
+          })
+        }
+
+        const RecommentCreateBtn = listDiv.querySelector('.recomment--create--button')
+        if (RecommentCreateBtn) {
+          RecommentCreateBtn.addEventListener('click', (event) => {
+            if (RecommentCreateForm.classList.contains('d-none')) {
+              RecommentCreateForm.classList.remove('d-none')
+            } else {
+              RecommentCreateForm.classList.add('d-none')
+            }
+
+            if (!CommentUpdateForm.classList.contains('d-none')) {
+              CommentUpdateForm.classList.add('d-none')
+            }
+          })
+        }
+
+        if (RecommentCancleBtn) {
+          RecommentCancleBtn.addEventListener('click', (event) => {
+            RecommentCreateForm.classList.add('d-none')
+          })
+        }
       })
-      
     })
   ```
