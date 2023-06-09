@@ -146,3 +146,17 @@
     {% endfor %}
   ```
 
+<br/>
+
+### ckeditor 여러 개 사용
+- ```javascript
+    var editorContainers = document.querySelectorAll('.communities--detail--section--commentitem .comment-ckeditor');
+
+    editorContainers.forEach(function(container) {
+      ClassicEditor
+        .create(container)
+        .catch(error => {
+          console.error(error);
+        });
+    });
+  ```
