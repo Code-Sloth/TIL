@@ -197,4 +197,36 @@
     ul li:last-child {
       background-color: red;
     }
+
+    /* disabled 제외 */
+    .ul button:not(:disabled) {
+      background-color: red;
+    }
+
+    /* class 여러 개 제외 */
+    .ul li:not(.aaa):not(.bbb) {
+      background-color: red;
+    }
   ```
+
+<br/>
+
+### scale 줄였을 때 빈 공간 이동
+- ```css
+    div {
+      transform: scale(0.8);
+      transform-origin: top right;
+    }
+  ```
+
+<br/>
+
+### absolute 가운데 정렬
+- ```css
+    .owl-dots {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  ```
+
