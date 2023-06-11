@@ -160,3 +160,20 @@
         });
     });
   ```
+
+<br/>
+
+### sort
+- ```python
+    def index_sort(o, queryset):
+      if o == '최신순':
+          return queryset.order_by('-pk')
+      elif o == '추천순':
+          return queryset.annotate(likes_diff=Count('like_users') - Count('dislike_users')).order_by('-likes_diff')
+      elif o == '댓글순':
+          return queryset.annotate(comment_count=Count('comments')).order_by('-comment_count')
+      elif o == '스크랩순':
+          return queryset.annotate(scrape_count=Count('scrape_users')).order_by('-scrape_count')
+      elif o == '조회순':
+          return queryset.order_by('-views')
+  ```
