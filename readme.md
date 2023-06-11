@@ -138,7 +138,7 @@
 |**☁ Day160 (6.3) / Weekend**|**☁ Day167 (6.10) / Weekend**|
 |[Add_DjangoTip](KDT/Django/tip.md)|[Update_CSS](KDT/Web/CSS5.3.md)|
 |**☁ Day161 (6.4) / Weekend**|**☁ Day168 (6.11) / Weekend**|
-|[Add_CSS](KDT/Web/CSS5.3.md)||
+|[Add_CSS](KDT/Web/CSS5.3.md)|[Update_Django_Tip](KDT/Django/tip.md)|
 
 |week 21|week 22|
 |--|--|
