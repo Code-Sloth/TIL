@@ -123,6 +123,19 @@
 <details>
 <summary>KDT 날짜별</summary>
 
+|week 25|
+|--|
+|**🔥 Day169 (6.12)**|
+|[Update_Like_Unlike_Ajax](KDT/Django/like_unlike.md)|
+|**🔥 Day170 (6.13)**|
+||
+|**🔥 Day171 (6.14)**|
+||
+|**🔥 Day172 (6.15)**|
+||
+|**🔥 Day173 (6.16)**|
+||
+
 |week 23|week 24|
 |--|--|
 |**🔥 Day155 (5.29)**|**🔥 Day162 (6.5)**|
