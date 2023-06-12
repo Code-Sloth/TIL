@@ -145,3 +145,13 @@
 
       return JsonResponse(context)
   ```
+
+<br/>
+
+### 참고
+- ```python
+    # 이 함수를 사용하 model field로 like integer field없이 가능
+    @property
+    def likes_count(self):
+        return self.like_users.count()-self.dislike_users.count()
+  ```
