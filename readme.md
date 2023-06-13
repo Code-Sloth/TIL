@@ -128,7 +128,7 @@
 |**🔥 Day169 (6.12)**|
 |[Update_Like_Unlike_Ajax](KDT/Django/like_unlike.md)|
 |**🔥 Day170 (6.13)**|
-||
+|[Update_Fixture](KDT/Django/fixture4.18.md)|
 |**🔥 Day171 (6.14)**|
 ||
 |**🔥 Day172 (6.15)**|
