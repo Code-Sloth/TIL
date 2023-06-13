@@ -89,3 +89,11 @@
     - `articles/fixtures/articles.json, users.json, comments.json`
 - 순서 유의해서 loaddata
   - `$ python manage.py loaddata users.json articles.json comments.json`
+
+<br/>
+
+### 한 번에 넣기
+- dumpdata
+  - `$ python -Xutf8 manage.py dumpdata > xxx.json`
+- loaddata
+  - `$ python manage.py loaddata xxx.json`
