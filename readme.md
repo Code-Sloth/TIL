@@ -130,7 +130,7 @@
 |**🔥 Day170 (6.13)**|
 |[Update_Fixture](KDT/Django/fixture4.18.md)|
 |**🔥 Day171 (6.14)**|
-||
+|[Add_Django_Tip](KDT/Django/tip.md)|
 |**🔥 Day172 (6.15)**|
 ||
 |**🔥 Day173 (6.16)**|
