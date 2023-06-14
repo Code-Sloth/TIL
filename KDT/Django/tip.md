@@ -177,3 +177,37 @@
       elif o == '조회순':
           return queryset.order_by('-views')
   ```
+
+<br/>
+
+### 비동기 메세지
+- ```javascript
+    const bodyElement  = document.querySelector('body');
+    const sideElement = document.querySelector('#side-alarm')
+    const newAlarm = document.createElement('a');
+
+    if (window.innerWidth < 800) {
+      // 겹치게 쌓이기
+
+      newAlarm.href = `/chats/${sendername}`;
+      newAlarm.classList.add('livealarm')
+      newAlarm.innerHTML = `<span><i class="bi bi-chat-fill"></i> ${sendername}</span>님이 메세지를 보냈어요.`;
+      
+      bodyElement.insertBefore(newAlarm, bodyElement.lastChild);
+
+      setTimeout(() => {
+        bodyElement.removeChild(newAlarm);
+      }, 3000);
+    } else {
+      // 위로 쌓이기
+      newAlarm.href = `/chats/${sendername}`;
+      newAlarm.classList.add('sidelivealarm')
+      newAlarm.innerHTML = `<div><s><i class="bi bi-chat-fill"></i> ${sendername}</s>님이 메세지를 보냈어요.</div><section>${message}</section>`;
+      
+      sideElement.insertBefore(newAlarm, sideElement.firstChild);
+
+      setTimeout(() => {
+        sideElement.removeChild(newAlarm);
+      }, 3000);
+    }
+  ```
