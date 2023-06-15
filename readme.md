@@ -132,7 +132,7 @@
 |**🔥 Day171 (6.14)**|
 |[Add_Django_Tip](KDT/Django/tip.md)|
 |**🔥 Day172 (6.15)**|
-||
+|[Update_CSS](KDT/Web/CSS5.3.md)|
 |**🔥 Day173 (6.16)**|
 ||
 
