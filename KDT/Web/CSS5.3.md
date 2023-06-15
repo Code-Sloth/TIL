@@ -230,3 +230,12 @@
     }
   ```
 
+<br/>
+
+### CSS 함수
+- ```css
+    /* Y방향 반응형 */
+    #chat-log {
+      height: calc(100vh - 50px);
+    }
+  ```
