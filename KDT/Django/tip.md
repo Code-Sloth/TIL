@@ -211,3 +211,56 @@
       }, 3000);
     }
   ```
+
+<br/>
+
+### 댓글 생성 후 스크롤 이동
+- ```python
+    def detail(request, post_pk):
+      post = Post.objects.get(pk=post_pk)
+      comments = post.comments.filter(parent_comment=None)
+      comment_form = CommentForm()
+
+      comment_pk = request.session.pop('comment_pk', None)
+
+      if comment_pk:
+          comment = Comment.objects.get(pk=comment_pk)
+          comment_section_id = f'comment-{comment.pk}'
+      else:
+          comment = None
+          comment_section_id = None
+
+      if not request.session.get("post_viewed_{}".format(post_pk)):
+          post.views += 1
+          post.save()
+          request.session["post_viewed_{}".format(post_pk)] = True
+      
+      context = {
+          'post': post,
+          'comments': comments,
+          'comment_form': comment_form,
+          'comment': comment,
+          'comment_section_id': comment_section_id,
+          'likes_count': post.like_users.count()-post.dislike_users.count(),
+          'KAKAO_JS_KEY': KAKAO_JS_KEY,
+      }
+      return render(request, 'communities/detail.html', context)
+  ```
+- ```html
+    {% for comment in comments %}
+      <div class='communities--detail--section--commentitem' id='comment-{{ comment.pk }}'>
+        {{ comment.content }}
+      </div>
+    <% endfor %>
+  ```
+- ```javascript
+    {% if comment %}
+      $(document).ready(function() {
+        var targetScrollPosition = $('#{{ comment_section_id }}').offset().top - 100;
+
+        $('html, body').animate({
+          scrollTop: targetScrollPosition
+        }, 500);
+      });
+    {% endif %}
+  ```
