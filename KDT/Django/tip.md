@@ -216,6 +216,26 @@
 
 ### 댓글 생성 후 스크롤 이동
 - ```python
+    def comment_create(request, moim_pk, parent_pk):
+      post = Post.objects.get(pk=moim_pk)
+      if request.method == 'POST':
+          comment_form = CommentForm(request.POST)
+
+          if comment_form.is_valid():
+              comment = comment_form.save(commit=False)
+              comment.user = request.user
+              comment.post = post
+              if parent_pk != 0:
+                  parent_comment = Comment.objects.get(pk=parent_pk)
+                  comment.parent_comment = parent_comment
+                  comment.depth = parent_comment.depth + 10
+                  if comment.depth > 50:
+                      comment.depth = 10
+              comment.save()
+              request.session['comment_pk'] = comment.pk
+
+              return redirect('moims:detail', moim_pk=moim_pk)
+
     def detail(request, post_pk):
       post = Post.objects.get(pk=post_pk)
       comments = post.comments.filter(parent_comment=None)
