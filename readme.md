@@ -2,11 +2,6 @@
 
 <br/>
 
-## [JavaScript](JavaScript/)
-- [기본 개념](JavaScript/JavaScript.md)
-
-<br/>
-
 ## [Django](KDT/Django)
 - [Guide](KDT/Django/django_guide.md)
 - [Server](KDT/Django/django3.20.md)
